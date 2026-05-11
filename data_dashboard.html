@@ -150,8 +150,12 @@ input.sel::placeholder{color:var(--muted2)}
 .leaflet-control-attribution{background:rgba(14,28,47,.7)!important;color:var(--muted2)!important;font-size:10px!important}
 .leaflet-control-attribution a{color:var(--muted)!important}
 .leaflet-tile {
-    border: 1px solid transparent;
-    margin: -1px;
+    border: 2px solid transparent !important;
+    margin: -2px !important;
+}
+.leaflet-tile-pane {
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 .map-legend{
