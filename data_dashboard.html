@@ -1034,13 +1034,15 @@ function initMap() {
           const plays = playsByISO[f.id] || 0;
           const meta  = isoMeta[f.id];
 
-          if (plays > 0 && meta) {
+          if (!meta) return; // leave non-dataset countries (Russia etc.) inert
+
+          if (plays > 0) {
             layer.bindPopup(buildPopup(meta, plays), { maxWidth:320, className:'cp-popup' });
             layer.bindTooltip(`<strong>${meta.name}</strong> · ${plays.toLocaleString()} plays`, { sticky:true, opacity:1 });
           }
 
           layer.on('mouseover', e => {
-            e.target.setStyle({ fillOpacity:1, color:'rgba(244,97,28,0.8)', weight: plays > 0 ? 1.5 : 0 });
+            e.target.setStyle({ fillOpacity:1, weight:1.5, color:'rgba(244,97,28,0.7)' });
           });
           layer.on('mouseout', e => {
             e.target.setStyle({ fillOpacity: plays ? 0.88 : 0.5, weight:0.5, color:'rgba(255,255,255,0.06)' });
