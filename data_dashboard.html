@@ -927,6 +927,11 @@ function initMap() {
 
   const map = L.map('map', { center:[30,5], zoom:2, minZoom:1.5, maxZoom:7, zoomControl:true });
 
+  // CartoDB dark tiles
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    maxZoom:8
+  }).addTo(map);
 
   fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
     .then(r => r.json())
@@ -1025,9 +1030,7 @@ function initMap() {
           const plays = playsByISO[f.id] || 0;
           const meta  = isoMeta[f.id];
 
-          if (!meta) return; // leave non-dataset countries (Russia etc.) inert
-
-          if (plays > 0) {
+          if (plays > 0 && meta) {
             layer.bindPopup(buildPopup(meta, plays), { maxWidth:320, className:'cp-popup' });
             layer.bindTooltip(`<strong>${meta.name}</strong> · ${plays.toLocaleString()} plays`, { sticky:true, opacity:1 });
           }
