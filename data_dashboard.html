@@ -1019,10 +1019,11 @@ function initMap() {
         </div>`;
       }
 
-      // ISO 643 = Russia — its polygon crosses the antimeridian and Leaflet draws
-      // a horizontal line across the entire map when rendering it.
+      // Russia (643), Fiji (242), Kiribati (296) cross the antimeridian — Leaflet
+      // draws a horizontal line across the map when rendering them.
+      const SKIP_IDS = new Set([643, 242, 296].map(String));
       L.geoJSON(geojson, {
-        filter: f => f.id !== 643,
+        filter: f => !SKIP_IDS.has(String(f.id)),
         style: f => ({
           fillColor:   getColor(playsByISO[f.id]),
           fillOpacity: playsByISO[f.id] ? 0.88 : 0.5,
