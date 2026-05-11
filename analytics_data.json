@@ -1,0 +1,3353 @@
+{
+  "kpi": {
+    "total_sessions": 173182,
+    "unique_devices": 835,
+    "unique_countries": 14,
+    "total_game_plays": 280905,
+    "median_session_min": 5.2,
+    "avg_session_min": 6.08,
+    "top_game": "BEACHBALL"
+  },
+  "hourly_usage": [
+    {
+      "hour": 0,
+      "plays": 13081
+    },
+    {
+      "hour": 1,
+      "plays": 12289
+    },
+    {
+      "hour": 2,
+      "plays": 9869
+    },
+    {
+      "hour": 3,
+      "plays": 8111
+    },
+    {
+      "hour": 4,
+      "plays": 10168
+    },
+    {
+      "hour": 5,
+      "plays": 12468
+    },
+    {
+      "hour": 6,
+      "plays": 12309
+    },
+    {
+      "hour": 7,
+      "plays": 11663
+    },
+    {
+      "hour": 8,
+      "plays": 11053
+    },
+    {
+      "hour": 9,
+      "plays": 9120
+    },
+    {
+      "hour": 10,
+      "plays": 9058
+    },
+    {
+      "hour": 11,
+      "plays": 9644
+    },
+    {
+      "hour": 12,
+      "plays": 9654
+    },
+    {
+      "hour": 13,
+      "plays": 9372
+    },
+    {
+      "hour": 14,
+      "plays": 10127
+    },
+    {
+      "hour": 15,
+      "plays": 11919
+    },
+    {
+      "hour": 16,
+      "plays": 14195
+    },
+    {
+      "hour": 17,
+      "plays": 13413
+    },
+    {
+      "hour": 18,
+      "plays": 12559
+    },
+    {
+      "hour": 19,
+      "plays": 13780
+    },
+    {
+      "hour": 20,
+      "plays": 13830
+    },
+    {
+      "hour": 21,
+      "plays": 14533
+    },
+    {
+      "hour": 22,
+      "plays": 13575
+    },
+    {
+      "hour": 23,
+      "plays": 15115
+    }
+  ],
+  "country_hourly": {
+    "AU": [
+      1120,
+      1144,
+      1221,
+      1171,
+      1264,
+      1280,
+      1350,
+      1470,
+      2233,
+      2132,
+      2185,
+      1586,
+      1073,
+      983,
+      865,
+      833,
+      934,
+      919,
+      921,
+      937,
+      945,
+      940,
+      940,
+      1379
+    ],
+    "BE": [
+      11,
+      9,
+      9,
+      11,
+      11,
+      10,
+      10,
+      10,
+      9,
+      12,
+      19,
+      48,
+      77,
+      104,
+      81,
+      76,
+      112,
+      73,
+      64,
+      70,
+      16,
+      11,
+      11,
+      9
+    ],
+    "CA": [
+      2449,
+      2525,
+      1932,
+      1506,
+      1356,
+      1237,
+      1058,
+      1023,
+      1276,
+      1179,
+      1209,
+      1116,
+      908,
+      885,
+      883,
+      995,
+      1150,
+      1230,
+      1413,
+      1686,
+      1742,
+      1910,
+      2008,
+      2592
+    ],
+    "CH": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      33,
+      10,
+      3,
+      0,
+      0,
+      5,
+      4,
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "DE": [
+      82,
+      34,
+      43,
+      36,
+      19,
+      41,
+      28,
+      18,
+      24,
+      161,
+      486,
+      1042,
+      1148,
+      835,
+      942,
+      1107,
+      791,
+      626,
+      410,
+      239,
+      1181,
+      1540,
+      1184,
+      1345
+    ],
+    "DK": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      8,
+      10,
+      11,
+      5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "FR": [
+      337,
+      339,
+      362,
+      174,
+      174,
+      193,
+      179,
+      142,
+      178,
+      189,
+      318,
+      825,
+      1378,
+      1287,
+      1093,
+      2221,
+      3585,
+      3179,
+      2008,
+      1198,
+      657,
+      406,
+      335,
+      406
+    ],
+    "GB": [
+      1965,
+      1834,
+      1459,
+      1620,
+      1569,
+      1403,
+      1343,
+      1572,
+      1231,
+      974,
+      936,
+      819,
+      732,
+      575,
+      593,
+      769,
+      1169,
+      1295,
+      1372,
+      1386,
+      1322,
+      1332,
+      1630,
+      1829
+    ],
+    "IE": [
+      84,
+      35,
+      21,
+      19,
+      20,
+      19,
+      21,
+      19,
+      19,
+      32,
+      38,
+      89,
+      144,
+      179,
+      279,
+      495,
+      618,
+      506,
+      455,
+      323,
+      249,
+      292,
+      260,
+      183
+    ],
+    "NL": [
+      303,
+      309,
+      320,
+      328,
+      322,
+      334,
+      241,
+      247,
+      263,
+      428,
+      381,
+      445,
+      426,
+      444,
+      493,
+      454,
+      502,
+      339,
+      352,
+      475,
+      752,
+      334,
+      221,
+      213
+    ],
+    "NO": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      5,
+      6,
+      6,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "SE": [
+      36,
+      24,
+      22,
+      22,
+      21,
+      22,
+      22,
+      22,
+      22,
+      31,
+      29,
+      42,
+      96,
+      22,
+      19,
+      27,
+      16,
+      62,
+      10,
+      12,
+      24,
+      25,
+      22,
+      26
+    ],
+    "UK": [
+      20,
+      13,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      9,
+      24,
+      10,
+      14,
+      98,
+      10,
+      19,
+      22,
+      30,
+      22,
+      16,
+      19,
+      21
+    ],
+    "US": [
+      6674,
+      6023,
+      4480,
+      3224,
+      5412,
+      7929,
+      8057,
+      7140,
+      5798,
+      3982,
+      3424,
+      3608,
+      3632,
+      4032,
+      4848,
+      4834,
+      5304,
+      5161,
+      5532,
+      7424,
+      6920,
+      7727,
+      6945,
+      7112
+    ]
+  },
+  "seasonal": [
+    {
+      "season": "Winter",
+      "plays": 113397
+    },
+    {
+      "season": "Spring",
+      "plays": 125647
+    },
+    {
+      "season": "Summer",
+      "plays": 11551
+    },
+    {
+      "season": "Autumn",
+      "plays": 30310
+    }
+  ],
+  "sessions": {
+    "top_launches": [
+      {
+        "name": "BEACHBALL",
+        "total_launches": 9575.0
+      },
+      {
+        "name": "LEAVES",
+        "total_launches": 9549.0
+      },
+      {
+        "name": "FISHES",
+        "total_launches": 9227.0
+      },
+      {
+        "name": "BIRTHDAY",
+        "total_launches": 9056.0
+      },
+      {
+        "name": "MUSICORGAN",
+        "total_launches": 8613.0
+      },
+      {
+        "name": "PUZZLE",
+        "total_launches": 8600.0
+      },
+      {
+        "name": "BUTTERFLIES",
+        "total_launches": 5055.0
+      },
+      {
+        "name": "BUBBLES",
+        "total_launches": 4899.0
+      },
+      {
+        "name": "FLOWERS",
+        "total_launches": 4777.0
+      },
+      {
+        "name": "STARGAZING",
+        "total_launches": 4710.0
+      }
+    ],
+    "top_avg_duration": [
+      {
+        "name": "PUZZLE_UGC",
+        "avg_duration": 15.37
+      },
+      {
+        "name": "SNOEZEL_CLOUDS",
+        "avg_duration": 15.19
+      },
+      {
+        "name": "SUITCASE",
+        "avg_duration": 14.31
+      },
+      {
+        "name": "MEMORY_ORIGINAL",
+        "avg_duration": 12.23
+      },
+      {
+        "name": "PAINTSPLATTERS_UGC",
+        "avg_duration": 9.11
+      },
+      {
+        "name": "FLOWERS",
+        "avg_duration": 8.28
+      },
+      {
+        "name": "LANDMARKS",
+        "avg_duration": 8.15
+      },
+      {
+        "name": "FIREFLIES",
+        "avg_duration": 8.1
+      },
+      {
+        "name": "PUZZLE",
+        "avg_duration": 8.02
+      },
+      {
+        "name": "GARDENING",
+        "avg_duration": 7.95
+      }
+    ],
+    "top_cumulative": [
+      {
+        "name": "PUZZLE",
+        "total_duration": 68962.96
+      },
+      {
+        "name": "MUSICORGAN",
+        "total_duration": 62753.28
+      },
+      {
+        "name": "FISHES",
+        "total_duration": 58638.05
+      },
+      {
+        "name": "BEACHBALL",
+        "total_duration": 53892.93
+      },
+      {
+        "name": "LEAVES",
+        "total_duration": 51350.41
+      },
+      {
+        "name": "BIRTHDAY",
+        "total_duration": 45811.76
+      },
+      {
+        "name": "FLOWERS",
+        "total_duration": 39573.06
+      },
+      {
+        "name": "FIREFLIES",
+        "total_duration": 37464.11
+      },
+      {
+        "name": "PAINTSPLATTERS_UGC",
+        "total_duration": 36430.55
+      },
+      {
+        "name": "LANDMARKS",
+        "total_duration": 32618.3
+      }
+    ]
+  },
+  "retention": [
+    {
+      "day": 5,
+      "devices": 80
+    },
+    {
+      "day": 6,
+      "devices": 70
+    },
+    {
+      "day": 7,
+      "devices": 77
+    },
+    {
+      "day": 8,
+      "devices": 63
+    },
+    {
+      "day": 9,
+      "devices": 60
+    },
+    {
+      "day": 10,
+      "devices": 56
+    },
+    {
+      "day": 11,
+      "devices": 47
+    },
+    {
+      "day": 12,
+      "devices": 53
+    },
+    {
+      "day": 13,
+      "devices": 54
+    },
+    {
+      "day": 14,
+      "devices": 64
+    },
+    {
+      "day": 15,
+      "devices": 52
+    },
+    {
+      "day": 16,
+      "devices": 47
+    },
+    {
+      "day": 17,
+      "devices": 37
+    },
+    {
+      "day": 18,
+      "devices": 47
+    },
+    {
+      "day": 19,
+      "devices": 46
+    },
+    {
+      "day": 20,
+      "devices": 44
+    },
+    {
+      "day": 21,
+      "devices": 46
+    },
+    {
+      "day": 22,
+      "devices": 50
+    },
+    {
+      "day": 23,
+      "devices": 36
+    },
+    {
+      "day": 24,
+      "devices": 32
+    },
+    {
+      "day": 25,
+      "devices": 25
+    },
+    {
+      "day": 26,
+      "devices": 38
+    },
+    {
+      "day": 27,
+      "devices": 45
+    },
+    {
+      "day": 28,
+      "devices": 58
+    },
+    {
+      "day": 29,
+      "devices": 40
+    },
+    {
+      "day": 30,
+      "devices": 25
+    },
+    {
+      "day": 31,
+      "devices": 25
+    },
+    {
+      "day": 32,
+      "devices": 28
+    },
+    {
+      "day": 33,
+      "devices": 34
+    },
+    {
+      "day": 34,
+      "devices": 41
+    },
+    {
+      "day": 35,
+      "devices": 43
+    },
+    {
+      "day": 36,
+      "devices": 38
+    },
+    {
+      "day": 37,
+      "devices": 33
+    },
+    {
+      "day": 38,
+      "devices": 24
+    },
+    {
+      "day": 39,
+      "devices": 28
+    },
+    {
+      "day": 40,
+      "devices": 27
+    },
+    {
+      "day": 41,
+      "devices": 32
+    },
+    {
+      "day": 42,
+      "devices": 30
+    },
+    {
+      "day": 43,
+      "devices": 24
+    },
+    {
+      "day": 44,
+      "devices": 21
+    },
+    {
+      "day": 45,
+      "devices": 11
+    },
+    {
+      "day": 46,
+      "devices": 21
+    },
+    {
+      "day": 47,
+      "devices": 14
+    },
+    {
+      "day": 48,
+      "devices": 10
+    },
+    {
+      "day": 49,
+      "devices": 9
+    },
+    {
+      "day": 50,
+      "devices": 11
+    },
+    {
+      "day": 51,
+      "devices": 8
+    },
+    {
+      "day": 52,
+      "devices": 11
+    },
+    {
+      "day": 53,
+      "devices": 7
+    },
+    {
+      "day": 54,
+      "devices": 10
+    },
+    {
+      "day": 55,
+      "devices": 11
+    },
+    {
+      "day": 56,
+      "devices": 9
+    },
+    {
+      "day": 57,
+      "devices": 10
+    },
+    {
+      "day": 58,
+      "devices": 6
+    },
+    {
+      "day": 59,
+      "devices": 7
+    },
+    {
+      "day": 60,
+      "devices": 2
+    },
+    {
+      "day": 61,
+      "devices": 7
+    },
+    {
+      "day": 62,
+      "devices": 4
+    },
+    {
+      "day": 63,
+      "devices": 7
+    },
+    {
+      "day": 64,
+      "devices": 5
+    },
+    {
+      "day": 65,
+      "devices": 5
+    },
+    {
+      "day": 66,
+      "devices": 4
+    },
+    {
+      "day": 67,
+      "devices": 4
+    },
+    {
+      "day": 68,
+      "devices": 4
+    },
+    {
+      "day": 69,
+      "devices": 6
+    },
+    {
+      "day": 70,
+      "devices": 5
+    },
+    {
+      "day": 71,
+      "devices": 4
+    },
+    {
+      "day": 72,
+      "devices": 7
+    },
+    {
+      "day": 73,
+      "devices": 4
+    },
+    {
+      "day": 74,
+      "devices": 5
+    },
+    {
+      "day": 75,
+      "devices": 8
+    },
+    {
+      "day": 76,
+      "devices": 5
+    },
+    {
+      "day": 77,
+      "devices": 6
+    },
+    {
+      "day": 78,
+      "devices": 4
+    },
+    {
+      "day": 79,
+      "devices": 4
+    },
+    {
+      "day": 80,
+      "devices": 4
+    },
+    {
+      "day": 81,
+      "devices": 4
+    },
+    {
+      "day": 82,
+      "devices": 1
+    },
+    {
+      "day": 83,
+      "devices": 1
+    },
+    {
+      "day": 84,
+      "devices": 7
+    },
+    {
+      "day": 85,
+      "devices": 6
+    },
+    {
+      "day": 86,
+      "devices": 6
+    },
+    {
+      "day": 87,
+      "devices": 6
+    },
+    {
+      "day": 88,
+      "devices": 3
+    },
+    {
+      "day": 89,
+      "devices": 5
+    },
+    {
+      "day": 90,
+      "devices": 5
+    },
+    {
+      "day": 91,
+      "devices": 5
+    },
+    {
+      "day": 92,
+      "devices": 3
+    },
+    {
+      "day": 93,
+      "devices": 2
+    },
+    {
+      "day": 94,
+      "devices": 3
+    },
+    {
+      "day": 95,
+      "devices": 3
+    },
+    {
+      "day": 96,
+      "devices": 4
+    },
+    {
+      "day": 97,
+      "devices": 4
+    },
+    {
+      "day": 98,
+      "devices": 4
+    },
+    {
+      "day": 99,
+      "devices": 3
+    },
+    {
+      "day": 100,
+      "devices": 3
+    },
+    {
+      "day": 101,
+      "devices": 5
+    },
+    {
+      "day": 102,
+      "devices": 3
+    },
+    {
+      "day": 103,
+      "devices": 6
+    },
+    {
+      "day": 104,
+      "devices": 2
+    },
+    {
+      "day": 105,
+      "devices": 3
+    },
+    {
+      "day": 106,
+      "devices": 2
+    },
+    {
+      "day": 107,
+      "devices": 2
+    },
+    {
+      "day": 108,
+      "devices": 2
+    },
+    {
+      "day": 109,
+      "devices": 5
+    },
+    {
+      "day": 110,
+      "devices": 1
+    },
+    {
+      "day": 111,
+      "devices": 2
+    },
+    {
+      "day": 112,
+      "devices": 7
+    },
+    {
+      "day": 113,
+      "devices": 3
+    },
+    {
+      "day": 114,
+      "devices": 6
+    },
+    {
+      "day": 115,
+      "devices": 4
+    },
+    {
+      "day": 116,
+      "devices": 4
+    },
+    {
+      "day": 117,
+      "devices": 1
+    },
+    {
+      "day": 118,
+      "devices": 1
+    },
+    {
+      "day": 119,
+      "devices": 2
+    },
+    {
+      "day": 120,
+      "devices": 2
+    },
+    {
+      "day": 122,
+      "devices": 3
+    },
+    {
+      "day": 123,
+      "devices": 8
+    },
+    {
+      "day": 124,
+      "devices": 4
+    },
+    {
+      "day": 125,
+      "devices": 2
+    },
+    {
+      "day": 126,
+      "devices": 2
+    },
+    {
+      "day": 127,
+      "devices": 3
+    },
+    {
+      "day": 128,
+      "devices": 2
+    },
+    {
+      "day": 129,
+      "devices": 2
+    },
+    {
+      "day": 130,
+      "devices": 1
+    },
+    {
+      "day": 131,
+      "devices": 2
+    },
+    {
+      "day": 132,
+      "devices": 2
+    },
+    {
+      "day": 133,
+      "devices": 5
+    },
+    {
+      "day": 134,
+      "devices": 3
+    },
+    {
+      "day": 135,
+      "devices": 2
+    },
+    {
+      "day": 136,
+      "devices": 1
+    },
+    {
+      "day": 137,
+      "devices": 3
+    },
+    {
+      "day": 138,
+      "devices": 1
+    },
+    {
+      "day": 139,
+      "devices": 3
+    },
+    {
+      "day": 140,
+      "devices": 2
+    },
+    {
+      "day": 141,
+      "devices": 5
+    },
+    {
+      "day": 142,
+      "devices": 4
+    },
+    {
+      "day": 143,
+      "devices": 3
+    },
+    {
+      "day": 144,
+      "devices": 3
+    },
+    {
+      "day": 145,
+      "devices": 4
+    },
+    {
+      "day": 146,
+      "devices": 3
+    },
+    {
+      "day": 147,
+      "devices": 3
+    },
+    {
+      "day": 148,
+      "devices": 3
+    },
+    {
+      "day": 149,
+      "devices": 1
+    },
+    {
+      "day": 150,
+      "devices": 2
+    },
+    {
+      "day": 151,
+      "devices": 6
+    },
+    {
+      "day": 152,
+      "devices": 2
+    },
+    {
+      "day": 153,
+      "devices": 2
+    },
+    {
+      "day": 154,
+      "devices": 5
+    },
+    {
+      "day": 155,
+      "devices": 4
+    },
+    {
+      "day": 156,
+      "devices": 7
+    },
+    {
+      "day": 157,
+      "devices": 3
+    },
+    {
+      "day": 158,
+      "devices": 3
+    },
+    {
+      "day": 159,
+      "devices": 2
+    },
+    {
+      "day": 160,
+      "devices": 2
+    },
+    {
+      "day": 161,
+      "devices": 1
+    },
+    {
+      "day": 162,
+      "devices": 2
+    },
+    {
+      "day": 163,
+      "devices": 1
+    },
+    {
+      "day": 164,
+      "devices": 2
+    },
+    {
+      "day": 165,
+      "devices": 3
+    },
+    {
+      "day": 166,
+      "devices": 4
+    },
+    {
+      "day": 167,
+      "devices": 2
+    },
+    {
+      "day": 168,
+      "devices": 1
+    },
+    {
+      "day": 169,
+      "devices": 4
+    },
+    {
+      "day": 170,
+      "devices": 2
+    },
+    {
+      "day": 171,
+      "devices": 2
+    },
+    {
+      "day": 172,
+      "devices": 3
+    },
+    {
+      "day": 173,
+      "devices": 2
+    },
+    {
+      "day": 174,
+      "devices": 1
+    },
+    {
+      "day": 175,
+      "devices": 3
+    },
+    {
+      "day": 176,
+      "devices": 1
+    },
+    {
+      "day": 177,
+      "devices": 4
+    },
+    {
+      "day": 178,
+      "devices": 5
+    },
+    {
+      "day": 179,
+      "devices": 4
+    },
+    {
+      "day": 180,
+      "devices": 4
+    },
+    {
+      "day": 181,
+      "devices": 1
+    },
+    {
+      "day": 182,
+      "devices": 2
+    },
+    {
+      "day": 183,
+      "devices": 1
+    },
+    {
+      "day": 184,
+      "devices": 1
+    },
+    {
+      "day": 185,
+      "devices": 1
+    },
+    {
+      "day": 187,
+      "devices": 3
+    },
+    {
+      "day": 188,
+      "devices": 3
+    },
+    {
+      "day": 189,
+      "devices": 2
+    },
+    {
+      "day": 190,
+      "devices": 1
+    },
+    {
+      "day": 191,
+      "devices": 3
+    },
+    {
+      "day": 192,
+      "devices": 1
+    },
+    {
+      "day": 193,
+      "devices": 2
+    },
+    {
+      "day": 194,
+      "devices": 2
+    },
+    {
+      "day": 198,
+      "devices": 2
+    },
+    {
+      "day": 200,
+      "devices": 1
+    },
+    {
+      "day": 203,
+      "devices": 2
+    },
+    {
+      "day": 207,
+      "devices": 2
+    },
+    {
+      "day": 208,
+      "devices": 1
+    },
+    {
+      "day": 209,
+      "devices": 1
+    },
+    {
+      "day": 210,
+      "devices": 3
+    },
+    {
+      "day": 211,
+      "devices": 2
+    },
+    {
+      "day": 212,
+      "devices": 1
+    },
+    {
+      "day": 215,
+      "devices": 1
+    },
+    {
+      "day": 216,
+      "devices": 2
+    },
+    {
+      "day": 217,
+      "devices": 2
+    },
+    {
+      "day": 219,
+      "devices": 1
+    },
+    {
+      "day": 220,
+      "devices": 1
+    },
+    {
+      "day": 221,
+      "devices": 2
+    },
+    {
+      "day": 222,
+      "devices": 1
+    },
+    {
+      "day": 223,
+      "devices": 1
+    },
+    {
+      "day": 224,
+      "devices": 1
+    },
+    {
+      "day": 225,
+      "devices": 1
+    },
+    {
+      "day": 226,
+      "devices": 2
+    },
+    {
+      "day": 227,
+      "devices": 2
+    },
+    {
+      "day": 228,
+      "devices": 5
+    },
+    {
+      "day": 229,
+      "devices": 2
+    },
+    {
+      "day": 230,
+      "devices": 2
+    },
+    {
+      "day": 231,
+      "devices": 1
+    },
+    {
+      "day": 232,
+      "devices": 1
+    },
+    {
+      "day": 234,
+      "devices": 1
+    },
+    {
+      "day": 235,
+      "devices": 1
+    },
+    {
+      "day": 236,
+      "devices": 1
+    },
+    {
+      "day": 237,
+      "devices": 3
+    },
+    {
+      "day": 238,
+      "devices": 3
+    },
+    {
+      "day": 239,
+      "devices": 2
+    },
+    {
+      "day": 240,
+      "devices": 3
+    },
+    {
+      "day": 241,
+      "devices": 1
+    },
+    {
+      "day": 243,
+      "devices": 2
+    },
+    {
+      "day": 245,
+      "devices": 1
+    },
+    {
+      "day": 246,
+      "devices": 3
+    },
+    {
+      "day": 247,
+      "devices": 1
+    },
+    {
+      "day": 249,
+      "devices": 2
+    },
+    {
+      "day": 250,
+      "devices": 1
+    },
+    {
+      "day": 251,
+      "devices": 1
+    },
+    {
+      "day": 252,
+      "devices": 1
+    },
+    {
+      "day": 253,
+      "devices": 1
+    },
+    {
+      "day": 254,
+      "devices": 1
+    },
+    {
+      "day": 258,
+      "devices": 1
+    },
+    {
+      "day": 260,
+      "devices": 3
+    },
+    {
+      "day": 261,
+      "devices": 1
+    },
+    {
+      "day": 263,
+      "devices": 2
+    },
+    {
+      "day": 266,
+      "devices": 2
+    },
+    {
+      "day": 267,
+      "devices": 1
+    },
+    {
+      "day": 268,
+      "devices": 1
+    },
+    {
+      "day": 271,
+      "devices": 1
+    },
+    {
+      "day": 273,
+      "devices": 1
+    },
+    {
+      "day": 276,
+      "devices": 2
+    },
+    {
+      "day": 277,
+      "devices": 4
+    },
+    {
+      "day": 278,
+      "devices": 2
+    },
+    {
+      "day": 279,
+      "devices": 2
+    },
+    {
+      "day": 280,
+      "devices": 2
+    },
+    {
+      "day": 281,
+      "devices": 1
+    },
+    {
+      "day": 284,
+      "devices": 1
+    },
+    {
+      "day": 285,
+      "devices": 2
+    },
+    {
+      "day": 286,
+      "devices": 1
+    },
+    {
+      "day": 287,
+      "devices": 2
+    },
+    {
+      "day": 290,
+      "devices": 1
+    },
+    {
+      "day": 291,
+      "devices": 1
+    },
+    {
+      "day": 294,
+      "devices": 1
+    },
+    {
+      "day": 295,
+      "devices": 3
+    },
+    {
+      "day": 297,
+      "devices": 2
+    },
+    {
+      "day": 304,
+      "devices": 1
+    },
+    {
+      "day": 305,
+      "devices": 1
+    },
+    {
+      "day": 306,
+      "devices": 2
+    },
+    {
+      "day": 307,
+      "devices": 1
+    },
+    {
+      "day": 308,
+      "devices": 5
+    },
+    {
+      "day": 309,
+      "devices": 4
+    },
+    {
+      "day": 310,
+      "devices": 3
+    },
+    {
+      "day": 311,
+      "devices": 1
+    },
+    {
+      "day": 312,
+      "devices": 2
+    },
+    {
+      "day": 313,
+      "devices": 1
+    },
+    {
+      "day": 314,
+      "devices": 2
+    },
+    {
+      "day": 315,
+      "devices": 2
+    },
+    {
+      "day": 316,
+      "devices": 1
+    },
+    {
+      "day": 317,
+      "devices": 1
+    },
+    {
+      "day": 319,
+      "devices": 2
+    },
+    {
+      "day": 320,
+      "devices": 1
+    },
+    {
+      "day": 321,
+      "devices": 1
+    },
+    {
+      "day": 322,
+      "devices": 1
+    },
+    {
+      "day": 323,
+      "devices": 1
+    },
+    {
+      "day": 324,
+      "devices": 1
+    },
+    {
+      "day": 325,
+      "devices": 1
+    },
+    {
+      "day": 329,
+      "devices": 1
+    },
+    {
+      "day": 331,
+      "devices": 1
+    },
+    {
+      "day": 332,
+      "devices": 1
+    },
+    {
+      "day": 335,
+      "devices": 2
+    },
+    {
+      "day": 336,
+      "devices": 3
+    },
+    {
+      "day": 337,
+      "devices": 2
+    },
+    {
+      "day": 338,
+      "devices": 2
+    },
+    {
+      "day": 339,
+      "devices": 3
+    },
+    {
+      "day": 340,
+      "devices": 1
+    },
+    {
+      "day": 342,
+      "devices": 1
+    },
+    {
+      "day": 343,
+      "devices": 1
+    },
+    {
+      "day": 344,
+      "devices": 1
+    },
+    {
+      "day": 345,
+      "devices": 1
+    },
+    {
+      "day": 350,
+      "devices": 1
+    },
+    {
+      "day": 353,
+      "devices": 1
+    },
+    {
+      "day": 354,
+      "devices": 1
+    },
+    {
+      "day": 355,
+      "devices": 1
+    },
+    {
+      "day": 356,
+      "devices": 1
+    },
+    {
+      "day": 357,
+      "devices": 1
+    },
+    {
+      "day": 362,
+      "devices": 1
+    },
+    {
+      "day": 364,
+      "devices": 1
+    },
+    {
+      "day": 368,
+      "devices": 1
+    },
+    {
+      "day": 371,
+      "devices": 1
+    },
+    {
+      "day": 372,
+      "devices": 1
+    },
+    {
+      "day": 374,
+      "devices": 2
+    },
+    {
+      "day": 375,
+      "devices": 2
+    },
+    {
+      "day": 376,
+      "devices": 1
+    },
+    {
+      "day": 377,
+      "devices": 1
+    },
+    {
+      "day": 378,
+      "devices": 1
+    },
+    {
+      "day": 380,
+      "devices": 2
+    },
+    {
+      "day": 381,
+      "devices": 1
+    },
+    {
+      "day": 382,
+      "devices": 3
+    },
+    {
+      "day": 385,
+      "devices": 1
+    },
+    {
+      "day": 386,
+      "devices": 1
+    },
+    {
+      "day": 387,
+      "devices": 1
+    },
+    {
+      "day": 398,
+      "devices": 1
+    },
+    {
+      "day": 400,
+      "devices": 1
+    },
+    {
+      "day": 401,
+      "devices": 3
+    },
+    {
+      "day": 402,
+      "devices": 2
+    },
+    {
+      "day": 403,
+      "devices": 1
+    },
+    {
+      "day": 404,
+      "devices": 1
+    },
+    {
+      "day": 409,
+      "devices": 2
+    },
+    {
+      "day": 410,
+      "devices": 1
+    },
+    {
+      "day": 411,
+      "devices": 1
+    },
+    {
+      "day": 420,
+      "devices": 2
+    },
+    {
+      "day": 422,
+      "devices": 1
+    },
+    {
+      "day": 423,
+      "devices": 1
+    },
+    {
+      "day": 432,
+      "devices": 1
+    },
+    {
+      "day": 433,
+      "devices": 1
+    },
+    {
+      "day": 434,
+      "devices": 2
+    },
+    {
+      "day": 435,
+      "devices": 1
+    },
+    {
+      "day": 436,
+      "devices": 1
+    },
+    {
+      "day": 438,
+      "devices": 1
+    },
+    {
+      "day": 441,
+      "devices": 1
+    },
+    {
+      "day": 445,
+      "devices": 1
+    },
+    {
+      "day": 459,
+      "devices": 1
+    },
+    {
+      "day": 460,
+      "devices": 1
+    },
+    {
+      "day": 461,
+      "devices": 2
+    },
+    {
+      "day": 462,
+      "devices": 1
+    },
+    {
+      "day": 463,
+      "devices": 2
+    },
+    {
+      "day": 464,
+      "devices": 2
+    },
+    {
+      "day": 465,
+      "devices": 2
+    },
+    {
+      "day": 466,
+      "devices": 2
+    },
+    {
+      "day": 467,
+      "devices": 2
+    },
+    {
+      "day": 468,
+      "devices": 1
+    },
+    {
+      "day": 469,
+      "devices": 3
+    },
+    {
+      "day": 470,
+      "devices": 3
+    },
+    {
+      "day": 471,
+      "devices": 4
+    },
+    {
+      "day": 472,
+      "devices": 4
+    },
+    {
+      "day": 473,
+      "devices": 1
+    },
+    {
+      "day": 474,
+      "devices": 1
+    },
+    {
+      "day": 475,
+      "devices": 1
+    },
+    {
+      "day": 481,
+      "devices": 1
+    },
+    {
+      "day": 482,
+      "devices": 1
+    },
+    {
+      "day": 483,
+      "devices": 2
+    },
+    {
+      "day": 485,
+      "devices": 2
+    },
+    {
+      "day": 486,
+      "devices": 1
+    },
+    {
+      "day": 488,
+      "devices": 2
+    },
+    {
+      "day": 491,
+      "devices": 1
+    },
+    {
+      "day": 493,
+      "devices": 2
+    },
+    {
+      "day": 494,
+      "devices": 1
+    },
+    {
+      "day": 495,
+      "devices": 1
+    },
+    {
+      "day": 497,
+      "devices": 2
+    },
+    {
+      "day": 498,
+      "devices": 2
+    },
+    {
+      "day": 500,
+      "devices": 1
+    }
+  ],
+  "games_by_device": {
+    "0": [
+      {
+        "name": "BEACHBALL",
+        "plays": 5870
+      },
+      {
+        "name": "LEAVES",
+        "plays": 5791
+      },
+      {
+        "name": "FISHES",
+        "plays": 5484
+      },
+      {
+        "name": "BIRDFEEDER",
+        "plays": 4314
+      },
+      {
+        "name": "KITES",
+        "plays": 4278
+      },
+      {
+        "name": "SPINNINGTOPS",
+        "plays": 4221
+      },
+      {
+        "name": "BUBBLES",
+        "plays": 4165
+      },
+      {
+        "name": "FIREFLIES",
+        "plays": 4066
+      },
+      {
+        "name": "FLOWERS",
+        "plays": 3993
+      },
+      {
+        "name": "MUSICORGAN",
+        "plays": 3985
+      }
+    ],
+    "2": [
+      {
+        "name": "LEAVES",
+        "plays": 8611
+      },
+      {
+        "name": "BEACHBALL",
+        "plays": 8551
+      },
+      {
+        "name": "FISHES",
+        "plays": 8253
+      },
+      {
+        "name": "BIRTHDAY",
+        "plays": 8193
+      },
+      {
+        "name": "PUZZLE",
+        "plays": 7908
+      },
+      {
+        "name": "MUSICORGAN",
+        "plays": 7905
+      },
+      {
+        "name": "BUTTERFLIES",
+        "plays": 4468
+      },
+      {
+        "name": "BUBBLES",
+        "plays": 4274
+      },
+      {
+        "name": "FLOWERS",
+        "plays": 4212
+      },
+      {
+        "name": "SPINNINGTOPS",
+        "plays": 4158
+      }
+    ],
+    "3": [
+      {
+        "name": "BUBBLES",
+        "plays": 235
+      },
+      {
+        "name": "ANEMONES",
+        "plays": 232
+      },
+      {
+        "name": "BUTTERFLIES",
+        "plays": 231
+      },
+      {
+        "name": "FLOWERS",
+        "plays": 230
+      },
+      {
+        "name": "LEAVES",
+        "plays": 230
+      },
+      {
+        "name": "BEACHBALL",
+        "plays": 229
+      },
+      {
+        "name": "KITES",
+        "plays": 229
+      },
+      {
+        "name": "STARGAZING",
+        "plays": 227
+      },
+      {
+        "name": "FISHES",
+        "plays": 226
+      },
+      {
+        "name": "BIRDFEEDER",
+        "plays": 223
+      }
+    ],
+    "4": [
+      {
+        "name": "FISHES",
+        "plays": 13
+      },
+      {
+        "name": "TOVER_PETS",
+        "plays": 13
+      },
+      {
+        "name": "SNOEZEL_STARS",
+        "plays": 12
+      },
+      {
+        "name": "BUTTERFLIES",
+        "plays": 11
+      },
+      {
+        "name": "PAINTSPLATTERS",
+        "plays": 10
+      },
+      {
+        "name": "BIRDFEEDER",
+        "plays": 9
+      },
+      {
+        "name": "RISE_AND_SHINE",
+        "plays": 9
+      },
+      {
+        "name": "PAINTSPLATTERS_UGC",
+        "plays": 8
+      },
+      {
+        "name": "ANEMONES",
+        "plays": 7
+      },
+      {
+        "name": "BEACHBALL",
+        "plays": 7
+      }
+    ],
+    "5": [
+      {
+        "name": "LEAVES",
+        "plays": 218
+      },
+      {
+        "name": "BEACHBALL",
+        "plays": 216
+      },
+      {
+        "name": "FISHES",
+        "plays": 214
+      },
+      {
+        "name": "BIRTHDAY",
+        "plays": 213
+      },
+      {
+        "name": "PUZZLE",
+        "plays": 212
+      },
+      {
+        "name": "MUSICORGAN",
+        "plays": 189
+      },
+      {
+        "name": "BUBBLES",
+        "plays": 76
+      },
+      {
+        "name": "BUTTERFLIES",
+        "plays": 76
+      },
+      {
+        "name": "FLOWERS",
+        "plays": 76
+      },
+      {
+        "name": "STARGAZING",
+        "plays": 76
+      }
+    ]
+  },
+  "games_by_country": {
+    "AU": [
+      {
+        "name": "LEAVES",
+        "plays": 2297
+      },
+      {
+        "name": "BEACHBALL",
+        "plays": 2289
+      },
+      {
+        "name": "FISHES",
+        "plays": 2150
+      },
+      {
+        "name": "BIRTHDAY",
+        "plays": 1699
+      },
+      {
+        "name": "MUSICORGAN",
+        "plays": 1592
+      }
+    ],
+    "BE": [
+      {
+        "name": "MEMORY_KIDS_UGC",
+        "plays": 29
+      },
+      {
+        "name": "BALL_TOSS",
+        "plays": 27
+      },
+      {
+        "name": "STARSIGNS",
+        "plays": 26
+      },
+      {
+        "name": "POND",
+        "plays": 24
+      },
+      {
+        "name": "PAINTSPLATTERS_UP",
+        "plays": 23
+      }
+    ],
+    "CA": [
+      {
+        "name": "BEACHBALL",
+        "plays": 2681
+      },
+      {
+        "name": "LEAVES",
+        "plays": 2677
+      },
+      {
+        "name": "FISHES",
+        "plays": 2676
+      },
+      {
+        "name": "MUSICORGAN",
+        "plays": 2623
+      },
+      {
+        "name": "PUZZLE",
+        "plays": 2558
+      }
+    ],
+    "CH": [
+      {
+        "name": "COLOURFUL_MEMORIES",
+        "plays": 4
+      },
+      {
+        "name": "LANDMARKS",
+        "plays": 4
+      },
+      {
+        "name": "PUZZLE",
+        "plays": 4
+      },
+      {
+        "name": "BEACHBALL",
+        "plays": 3
+      },
+      {
+        "name": "BIRDFEEDER",
+        "plays": 3
+      }
+    ],
+    "DE": [
+      {
+        "name": "GARDENING",
+        "plays": 423
+      },
+      {
+        "name": "FIREFLIES",
+        "plays": 422
+      },
+      {
+        "name": "KITES",
+        "plays": 418
+      },
+      {
+        "name": "SPINNINGTOPS",
+        "plays": 414
+      },
+      {
+        "name": "DINNER_PARTY",
+        "plays": 413
+      }
+    ],
+    "DK": [
+      {
+        "name": "ANEMONES",
+        "plays": 4
+      },
+      {
+        "name": "BIRDFEEDER",
+        "plays": 2
+      },
+      {
+        "name": "BODY_AWARENESS",
+        "plays": 2
+      },
+      {
+        "name": "BUBBLES",
+        "plays": 2
+      },
+      {
+        "name": "BUTTERFLIES",
+        "plays": 2
+      }
+    ],
+    "FR": [
+      {
+        "name": "BEACHBALL",
+        "plays": 1047
+      },
+      {
+        "name": "LEAVES",
+        "plays": 987
+      },
+      {
+        "name": "FISHES",
+        "plays": 896
+      },
+      {
+        "name": "BIRTHDAY",
+        "plays": 869
+      },
+      {
+        "name": "PUZZLE",
+        "plays": 812
+      }
+    ],
+    "GB": [
+      {
+        "name": "LEAVES",
+        "plays": 1486
+      },
+      {
+        "name": "BEACHBALL",
+        "plays": 1444
+      },
+      {
+        "name": "FISHES",
+        "plays": 1425
+      },
+      {
+        "name": "BIRTHDAY",
+        "plays": 1416
+      },
+      {
+        "name": "MUSICORGAN",
+        "plays": 1326
+      }
+    ],
+    "IE": [
+      {
+        "name": "ANEMONES",
+        "plays": 152
+      },
+      {
+        "name": "BUTTERFLIES",
+        "plays": 152
+      },
+      {
+        "name": "SPINNINGTOPS",
+        "plays": 149
+      },
+      {
+        "name": "FLOWERS",
+        "plays": 148
+      },
+      {
+        "name": "LEAVES",
+        "plays": 146
+      }
+    ],
+    "NL": [
+      {
+        "name": "BIRTHDAY",
+        "plays": 382
+      },
+      {
+        "name": "LEAVES",
+        "plays": 318
+      },
+      {
+        "name": "BEACHBALL",
+        "plays": 308
+      },
+      {
+        "name": "FISHES",
+        "plays": 304
+      },
+      {
+        "name": "PUZZLE",
+        "plays": 290
+      }
+    ],
+    "NO": [
+      {
+        "name": "FISHES",
+        "plays": 2
+      },
+      {
+        "name": "LEAVES",
+        "plays": 2
+      },
+      {
+        "name": "MOLES_ORIGINAL",
+        "plays": 2
+      },
+      {
+        "name": "MUSICORGAN",
+        "plays": 2
+      },
+      {
+        "name": "SNOEZEL_STARS",
+        "plays": 2
+      }
+    ],
+    "SE": [
+      {
+        "name": "BEACHBALL",
+        "plays": 52
+      },
+      {
+        "name": "BIRTHDAY",
+        "plays": 52
+      },
+      {
+        "name": "PUZZLE",
+        "plays": 52
+      },
+      {
+        "name": "STARGAZING",
+        "plays": 49
+      },
+      {
+        "name": "BUBBLES",
+        "plays": 48
+      }
+    ],
+    "UK": [
+      {
+        "name": "BEACHBALL",
+        "plays": 21
+      },
+      {
+        "name": "BIRTHDAY",
+        "plays": 21
+      },
+      {
+        "name": "BUTTERFLIES",
+        "plays": 21
+      },
+      {
+        "name": "MUSICORGAN",
+        "plays": 20
+      },
+      {
+        "name": "PUZZLE",
+        "plays": 20
+      }
+    ],
+    "US": [
+      {
+        "name": "BEACHBALL",
+        "plays": 6546
+      },
+      {
+        "name": "LEAVES",
+        "plays": 6511
+      },
+      {
+        "name": "FISHES",
+        "plays": 6211
+      },
+      {
+        "name": "PUZZLE",
+        "plays": 5294
+      },
+      {
+        "name": "MUSICORGAN",
+        "plays": 5241
+      }
+    ]
+  },
+  "avg_session_by_country": {
+    "US": {
+      "avg_duration": 7.13,
+      "sessions": 59593
+    },
+    "AU": {
+      "avg_duration": 6.12,
+      "sessions": 18289
+    },
+    "CA": {
+      "avg_duration": 6.04,
+      "sessions": 30031
+    },
+    "GB": {
+      "avg_duration": 5.89,
+      "sessions": 25380
+    },
+    "IE": {
+      "avg_duration": 5.77,
+      "sessions": 4345
+    },
+    "DK": {
+      "avg_duration": 4.99,
+      "sessions": 33
+    },
+    "NL": {
+      "avg_duration": 4.8,
+      "sessions": 8237
+    },
+    "UK": {
+      "avg_duration": 4.74,
+      "sessions": 342
+    },
+    "SE": {
+      "avg_duration": 4.61,
+      "sessions": 638
+    },
+    "FR": {
+      "avg_duration": 4.59,
+      "sessions": 17740
+    },
+    "BE": {
+      "avg_duration": 4.27,
+      "sessions": 567
+    },
+    "DE": {
+      "avg_duration": 4.08,
+      "sessions": 7916
+    },
+    "CH": {
+      "avg_duration": 2.89,
+      "sessions": 55
+    },
+    "NO": {
+      "avg_duration": 1.9,
+      "sessions": 16
+    }
+  },
+  "all_game_stats": [
+    {
+      "name": "ANEMONES",
+      "launches": 3621,
+      "avg_duration": 7.92
+    },
+    {
+      "name": "ANIMALS",
+      "launches": 192,
+      "avg_duration": 4.11
+    },
+    {
+      "name": "ANIMALS_UNQ",
+      "launches": 49,
+      "avg_duration": 2.5
+    },
+    {
+      "name": "AUDIO_MEMORY",
+      "launches": 35,
+      "avg_duration": 3.17
+    },
+    {
+      "name": "BABY_MONSTERS",
+      "launches": 90,
+      "avg_duration": 2.48
+    },
+    {
+      "name": "BAKING",
+      "launches": 2464,
+      "avg_duration": 5.08
+    },
+    {
+      "name": "BALLGAME",
+      "launches": 190,
+      "avg_duration": 3.72
+    },
+    {
+      "name": "BALLOON_PARTY",
+      "launches": 174,
+      "avg_duration": 4.03
+    },
+    {
+      "name": "BALL_TOSS",
+      "launches": 227,
+      "avg_duration": 3.88
+    },
+    {
+      "name": "BALL_TOSS_ORIGINAL",
+      "launches": 3771,
+      "avg_duration": 5.38
+    },
+    {
+      "name": "BEACHBALL",
+      "launches": 9575,
+      "avg_duration": 5.63
+    },
+    {
+      "name": "BEACHCOMBING",
+      "launches": 291,
+      "avg_duration": 3.39
+    },
+    {
+      "name": "BEACH_ORIGINAL",
+      "launches": 308,
+      "avg_duration": 5.11
+    },
+    {
+      "name": "BIRDFEEDER",
+      "launches": 4655,
+      "avg_duration": 5.03
+    },
+    {
+      "name": "BIRTHDAY",
+      "launches": 9056,
+      "avg_duration": 5.06
+    },
+    {
+      "name": "BLOBNOTES",
+      "launches": 320,
+      "avg_duration": 4.2
+    },
+    {
+      "name": "BODY_AWARENESS",
+      "launches": 2773,
+      "avg_duration": 4.97
+    },
+    {
+      "name": "BOGGLE",
+      "launches": 6,
+      "avg_duration": 1.69
+    },
+    {
+      "name": "BOOKWORM",
+      "launches": 8,
+      "avg_duration": 0.15
+    },
+    {
+      "name": "BOUQUET",
+      "launches": 323,
+      "avg_duration": 6.66
+    },
+    {
+      "name": "BUBBLES",
+      "launches": 4899,
+      "avg_duration": 5.46
+    },
+    {
+      "name": "BUBBLES_UP",
+      "launches": 232,
+      "avg_duration": 3.46
+    },
+    {
+      "name": "BUBBLE_BATH",
+      "launches": 116,
+      "avg_duration": 2.24
+    },
+    {
+      "name": "BUBBLE_SUMS",
+      "launches": 12,
+      "avg_duration": 0.36
+    },
+    {
+      "name": "BUTTERFLIES",
+      "launches": 5055,
+      "avg_duration": 5.19
+    },
+    {
+      "name": "CANDYFISH",
+      "launches": 82,
+      "avg_duration": 2.85
+    },
+    {
+      "name": "CASH_REGISTER",
+      "launches": 115,
+      "avg_duration": 2.81
+    },
+    {
+      "name": "CATERPILLARS",
+      "launches": 160,
+      "avg_duration": 3.62
+    },
+    {
+      "name": "CHICKLETS",
+      "launches": 84,
+      "avg_duration": 3.1
+    },
+    {
+      "name": "CLEANING",
+      "launches": 204,
+      "avg_duration": 3.71
+    },
+    {
+      "name": "COLOURFUL_MEMORIES",
+      "launches": 2533,
+      "avg_duration": 4.83
+    },
+    {
+      "name": "COLOURINGBOOK",
+      "launches": 211,
+      "avg_duration": 3.34
+    },
+    {
+      "name": "COLOURMILLS",
+      "launches": 85,
+      "avg_duration": 2.81
+    },
+    {
+      "name": "COMBINATIONS",
+      "launches": 219,
+      "avg_duration": 3.87
+    },
+    {
+      "name": "CONFETTI_PARTY_ORIGINAL",
+      "launches": 166,
+      "avg_duration": 5.14
+    },
+    {
+      "name": "CROSSING",
+      "launches": 230,
+      "avg_duration": 3.62
+    },
+    {
+      "name": "DINNER_PARTY",
+      "launches": 3936,
+      "avg_duration": 7.91
+    },
+    {
+      "name": "DRAWINGS_ORIGINAL",
+      "launches": 3935,
+      "avg_duration": 6.09
+    },
+    {
+      "name": "DRESS_UP",
+      "launches": 197,
+      "avg_duration": 3.71
+    },
+    {
+      "name": "DUOS_ADULTS_UGC",
+      "launches": 267,
+      "avg_duration": 3.11
+    },
+    {
+      "name": "DUOS_KIDS_UGC",
+      "launches": 59,
+      "avg_duration": 1.98
+    },
+    {
+      "name": "DUOS_UGC",
+      "launches": 149,
+      "avg_duration": 5.09
+    },
+    {
+      "name": "EASTER",
+      "launches": 3598,
+      "avg_duration": 4.95
+    },
+    {
+      "name": "EMOTIONS",
+      "launches": 44,
+      "avg_duration": 2.08
+    },
+    {
+      "name": "FIREFLIES",
+      "launches": 4624,
+      "avg_duration": 8.1
+    },
+    {
+      "name": "FISHES",
+      "launches": 9227,
+      "avg_duration": 6.36
+    },
+    {
+      "name": "FLOWERS",
+      "launches": 4777,
+      "avg_duration": 8.28
+    },
+    {
+      "name": "FLY_SWATTER",
+      "launches": 157,
+      "avg_duration": 4.79
+    },
+    {
+      "name": "FOOTBALL",
+      "launches": 54,
+      "avg_duration": 2.43
+    },
+    {
+      "name": "FROG_FEEDER",
+      "launches": 61,
+      "avg_duration": 3.11
+    },
+    {
+      "name": "FRUITS",
+      "launches": 160,
+      "avg_duration": 3.89
+    },
+    {
+      "name": "GARDENING",
+      "launches": 3941,
+      "avg_duration": 7.95
+    },
+    {
+      "name": "GROCERIES",
+      "launches": 165,
+      "avg_duration": 3.78
+    },
+    {
+      "name": "HAMSTER_MAZE",
+      "launches": 30,
+      "avg_duration": 1.67
+    },
+    {
+      "name": "HIDEANDSEEK",
+      "launches": 111,
+      "avg_duration": 2.1
+    },
+    {
+      "name": "INSTRUMENTS",
+      "launches": 340,
+      "avg_duration": 4.22
+    },
+    {
+      "name": "KITES",
+      "launches": 4633,
+      "avg_duration": 4.91
+    },
+    {
+      "name": "LADYBUGS",
+      "launches": 373,
+      "avg_duration": 5.9
+    },
+    {
+      "name": "LANDMARKS",
+      "launches": 4004,
+      "avg_duration": 8.15
+    },
+    {
+      "name": "LEAVES",
+      "launches": 9549,
+      "avg_duration": 5.38
+    },
+    {
+      "name": "MATCHMAKER",
+      "launches": 279,
+      "avg_duration": 4.49
+    },
+    {
+      "name": "MATCHMAKER_HOBBIES_UP",
+      "launches": 201,
+      "avg_duration": 3.71
+    },
+    {
+      "name": "MATCHMAKER_SPORTS",
+      "launches": 116,
+      "avg_duration": 3.62
+    },
+    {
+      "name": "MATHRACE",
+      "launches": 27,
+      "avg_duration": 1.01
+    },
+    {
+      "name": "MEMORY",
+      "launches": 256,
+      "avg_duration": 3.51
+    },
+    {
+      "name": "MEMORY_ADULTS_UGC",
+      "launches": 9,
+      "avg_duration": 4.04
+    },
+    {
+      "name": "MEMORY_KIDS_UGC",
+      "launches": 91,
+      "avg_duration": 1.61
+    },
+    {
+      "name": "MEMORY_ORIGINAL",
+      "launches": 178,
+      "avg_duration": 12.23
+    },
+    {
+      "name": "MEMORY_SPROUT",
+      "launches": 59,
+      "avg_duration": 2.13
+    },
+    {
+      "name": "MEMORY_UGC",
+      "launches": 3757,
+      "avg_duration": 7.23
+    },
+    {
+      "name": "MINECARTS",
+      "launches": 96,
+      "avg_duration": 2.59
+    },
+    {
+      "name": "MOLES_ORIGINAL",
+      "launches": 3933,
+      "avg_duration": 4.91
+    },
+    {
+      "name": "MONSTERS",
+      "launches": 85,
+      "avg_duration": 2.39
+    },
+    {
+      "name": "MUSICBOX",
+      "launches": 3942,
+      "avg_duration": 6.17
+    },
+    {
+      "name": "MUSICORGAN",
+      "launches": 8613,
+      "avg_duration": 7.29
+    },
+    {
+      "name": "MUSIC_HERO",
+      "launches": 228,
+      "avg_duration": 3.79
+    },
+    {
+      "name": "MUSIC_HERO_ORIGINAL",
+      "launches": 3776,
+      "avg_duration": 4.94
+    },
+    {
+      "name": "ODD_ONE_OUT",
+      "launches": 78,
+      "avg_duration": 4.79
+    },
+    {
+      "name": "PAINTSPLATTERS",
+      "launches": 3936,
+      "avg_duration": 7.77
+    },
+    {
+      "name": "PAINTSPLATTERS_ADULTS_UGC",
+      "launches": 424,
+      "avg_duration": 3.78
+    },
+    {
+      "name": "PAINTSPLATTERS_UGC",
+      "launches": 4000,
+      "avg_duration": 9.11
+    },
+    {
+      "name": "PAINTSPLATTERS_UP",
+      "launches": 544,
+      "avg_duration": 5.17
+    },
+    {
+      "name": "POND",
+      "launches": 429,
+      "avg_duration": 3.95
+    },
+    {
+      "name": "POOL_TABLE",
+      "launches": 2262,
+      "avg_duration": 5.07
+    },
+    {
+      "name": "PROVERBS",
+      "launches": 483,
+      "avg_duration": 6.61
+    },
+    {
+      "name": "PUPPIES",
+      "launches": 480,
+      "avg_duration": 3.85
+    },
+    {
+      "name": "PUZZLE",
+      "launches": 8600,
+      "avg_duration": 8.02
+    },
+    {
+      "name": "PUZZLE_ADULTS_UGC",
+      "launches": 268,
+      "avg_duration": 4.51
+    },
+    {
+      "name": "PUZZLE_TRANSPORTATION",
+      "launches": 323,
+      "avg_duration": 6.36
+    },
+    {
+      "name": "PUZZLE_UGC",
+      "launches": 601,
+      "avg_duration": 15.37
+    },
+    {
+      "name": "PUZZLE_UP",
+      "launches": 180,
+      "avg_duration": 5.22
+    },
+    {
+      "name": "QUESTIONS",
+      "launches": 9,
+      "avg_duration": 1.36
+    },
+    {
+      "name": "RAINBOW",
+      "launches": 513,
+      "avg_duration": 4.21
+    },
+    {
+      "name": "RHYMES",
+      "launches": 317,
+      "avg_duration": 6.67
+    },
+    {
+      "name": "RISE_AND_SHINE",
+      "launches": 13,
+      "avg_duration": 0.73
+    },
+    {
+      "name": "RUMMYTILES",
+      "launches": 143,
+      "avg_duration": 4.11
+    },
+    {
+      "name": "SLIDE_PUZZLE",
+      "launches": 69,
+      "avg_duration": 6.25
+    },
+    {
+      "name": "SLIDE_PUZZLE_UP",
+      "launches": 200,
+      "avg_duration": 3.94
+    },
+    {
+      "name": "SLOT_CARS",
+      "launches": 86,
+      "avg_duration": 2.34
+    },
+    {
+      "name": "SMOKE_SIMULATOR",
+      "launches": 102,
+      "avg_duration": 2.64
+    },
+    {
+      "name": "SMUDGES",
+      "launches": 66,
+      "avg_duration": 2.25
+    },
+    {
+      "name": "SNAKE",
+      "launches": 73,
+      "avg_duration": 2.42
+    },
+    {
+      "name": "SNOEZEL_CIRCLES",
+      "launches": 7,
+      "avg_duration": 4.95
+    },
+    {
+      "name": "SNOEZEL_CLOUDS",
+      "launches": 8,
+      "avg_duration": 15.19
+    },
+    {
+      "name": "SNOEZEL_LAVALAMP",
+      "launches": 7,
+      "avg_duration": 0.97
+    },
+    {
+      "name": "SNOEZEL_STARS",
+      "launches": 10,
+      "avg_duration": 0.43
+    },
+    {
+      "name": "SOCCER_UP",
+      "launches": 401,
+      "avg_duration": 4.93
+    },
+    {
+      "name": "SOUND_SAFARI",
+      "launches": 94,
+      "avg_duration": 4.66
+    },
+    {
+      "name": "SOUND_SAFARI_ORIGINAL",
+      "launches": 126,
+      "avg_duration": 4.18
+    },
+    {
+      "name": "SPECIAL_OLYMPICS",
+      "launches": 211,
+      "avg_duration": 2.74
+    },
+    {
+      "name": "SPINNINGTOPS",
+      "launches": 4661,
+      "avg_duration": 5.0
+    },
+    {
+      "name": "SPORTS_TOURNEY_ORIGINAL",
+      "launches": 343,
+      "avg_duration": 6.11
+    },
+    {
+      "name": "STARDUST",
+      "launches": 96,
+      "avg_duration": 2.03
+    },
+    {
+      "name": "STARGAZING",
+      "launches": 4710,
+      "avg_duration": 4.89
+    },
+    {
+      "name": "STARSIGNS",
+      "launches": 274,
+      "avg_duration": 4.29
+    },
+    {
+      "name": "SUITCASE",
+      "launches": 73,
+      "avg_duration": 14.31
+    },
+    {
+      "name": "TILE_SEQUENCES",
+      "launches": 350,
+      "avg_duration": 5.73
+    },
+    {
+      "name": "TILE_SEQUENCES_ANIMALS",
+      "launches": 42,
+      "avg_duration": 2.24
+    },
+    {
+      "name": "TIME_BOMB",
+      "launches": 16,
+      "avg_duration": 1.22
+    },
+    {
+      "name": "TOOTHBRUSHING",
+      "launches": 276,
+      "avg_duration": 3.09
+    },
+    {
+      "name": "TOVER_PETS",
+      "launches": 14,
+      "avg_duration": 5.06
+    },
+    {
+      "name": "TRAINS",
+      "launches": 89,
+      "avg_duration": 1.91
+    },
+    {
+      "name": "TRAINS_UP",
+      "launches": 177,
+      "avg_duration": 3.87
+    },
+    {
+      "name": "TRANSPORTATION",
+      "launches": 162,
+      "avg_duration": 3.87
+    },
+    {
+      "name": "TURNING_TILES",
+      "launches": 2233,
+      "avg_duration": 5.06
+    },
+    {
+      "name": "UNFOLD_SPROUT",
+      "launches": 37,
+      "avg_duration": 2.57
+    },
+    {
+      "name": "UNFOLD_UP",
+      "launches": 222,
+      "avg_duration": 3.81
+    },
+    {
+      "name": "VI_BOUQUET",
+      "launches": 115,
+      "avg_duration": 6.47
+    },
+    {
+      "name": "VI_BUBBLES_UP",
+      "launches": 150,
+      "avg_duration": 3.38
+    },
+    {
+      "name": "VI_CATERPILLARS",
+      "launches": 119,
+      "avg_duration": 4.23
+    },
+    {
+      "name": "VI_PAINTSPLATTERS_UP",
+      "launches": 155,
+      "avg_duration": 6.39
+    },
+    {
+      "name": "VI_POND",
+      "launches": 168,
+      "avg_duration": 3.18
+    },
+    {
+      "name": "VI_PUPPIES",
+      "launches": 135,
+      "avg_duration": 4.07
+    },
+    {
+      "name": "VI_PUZZLE_TRANSPORTATION",
+      "launches": 129,
+      "avg_duration": 6.44
+    },
+    {
+      "name": "VI_PUZZLE_UP",
+      "launches": 123,
+      "avg_duration": 6.44
+    },
+    {
+      "name": "VI_SOCCER_UP",
+      "launches": 143,
+      "avg_duration": 4.5
+    },
+    {
+      "name": "VI_WHAC_A_MOLE",
+      "launches": 137,
+      "avg_duration": 4.09
+    },
+    {
+      "name": "VOCABULARY",
+      "launches": 19,
+      "avg_duration": 0.89
+    },
+    {
+      "name": "WHAC_A_MOLE",
+      "launches": 348,
+      "avg_duration": 3.79
+    },
+    {
+      "name": "XMAS",
+      "launches": 16,
+      "avg_duration": 7.44
+    }
+  ]
+}

@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tovertafel · Analytics Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+<style>
+/* ── Design tokens (mirror dashboard.css) ─────────────────────────────────── */
+:root{
+  --navy:#0e1c2f;--navy2:#132238;--navy3:#1a2f47;--navy4:#243d59;--navy-lt:#2e5073;
+  --white:#ffffff;--offwhite:#e8eff7;--muted:#8eaac8;--muted2:#6080a0;
+  --blue:#3b82f6;   --blue-lt:rgba(59,130,246,.18);
+  --green:#22c55e;  --green-lt:rgba(34,197,94,.18);
+  --purple:#a855f7; --purple-lt:rgba(168,85,247,.18);
+  --orange:#F4611C; --orange-lt:rgba(244,97,28,.18);
+  --gold:#f59e0b;   --gold-lt:rgba(245,158,11,.18);
+  --brand:#F4611C;
+  --grad:linear-gradient(135deg,#F4611C,#f0922b);
+  --radius:16px;--radius-sm:10px;--radius-pill:100px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Source Sans Pro',sans-serif;font-weight:300;
+  background:var(--navy);color:var(--white);
+  min-height:100vh;font-size:15px;line-height:1.6;
+}
+
+/* ── Shell ─────────────────────────────────────────────────────────────────── */
+.shell{display:grid;grid-template-columns:240px 1fr;min-height:100vh}
+
+/* ── Sidebar ─────────────────────────────────────────────────────────────── */
+.sidebar{
+  background:var(--navy2);border-right:1px solid rgba(255,255,255,.06);
+  padding:2rem 1.25rem;display:flex;flex-direction:column;
+  position:sticky;top:0;height:100vh;overflow-y:auto;
+}
+.logo-area{display:flex;align-items:center;gap:10px;margin-bottom:2.5rem;padding:0 .25rem}
+.logo-icon{
+  width:40px;height:40px;background:var(--grad);border-radius:12px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.logo-icon svg{width:22px;height:22px}
+.logo-name{font-family:'Source Serif Pro',serif;font-weight:700;font-size:17px;color:var(--white);line-height:1.1}
+.logo-sub{font-size:11px;font-weight:300;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.nav-group{margin-bottom:1.5rem}
+.nav-lbl{
+  display:block;font-size:10px;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted2);padding:0 .75rem;margin-bottom:.5rem;
+}
+.nav-btn{
+  display:flex;align-items:center;gap:10px;width:100%;
+  padding:10px 12px;border-radius:var(--radius-sm);border:none;
+  background:transparent;color:var(--muted);
+  font-family:'Source Sans Pro',sans-serif;font-size:14px;font-weight:600;
+  cursor:pointer;transition:all .15s;text-align:left;
+}
+.nav-btn:hover{background:rgba(255,255,255,.06);color:var(--offwhite)}
+.nav-btn.active{background:var(--orange-lt);color:var(--white)}
+.nav-btn svg{width:17px;height:17px;flex-shrink:0}
+.sidebar-bottom{margin-top:auto;border-top:1px solid rgba(255,255,255,.06);padding-top:1.25rem}
+.ds-info{padding:0 .25rem;display:flex;flex-direction:column;gap:3px}
+.ds-info .ds-title{font-family:'Source Serif Pro',serif;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:4px}
+.ds-info span{font-size:11px;font-weight:300;color:var(--muted2)}
+
+/* ── Main ─────────────────────────────────────────────────────────────────── */
+.main{overflow-y:auto}
+.topbar{padding:1.5rem 2.5rem 0;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:2rem}
+.tab-list{display:flex;overflow-x:auto}
+.tab-btn{
+  padding:12px 20px;background:none;border:none;
+  font-family:'Source Sans Pro',sans-serif;font-size:14px;font-weight:600;
+  color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;
+  transition:all .15s;white-space:nowrap;margin-bottom:-1px;
+}
+.tab-btn:hover{color:var(--offwhite)}
+.tab-btn.active{color:var(--white);border-bottom-color:var(--brand)}
+
+/* ── Pages ─────────────────────────────────────────────────────────────────── */
+.page{display:none;padding:0 2.5rem 3rem}
+.page.active{display:block;animation:fadeUp .22s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ── Section heading ─────────────────────────────────────────────────────── */
+.sh{margin-bottom:1.5rem}
+.sh h2{font-family:'Source Serif Pro',serif;font-weight:700;font-size:28px;color:var(--white);line-height:1.1;margin-bottom:.35rem}
+.sh p{font-size:14px;font-weight:300;color:var(--muted)}
+
+/* ── KPI stat row ─────────────────────────────────────────────────────────── */
+.stat-row{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;margin-bottom:2rem}
+.stat-card{background:var(--navy3);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.25rem}
+.stat-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:.75rem;font-size:18px}
+.stat-val{font-family:'Source Serif Pro',serif;font-weight:700;font-size:26px;color:var(--white);line-height:1.1;margin-bottom:.2rem}
+.stat-lbl{font-size:12px;color:var(--muted);font-weight:300}
+
+/* ── Card grid ─────────────────────────────────────────────────────────────── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.two-col .full{grid-column:1/-1}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem}
+.three-col .full{grid-column:1/-1}
+
+.card{background:var(--navy3);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.5rem}
+.card h3{font-family:'Source Serif Pro',serif;font-weight:700;font-size:16px;color:var(--white);line-height:1.1;margin-bottom:.25rem}
+.card .sub{font-size:12px;font-weight:300;color:var(--muted2);margin-bottom:1rem}
+
+/* ── Insight pills ─────────────────────────────────────────────────────────── */
+.insight-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1.25rem}
+.insight{
+  background:var(--orange-lt);color:var(--orange);
+  border:1px solid rgba(244,97,28,.3);
+  font-size:12px;font-weight:600;padding:5px 12px;border-radius:var(--radius-pill);
+}
+
+/* ── Selector ─────────────────────────────────────────────────────────────── */
+.sel-row{display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap}
+.sel-row label{font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+select.sel{
+  font-family:'Source Sans Pro',sans-serif;font-size:13px;
+  padding:8px 32px 8px 14px;border:1.5px solid rgba(255,255,255,.12);
+  border-radius:var(--radius-sm);background:var(--navy4);color:var(--white);
+  cursor:pointer;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%238eaac8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 12px center;
+}
+select.sel option{background:var(--navy3)}
+select.sel:focus{outline:2px solid var(--brand);outline-offset:1px}
+input.sel{background:var(--navy3);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:7px 12px;color:var(--white);font-family:'Source Sans Pro',sans-serif;font-size:13px;min-width:240px}
+input.sel:focus{outline:2px solid var(--brand);outline-offset:1px;border-color:transparent}
+input.sel::placeholder{color:var(--muted2)}
+
+/* ── Map ─────────────────────────────────────────────────────────────────── */
+#map{height:440px;border-radius:var(--radius-sm);overflow:hidden;background:var(--navy4)}
+.leaflet-container{background:var(--navy)!important}
+.leaflet-tooltip{
+  background:var(--navy3)!important;border:1px solid rgba(255,255,255,.12)!important;
+  color:var(--offwhite)!important;font-family:'Source Sans Pro',sans-serif!important;
+  font-size:13px!important;font-weight:400!important;
+  box-shadow:0 4px 16px rgba(0,0,0,.4)!important;border-radius:8px!important;padding:6px 12px!important;
+}
+.leaflet-tooltip::before{display:none!important}
+.leaflet-control-zoom a{
+  background:var(--navy3)!important;color:var(--offwhite)!important;
+  border-color:rgba(255,255,255,.12)!important;
+}
+.leaflet-control-attribution{background:rgba(14,28,47,.7)!important;color:var(--muted2)!important;font-size:10px!important}
+.leaflet-control-attribution a{color:var(--muted)!important}
+
+.map-legend{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  margin-top:10px;padding:8px 14px;
+  background:var(--navy4);border-radius:var(--radius-sm);
+  font-size:11px;font-weight:300;color:var(--muted2);
+}
+.legend-grad{width:120px;height:10px;border-radius:5px;background:linear-gradient(to right,#243d59,#F4611C);flex-shrink:0}
+
+/* ── Country heat mini-cards ─────────────────────────────────────────────── */
+.heat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.heat-card{background:var(--navy4);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius-sm);padding:14px}
+.heat-card h4{font-family:'Source Serif Pro',serif;font-size:13px;font-weight:700;margin-bottom:10px;color:var(--offwhite)}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media(max-width:1200px){.stat-row{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:1000px){.three-col{grid-template-columns:1fr 1fr}}
+@media(max-width:800px){.two-col,.three-col{grid-template-columns:1fr}.shell{grid-template-columns:1fr}.sidebar{display:none}}
+
+/* ── Takeaways ──────────────────────────────────────────────────────────── */
+.takeaway-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-top:.5rem}
+@media(max-width:1100px){.takeaway-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.takeaway-grid{grid-template-columns:1fr}}
+.takeaway{background:var(--navy4);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius-sm);padding:1rem 1.1rem;display:flex;gap:12px;align-items:flex-start}
+.t-num{width:26px;height:26px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-family:'Source Serif Pro',serif;font-size:11px;font-weight:700;color:#fff;flex-shrink:0;margin-top:2px}
+.t-body h4{font-family:'Source Serif Pro',serif;font-size:13px;font-weight:700;color:var(--white);margin-bottom:.3rem;line-height:1.25}
+.t-body p{font-size:12px;font-weight:300;color:var(--muted);line-height:1.65}
+.t-body strong{color:var(--offwhite);font-weight:600}
+
+/* ── Map popup ──────────────────────────────────────────────────────────── */
+.leaflet-popup-content-wrapper{background:var(--navy3)!important;border:1px solid rgba(255,255,255,.13)!important;border-radius:14px!important;box-shadow:0 12px 40px rgba(0,0,0,.7)!important;color:var(--offwhite)!important}
+.leaflet-popup-tip-container{display:none!important}
+.leaflet-popup-content{margin:0!important;padding:0!important;line-height:1.5!important}
+.leaflet-popup-close-button{color:var(--muted)!important;font-size:20px!important;top:10px!important;right:12px!important;padding:0!important}
+.leaflet-popup-close-button:hover{color:var(--white)!important;background:none!important}
+
+.cp{width:280px;padding:18px 18px 16px;font-family:'Source Sans Pro',sans-serif}
+.cp-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;padding-right:20px}
+.cp-flag{font-size:28px;line-height:1;flex-shrink:0}
+.cp-name{font-family:'Source Serif Pro',serif;font-weight:700;font-size:16px;color:var(--white);line-height:1.1}
+.cp-plays{font-size:12px;font-weight:600;color:var(--brand);margin-top:3px}
+.cp-hr{height:1px;background:rgba(255,255,255,.08);margin:10px 0}
+.cp-lbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted2);margin-bottom:6px}
+.cp-games{display:flex;flex-direction:column;gap:5px}
+.cp-game{display:flex;align-items:center;gap:8px;font-size:12px}
+.cp-rank{width:18px;height:18px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-family:'Source Serif Pro',serif;font-size:10px;font-weight:700;color:#fff;flex-shrink:0}
+.cp-gname{flex:1;color:var(--offwhite);font-weight:300}
+.cp-gcount{color:var(--muted2);font-size:11px;white-space:nowrap}
+.cp-peak-val{font-size:13px;font-weight:600;color:var(--offwhite)}
+.cp-bars{display:flex;align-items:flex-end;gap:1.5px;height:44px;margin-top:6px}
+.cp-bar{flex:1;background:rgba(244,97,28,.35);border-radius:2px 2px 0 0;min-height:2px}
+.cp-bar.hi{background:var(--brand)}
+</style>
+</head>
+<body>
+<div id="loading-overlay" style="position:fixed;inset:0;background:#0d1117;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;gap:16px">
+  <div style="width:44px;height:44px;border:3px solid rgba(244,97,28,.25);border-top-color:#F4611C;border-radius:50%;animation:spin .8s linear infinite"></div>
+  <p style="color:#8eaac8;font-family:sans-serif;font-size:14px;margin:0">Loading dashboard data…</p>
+</div>
+<style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+<div class="shell">
+
+  <!-- ══ SIDEBAR ══ -->
+  <aside class="sidebar">
+    <div class="logo-area">
+      <div class="logo-icon">
+        <svg viewBox="0 0 22 22" fill="none">
+          <circle cx="11" cy="11" r="8" stroke="white" stroke-width="1.5"/>
+          <circle cx="11" cy="11" r="3.5" fill="white"/>
+          <line x1="11" y1="3"  x2="11" y2="19" stroke="white" stroke-width="1.2" stroke-opacity=".5"/>
+          <line x1="3"  y1="11" x2="19" y2="11" stroke="white" stroke-width="1.2" stroke-opacity=".5"/>
+        </svg>
+      </div>
+      <div>
+        <div class="logo-name">Tovertafel</div>
+        <div class="logo-sub">Analytics</div>
+      </div>
+    </div>
+
+    <div class="nav-group">
+      <span class="nav-lbl">Navigation</span>
+
+      <button class="nav-btn active" data-tab="overview" onclick="switchTab('overview')">
+        <svg viewBox="0 0 18 18" fill="none">
+          <rect x="1.5" y="1.5" width="6.5" height="6.5" rx="2" stroke="currentColor" stroke-width="1.6"/>
+          <rect x="10"  y="1.5" width="6.5" height="6.5" rx="2" stroke="currentColor" stroke-width="1.6"/>
+          <rect x="1.5" y="10"  width="6.5" height="6.5" rx="2" stroke="currentColor" stroke-width="1.6"/>
+          <rect x="10"  y="10"  width="6.5" height="6.5" rx="2" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+        Overview
+      </button>
+
+      <button class="nav-btn" data-tab="usage" onclick="switchTab('usage')">
+        <svg viewBox="0 0 18 18" fill="none">
+          <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M9 5v4l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Usage Patterns
+      </button>
+
+      <button class="nav-btn" data-tab="games" onclick="switchTab('games')">
+        <svg viewBox="0 0 18 18" fill="none">
+          <rect x="2"   y="12" width="3" height="5" rx="1" fill="currentColor"/>
+          <rect x="7.5" y="7"  width="3" height="10" rx="1" fill="currentColor"/>
+          <rect x="13"  y="3"  width="3" height="14" rx="1" fill="currentColor"/>
+        </svg>
+        Game Analysis
+      </button>
+
+      <button class="nav-btn" data-tab="geography" onclick="switchTab('geography')">
+        <svg viewBox="0 0 18 18" fill="none">
+          <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M2 9h14" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M9 2c-2 2-3 4-3 7s1 5 3 7M9 2c2 2 3 4 3 7s-1 5-3 7" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+        Geographic
+      </button>
+
+      <button class="nav-btn" data-tab="devices" onclick="switchTab('devices')">
+        <svg viewBox="0 0 18 18" fill="none">
+          <rect x="2" y="4" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M6 14v2M12 14v2M4 16h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        By Device Type
+      </button>
+
+      <button class="nav-btn" data-tab="retention" onclick="switchTab('retention')">
+        <svg viewBox="0 0 18 18" fill="none">
+          <path d="M2 14l4-5 4 2 6-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Retention
+      </button>
+
+      <button class="nav-btn" data-tab="game-explorer" onclick="switchTab('game-explorer')">
+        <svg viewBox="0 0 18 18" fill="none">
+          <circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M6 8h4M8 6v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        Game Explorer
+      </button>
+    </div>
+
+    <div class="sidebar-bottom">
+      <div class="ds-info">
+        <span class="ds-title">Dataset</span>
+        <span>561,434 events</span>
+        <span>835 unique devices</span>
+        <span>14 countries</span>
+        <span>data from 2023 onwards</span>
+        <span style="color:var(--muted2);font-size:10px;margin-top:2px">bulk from last 1–2 years</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ══ MAIN ══ -->
+  <main class="main">
+
+    <div class="topbar">
+      <div class="tab-list">
+        <button class="tab-btn active" data-tab="overview"   onclick="switchTab('overview')">Overview</button>
+        <button class="tab-btn"        data-tab="usage"      onclick="switchTab('usage')">Usage Patterns</button>
+        <button class="tab-btn"        data-tab="games"      onclick="switchTab('games')">Game Analysis</button>
+        <button class="tab-btn"        data-tab="geography"  onclick="switchTab('geography')">Geographic</button>
+        <button class="tab-btn"        data-tab="devices"    onclick="switchTab('devices')">By Device Type</button>
+        <button class="tab-btn"        data-tab="retention"     onclick="switchTab('retention')">Retention</button>
+        <button class="tab-btn"        data-tab="game-explorer" onclick="switchTab('game-explorer')">Game Explorer</button>
+      </div>
+    </div>
+
+    <!-- ══ OVERVIEW ══ -->
+    <div class="page active" id="page-overview">
+      <div class="sh">
+        <h2>Overview</h2>
+        <p>Key metrics from the full event log. Data collection started in 2023 and is growing rapidly, with the large majority of events coming from the past year or two.</p>
+      </div>
+      <div class="stat-row" id="kpi-grid"></div>
+
+      <div class="card" style="margin-bottom:1.25rem">
+        <h3>Key takeaways</h3>
+        <div class="sub">Six things the data tells us about how Tovertafel is used. Note: data collection goes back to 2023, with usage growing exponentially in recent years. Most events in this dataset are from the past 1 to 2 years.</div>
+        <div class="takeaway-grid">
+
+          <div class="takeaway">
+            <div class="t-num">1</div>
+            <div class="t-body">
+              <h4>Summer is underrepresented, and that is expected</h4>
+              <p>Spring has the most plays (<strong>125,647</strong>) and Winter follows closely with <strong>113,397</strong>. Summer comes in very low at just <strong>11,551</strong>, but this simply reflects where we are in the year. The data runs up to spring 2026 and summer has not started yet, so those months are still missing. As the dataset grows, summer figures will fill in.</p>
+            </div>
+          </div>
+
+          <div class="takeaway">
+            <div class="t-num">2</div>
+            <div class="t-body">
+              <h4>People play most in the evening</h4>
+              <p>The busiest hour globally is <strong>23:00 local time</strong> with 15,115 plays, and activity stays high from 16:00 right through to midnight. This points strongly to Tovertafel being part of regular evening care routines, likely used as a way to keep residents engaged and help them wind down before sleep.</p>
+            </div>
+          </div>
+
+          <div class="takeaway">
+            <div class="t-num">3</div>
+            <div class="t-body">
+              <h4>Germany plays completely different games from everyone else</h4>
+              <p><strong>BEACHBALL</strong> and <strong>LEAVES</strong> top the charts in almost every country. Germany is the clear exception. Its top five games are GARDENING, FIREFLIES, KITES, SPINNINGTOPS and DINNER PARTY, none of which feature in the global top ten. The Netherlands also stands out, with BIRTHDAY ranked first. These differences likely come down to local care staff choices and cultural context.</p>
+            </div>
+          </div>
+
+          <div class="takeaway">
+            <div class="t-num">4</div>
+            <div class="t-body">
+              <h4>How long people play matters as much as how often they start</h4>
+              <p>The typical session lasts just <strong>5.2 minutes</strong>, which fits the drop-in style of care home use. Even so, <strong>PUZZLE</strong> has built up around 1,150 total hours of play, more than any other game, because titles like PUZZLE UGC and SNOEZEL CLOUDS hold attention for 14 to 15 minutes at a time. Raw launch counts do not tell the full story.</p>
+            </div>
+          </div>
+
+          <div class="takeaway">
+            <div class="t-num">5</div>
+            <div class="t-body">
+              <h4>Most devices drop off within the first month</h4>
+              <p>Around 80 devices were still active at day 5 after first use. By day 30 only about <strong>a third of those were still active</strong>. After that the curve levels off, and a small group of committed devices keeps playing well past 300 days. The early drop-off is likely a mix of trial periods at new care facilities and the typical onboarding curve for any new technology.</p>
+            </div>
+          </div>
+
+          <div class="takeaway">
+            <div class="t-num">6</div>
+            <div class="t-body">
+              <h4>The US leads in volume, but Europe shows far more variety</h4>
+              <p>The US accounts for <strong>roughly half of all plays</strong>, with Australia and Canada close behind. European countries have lower totals but show much more variety in which games they prefer. This suggests that local care philosophy and staff choices shape game selection more than anything else, and that there is real room to tailor recommendations by country.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>Game plays by season</h3>
+          <div class="sub">Total GAME_START events by meteorological season</div>
+          <canvas id="chart-seasonal"></canvas>
+        </div>
+        <div class="card">
+          <h3>Hourly usage — global (local time)</h3>
+          <div class="sub">All GAME_START events by local hour of day</div>
+          <canvas id="chart-hourly-ov"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ USAGE PATTERNS ══ -->
+    <div class="page" id="page-usage">
+      <div class="sh">
+        <h2>Usage Patterns</h2>
+        <p>When are Tovertafel devices used — by hour, season, and country.</p>
+      </div>
+      <div class="insight-row" id="usage-insights"></div>
+      <div class="two-col">
+        <div class="card full">
+          <h3>Daily usage trend — plays by hour of day</h3>
+          <div class="sub">Based on original.time (device local time), all countries combined</div>
+          <canvas id="chart-hourly-full" style="max-height:340px"></canvas>
+        </div>
+        <div class="card full">
+          <h3>Hourly usage by country</h3>
+          <div class="sub">How each country distributes plays across the day (local time)</div>
+          <div class="sel-row">
+            <label>Country</label>
+            <select class="sel" id="country-hourly-sel" onchange="updateCountryHourly()"></select>
+          </div>
+          <canvas id="chart-country-hourly" style="max-height:300px"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ GAME ANALYSIS ══ -->
+    <div class="page" id="page-games">
+      <div class="sh">
+        <h2>Game Analysis</h2>
+        <p>Which games are launched most often, played longest, and accumulate the most total time?</p>
+      </div>
+      <div class="three-col">
+        <div class="card">
+          <h3>Top 10 by launches</h3>
+          <div class="sub">Total game sessions started</div>
+          <canvas id="chart-launches" style="max-height:360px"></canvas>
+        </div>
+        <div class="card">
+          <h3>Top 10 by avg duration</h3>
+          <div class="sub">Mean session length in minutes (≥5 plays)</div>
+          <canvas id="chart-avg-dur" style="max-height:360px"></canvas>
+        </div>
+        <div class="card">
+          <h3>Top 10 by total playtime</h3>
+          <div class="sub">Cumulative minutes across all sessions</div>
+          <canvas id="chart-cumulative" style="max-height:360px"></canvas>
+        </div>
+      </div>
+      <div class="card full" style="margin-top:1.5rem">
+        <h3>Session duration vs popularity — all 140 games</h3>
+        <div class="sub">Each dot is a game (min 5 sessions). Games to the right have longer average sessions; games higher up are launched more. Hover for details.</div>
+        <canvas id="chart-game-scatter" style="max-height:460px"></canvas>
+      </div>
+    </div>
+
+    <!-- ══ GEOGRAPHIC ══ -->
+    <div class="page" id="page-geography">
+      <div class="sh">
+        <h2>Geographic</h2>
+        <p>Game usage across 14 countries — map, country breakdown, and hourly heatmaps.</p>
+      </div>
+      <div class="two-col">
+        <div class="card full">
+          <h3>Plays by country — world map</h3>
+          <div class="sub">Choropleth showing total game plays per country. Darker orange = more plays. Countries with no data shown in dark navy.</div>
+          <div id="map"></div>
+          <div class="map-legend">
+            <span>Fewer plays</span>
+            <div class="legend-grad"></div>
+            <span>More plays</span>
+            <span style="margin-left:auto;color:var(--muted2)">Colour scale: log-normalised</span>
+          </div>
+        </div>
+
+        <div class="card full">
+          <h3>Top 5 games per country</h3>
+          <div class="sub">Most played games in the selected country</div>
+          <div class="sel-row">
+            <label>Country</label>
+            <select class="sel" id="country-games-sel" onchange="updateCountryGames()"></select>
+          </div>
+          <canvas id="chart-country-games" style="max-height:320px"></canvas>
+        </div>
+
+        <div class="card full">
+          <h3>Average session duration by country</h3>
+          <div class="sub">Mean session length per country, based on matched GAME_START and GAME_END events. Countries with very few sessions (under 50) should be treated as indicative only.</div>
+          <canvas id="chart-avg-session-country" style="max-height:380px"></canvas>
+        </div>
+
+        <div class="card full">
+          <h3>Hourly usage heatmap — all countries</h3>
+          <div class="sub">Plays by local hour of day for every country in the dataset</div>
+          <div class="heat-grid" id="heat-grid"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ DEVICES ══ -->
+    <div class="page" id="page-devices">
+      <div class="sh">
+        <h2>By Device Type</h2>
+        <p>Game preferences across the different Tovertafel hardware generations.</p>
+      </div>
+      <div class="card">
+        <h3>Top 10 most played games</h3>
+        <div class="sub">Select a device type to explore its most popular games</div>
+        <div class="sel-row">
+          <label>Device type</label>
+          <select class="sel" id="device-sel" onchange="updateDeviceChart()"></select>
+        </div>
+        <canvas id="chart-device" style="max-height:420px"></canvas>
+      </div>
+    </div>
+
+    <!-- ══ RETENTION ══ -->
+    <div class="page" id="page-retention">
+      <div class="sh">
+        <h2>Retention</h2>
+        <p>How many unique devices remain active over time since their first recorded event?</p>
+      </div>
+      <div class="insight-row" id="retention-insights"></div>
+      <div class="card">
+        <h3>Unique devices active by days since first activation (day 5+)</h3>
+        <div class="sub">Each point = number of distinct hostnames that logged at least one event on that day after their first activation</div>
+        <canvas id="chart-retention" style="max-height:440px"></canvas>
+      </div>
+    </div>
+
+    <!-- ══ GAME EXPLORER ══ -->
+    <div class="page" id="page-game-explorer">
+      <div class="sh">
+        <h2>Game Explorer</h2>
+        <p>Select any game to see its full breakdown — sessions, average duration, where it's played, when, and across which seasons.</p>
+      </div>
+      <div class="card" style="margin-bottom:1.5rem">
+        <div class="sel-row" style="gap:12px">
+          <label>Filter</label>
+          <input type="text" class="sel" id="game-search" placeholder="Type to filter..." oninput="filterGames(this.value)">
+          <select class="sel" id="game-detail-sel" onchange="updateGameDetail()"></select>
+        </div>
+        <div class="stat-row" id="game-detail-kpi" style="grid-template-columns:repeat(4,1fr);margin:1.25rem 0 0"></div>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <h3>Plays by country</h3>
+          <div class="sub">Total GAME_START events per country</div>
+          <canvas id="chart-gd-country" style="max-height:320px"></canvas>
+        </div>
+        <div class="card">
+          <h3>Plays by hour (local time)</h3>
+          <div class="sub">What time of day is this game played?</div>
+          <canvas id="chart-gd-hourly" style="max-height:320px"></canvas>
+        </div>
+        <div class="card">
+          <h3>Plays by season</h3>
+          <div class="sub">Seasonal popularity</div>
+          <canvas id="chart-gd-seasonal" style="max-height:320px"></canvas>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+</div>
+
+<script>
+let DATA, GAME_DATA;
+
+// ── Chart.js global defaults (dark theme) ──────────────────────────────────
+Chart.defaults.color = '#8eaac8';
+Chart.defaults.borderColor = 'rgba(255,255,255,0.07)';
+Chart.defaults.font.family = "'Source Sans Pro', sans-serif";
+Chart.defaults.font.size = 12;
+
+const BRAND   = '#F4611C';
+const PALETTE = ['#F4611C','#3b82f6','#22c55e','#a855f7','#f59e0b','#e8eff7','#60a5fa','#4ade80','#c084fc','#fbbf24'];
+const GRID    = 'rgba(255,255,255,0.07)';
+const TRANS   = 'rgba(244,97,28,0.15)';
+
+function fmt(h) { return String(h).padStart(2,'0') + ':00'; }
+
+function barOpts(horizontal) {
+  return {
+    indexAxis: horizontal ? 'y' : 'x',
+    plugins: { legend:{ display:false } },
+    scales: {
+      x:{ grid:{ color: horizontal ? GRID : 'transparent' }, ticks:{ maxRotation: horizontal ? 0 : 35 } },
+      y:{ grid:{ color: horizontal ? 'transparent' : GRID } }
+    },
+    responsive:true, maintainAspectRatio:true
+  };
+}
+
+// ── Tab switching ──────────────────────────────────────────────────────────
+function switchTab(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('[data-tab]').forEach(b => b.classList.toggle('active', b.dataset.tab === id));
+  document.getElementById('page-' + id).classList.add('active');
+  if (id === 'geography') initMap();
+}
+
+// ── KPI cards ──────────────────────────────────────────────────────────────
+function buildKPIs() {
+  const k = DATA.kpi;
+  const items = [
+    { icon:'🎮', bg:'rgba(244,97,28,.18)',  val: k.total_game_plays.toLocaleString(), lbl:'Total game plays' },
+    { icon:'📋', bg:'rgba(59,130,246,.18)', val: k.total_sessions.toLocaleString(),  lbl:'Valid sessions' },
+    { icon:'📡', bg:'rgba(34,197,94,.18)',  val: k.unique_devices.toLocaleString(),   lbl:'Unique devices' },
+    { icon:'🌍', bg:'rgba(168,85,247,.18)', val: k.unique_countries,                 lbl:'Countries' },
+    { icon:'⏱️', bg:'rgba(245,158,11,.18)', val: k.avg_session_min + ' min',         lbl:'Avg session duration' },
+    { icon:'🏆', bg:'rgba(244,97,28,.18)',  val: k.top_game,                         lbl:'Most-played game' },
+  ];
+  document.getElementById('kpi-grid').innerHTML = items.map(i =>
+    `<div class="stat-card">
+      <div class="stat-icon" style="background:${i.bg}">${i.icon}</div>
+      <div class="stat-val">${i.val}</div>
+      <div class="stat-lbl">${i.lbl}</div>
+    </div>`
+  ).join('');
+}
+
+// ── Hourly charts ──────────────────────────────────────────────────────────
+function buildHourlyCharts() {
+  const labels = DATA.hourly_usage.map(d => fmt(d.hour));
+  const values = DATA.hourly_usage.map(d => d.plays);
+  const ds = [{ data:values, backgroundColor: BRAND, borderRadius:3 }];
+  ['chart-hourly-ov','chart-hourly-full'].forEach(id =>
+    new Chart(document.getElementById(id), {
+      type:'bar',
+      data:{ labels, datasets: JSON.parse(JSON.stringify(ds)) },
+      options: barOpts(false)
+    })
+  );
+}
+
+// ── Seasonal ───────────────────────────────────────────────────────────────
+function buildSeasonal() {
+  const SEASON_COLORS = { Winter:'#3b82f6', Spring:'#22c55e', Summer:'#f59e0b', Autumn:'#F4611C' };
+  new Chart(document.getElementById('chart-seasonal'), {
+    type:'bar',
+    data:{
+      labels: DATA.seasonal.map(d => d.season),
+      datasets:[{ data: DATA.seasonal.map(d => d.plays), backgroundColor: DATA.seasonal.map(d => SEASON_COLORS[d.season]), borderRadius:4 }]
+    },
+    options: barOpts(false)
+  });
+}
+
+// ── Usage insights ─────────────────────────────────────────────────────────
+function buildUsageInsights() {
+  const plays  = DATA.hourly_usage.map(d => d.plays);
+  const peak   = DATA.hourly_usage[plays.indexOf(Math.max(...plays))].hour;
+  const quiet  = DATA.hourly_usage[plays.indexOf(Math.min(...plays))].hour;
+  const pk     = DATA.seasonal.reduce((a,b) => a.plays > b.plays ? a : b);
+  const qt     = DATA.seasonal.reduce((a,b) => a.plays < b.plays ? a : b);
+  document.getElementById('usage-insights').innerHTML = [
+    `Peak hour: ${fmt(peak)}`,
+    `Quietest hour: ${fmt(quiet)}`,
+    `Busiest season: ${pk.season} (${pk.plays.toLocaleString()} plays)`,
+    `Quietest season: ${qt.season} (${qt.plays.toLocaleString()} plays)`,
+  ].map(t => `<span class="insight">${t}</span>`).join('');
+}
+
+// ── Country hourly selector ────────────────────────────────────────────────
+let chChart = null;
+function buildCountryHourlySelector() {
+  const sel = document.getElementById('country-hourly-sel');
+  Object.keys(DATA.country_hourly).sort().forEach(c => {
+    sel.appendChild(Object.assign(document.createElement('option'), { value:c, textContent:c }));
+  });
+  updateCountryHourly();
+}
+function updateCountryHourly() {
+  const c = document.getElementById('country-hourly-sel').value;
+  if (chChart) chChart.destroy();
+  chChart = new Chart(document.getElementById('chart-country-hourly'), {
+    type:'bar',
+    data:{ labels: Array.from({length:24},(_,i)=>fmt(i)), datasets:[{ data: DATA.country_hourly[c], backgroundColor: '#3b82f6', borderRadius:3 }] },
+    options: barOpts(false)
+  });
+}
+
+// ── Game analysis charts ───────────────────────────────────────────────────
+function buildGameCharts() {
+  const s = DATA.sessions;
+  const hOpts = {
+    ...barOpts(true),
+    scales:{
+      x:{ grid:{ color:GRID }, title:{ display:true } },
+      y:{ grid:{ display:false } }
+    },
+    plugins:{ legend:{ display:false } }
+  };
+
+  new Chart(document.getElementById('chart-launches'), {
+    type:'bar',
+    data:{ labels: s.top_launches.map(d=>d.name), datasets:[{ data: s.top_launches.map(d=>d.total_launches), backgroundColor: PALETTE, borderRadius:3 }] },
+    options:{ ...hOpts, plugins:{ legend:{display:false}, tooltip:{ callbacks:{ label: ctx=>`  ${ctx.parsed.x.toLocaleString()} launches` } } } }
+  });
+
+  new Chart(document.getElementById('chart-avg-dur'), {
+    type:'bar',
+    data:{ labels: s.top_avg_duration.map(d=>d.name), datasets:[{ data: s.top_avg_duration.map(d=>d.avg_duration), backgroundColor: PALETTE, borderRadius:3 }] },
+    options:{ ...hOpts, plugins:{ legend:{display:false}, tooltip:{ callbacks:{ label: ctx=>`  ${ctx.parsed.x.toFixed(1)} min` } } } }
+  });
+
+  new Chart(document.getElementById('chart-cumulative'), {
+    type:'bar',
+    data:{ labels: s.top_cumulative.map(d=>d.name), datasets:[{ data: s.top_cumulative.map(d=>Math.round(d.total_duration)), backgroundColor: PALETTE, borderRadius:3 }] },
+    options:{ ...hOpts, plugins:{ legend:{display:false}, tooltip:{ callbacks:{ label: ctx=>`  ${ctx.parsed.x.toLocaleString()} min` } } } }
+  });
+}
+
+// ── Country games selector ────────────────────────────────────────────────
+let cgChart = null;
+function buildCountryGamesSelector() {
+  const sel = document.getElementById('country-games-sel');
+  Object.keys(DATA.games_by_country).sort().forEach(c => {
+    sel.appendChild(Object.assign(document.createElement('option'), { value:c, textContent:c }));
+  });
+  updateCountryGames();
+}
+function updateCountryGames() {
+  const c = document.getElementById('country-games-sel').value;
+  const g = DATA.games_by_country[c];
+  if (cgChart) cgChart.destroy();
+  cgChart = new Chart(document.getElementById('chart-country-games'), {
+    type:'bar',
+    data:{ labels: g.map(d=>d.name), datasets:[{ data: g.map(d=>d.plays), backgroundColor: PALETTE, borderRadius:4 }] },
+    options:{
+      ...barOpts(true),
+      scales:{ x:{ grid:{color:GRID} }, y:{ grid:{display:false} } },
+      plugins:{ legend:{display:false}, tooltip:{ callbacks:{ label: ctx=>`  ${ctx.parsed.x.toLocaleString()} plays` } } }
+    }
+  });
+}
+
+// ── Heat mini-cards ────────────────────────────────────────────────────────
+function buildHeatGrid() {
+  const grid = document.getElementById('heat-grid');
+  const labels = Array.from({length:24},(_,i)=>fmt(i));
+  Object.keys(DATA.country_hourly).sort().forEach(country => {
+    const vals = DATA.country_hourly[country];
+    if (vals.every(v=>v===0)) return;
+    const div = document.createElement('div');
+    div.className = 'heat-card';
+    div.innerHTML = `<h4>${country}</h4><canvas id="heat-${country}"></canvas>`;
+    grid.appendChild(div);
+    new Chart(document.getElementById(`heat-${country}`), {
+      type:'bar',
+      data:{ labels, datasets:[{ data:vals, backgroundColor:'rgba(244,97,28,0.7)', borderRadius:2 }] },
+      options:{
+        plugins:{ legend:{display:false} },
+        scales:{
+          x:{ ticks:{maxTicksLimit:6,maxRotation:0}, grid:{display:false} },
+          y:{ grid:{color:'rgba(255,255,255,0.05)'}, ticks:{maxTicksLimit:4} }
+        },
+        responsive:true, maintainAspectRatio:true, aspectRatio:2.2
+      }
+    });
+  });
+}
+
+// ── Game scatter: duration vs popularity ─────────────────────────────────
+function buildGameScatter() {
+  const pts = DATA.all_game_stats.map(g => ({ x: g.avg_duration, y: g.launches, name: g.name }));
+  new Chart(document.getElementById('chart-game-scatter'), {
+    type: 'scatter',
+    data: {
+      datasets: [{
+        data: pts,
+        backgroundColor: 'rgba(244,97,28,0.65)',
+        pointRadius: 5,
+        pointHoverRadius: 9,
+        pointHoverBackgroundColor: '#f0922b',
+      }]
+    },
+    options: {
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: {
+          label: ctx => {
+            const p = ctx.raw;
+            return [p.name.replace(/_/g, ' '), `Avg: ${p.x} min`, `${p.y.toLocaleString()} sessions`];
+          }
+        }}
+      },
+      scales: {
+        x: {
+          title: { display: true, text: 'Avg session duration (min)', color: '#8eaac8' },
+          grid: { color: GRID }, beginAtZero: true
+        },
+        y: {
+          title: { display: true, text: 'Total sessions launched', color: '#8eaac8' },
+          grid: { color: GRID }, beginAtZero: true
+        }
+      },
+      responsive: true, maintainAspectRatio: true
+    }
+  });
+}
+
+// ── Avg session duration by country ──────────────────────────────────────
+function buildAvgSessionByCountry() {
+  const raw = DATA.avg_session_by_country;
+  // Merge UK into GB (weighted average)
+  const d = { ...raw };
+  if (d.UK && d.GB) {
+    const total = d.GB.sessions + d.UK.sessions;
+    d.GB = {
+      avg_duration: +((d.GB.avg_duration * d.GB.sessions + d.UK.avg_duration * d.UK.sessions) / total).toFixed(2),
+      sessions: total
+    };
+    delete d.UK;
+  }
+  const entries = Object.entries(d).sort((a, b) => b[1].avg_duration - a[1].avg_duration);
+  new Chart(document.getElementById('chart-avg-session-country'), {
+    type: 'bar',
+    data: {
+      labels: entries.map(([c]) => c),
+      datasets: [{ data: entries.map(([, v]) => v.avg_duration), backgroundColor: PALETTE.concat(PALETTE), borderRadius: 3 }]
+    },
+    options: {
+      ...barOpts(true),
+      scales: {
+        x: { grid: { color: GRID }, title: { display: true, text: 'Avg session duration (min)', color: '#8eaac8' } },
+        y: { grid: { display: false } }
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => `  ${ctx.parsed.x.toFixed(2)} min  (${d[ctx.label]?.sessions?.toLocaleString() ?? ''} sessions)` } }
+      }
+    }
+  });
+}
+
+// ── Device type selector ──────────────────────────────────────────────────
+let dvChart = null;
+function buildDeviceSelector() {
+  const sel = document.getElementById('device-sel');
+  Object.keys(DATA.games_by_device).sort().forEach(d => {
+    sel.appendChild(Object.assign(document.createElement('option'), { value:d, textContent:`Device type ${d}` }));
+  });
+  updateDeviceChart();
+}
+function updateDeviceChart() {
+  const d = document.getElementById('device-sel').value;
+  const g = DATA.games_by_device[d];
+  if (dvChart) dvChart.destroy();
+  dvChart = new Chart(document.getElementById('chart-device'), {
+    type:'bar',
+    data:{ labels: g.map(x=>x.name), datasets:[{ data: g.map(x=>x.plays), backgroundColor: PALETTE, borderRadius:4 }] },
+    options:{
+      ...barOpts(true),
+      scales:{ x:{ grid:{color:GRID} }, y:{ grid:{display:false} } },
+      plugins:{ legend:{display:false}, tooltip:{ callbacks:{ label: ctx=>`  ${ctx.parsed.x.toLocaleString()} plays` } } }
+    }
+  });
+}
+
+// ── Retention chart ────────────────────────────────────────────────────────
+function buildRetention() {
+  const ret  = DATA.retention;
+  const base = ret[0].devices;
+  const d30  = ret.find(d => d.day >= 30);
+  const pct  = d30 ? Math.round(d30.devices / base * 100) : '?';
+  document.getElementById('retention-insights').innerHTML = [
+    `${base} devices active at day 5`,
+    `~${pct}% still active at day 30`,
+    `${DATA.kpi.unique_devices} total unique devices`,
+  ].map(t => `<span class="insight">${t}</span>`).join('');
+
+  new Chart(document.getElementById('chart-retention'), {
+    type:'line',
+    data:{
+      labels: ret.map(d=>d.day),
+      datasets:[{
+        data: ret.map(d=>d.devices),
+        borderColor: BRAND,
+        backgroundColor: TRANS,
+        pointRadius:2, pointHoverRadius:5,
+        borderWidth:2, fill:true, tension:0.3
+      }]
+    },
+    options:{
+      plugins:{ legend:{display:false}, tooltip:{ callbacks:{ title: i=>`Day ${i[0].label}`, label: ctx=>`  ${ctx.parsed.y} devices active` } } },
+      scales:{
+        x:{ title:{display:true,text:'Days since first activation',color:'#8eaac8'}, grid:{color:GRID}, ticks:{maxTicksLimit:14} },
+        y:{ title:{display:true,text:'Unique devices',color:'#8eaac8'}, grid:{color:GRID}, beginAtZero:true }
+      },
+      responsive:true, maintainAspectRatio:true
+    }
+  });
+}
+
+// ── World map ─────────────────────────────────────────────────────────────
+let mapInitialized = false;
+function initMap() {
+  if (mapInitialized) return;
+  mapInitialized = true;
+
+  // Total plays per country from hourly data
+  const totalByCountry = {};
+  for (const [c, hours] of Object.entries(DATA.country_hourly)) {
+    totalByCountry[c] = hours.reduce((a,b) => a+b, 0);
+  }
+
+  // ISO alpha-2 → ISO 3166-1 numeric (used by world-atlas topojson)
+  const alpha2ToISO = { AU:36, BE:56, CA:124, CH:756, DE:276, DK:208, FR:250, GB:826, IE:372, NL:528, NO:578, SE:752, UK:826, US:840 };
+  const playsByISO = {};
+  for (const [code, count] of Object.entries(totalByCountry)) {
+    const iso = alpha2ToISO[code];
+    if (iso) playsByISO[iso] = (playsByISO[iso] || 0) + count;
+  }
+
+  const maxPlays = Math.max(...Object.values(playsByISO));
+
+  // Log-normalised color: navy4 (#243d59) → brand (#F4611C)
+  function getColor(plays) {
+    if (!plays) return 'rgba(20,38,62,0.8)';
+    const t = Math.log(plays + 1) / Math.log(maxPlays + 1);
+    const r = Math.round(36  + t * (244 - 36));
+    const g = Math.round(61  + t * (97  - 61));
+    const b = Math.round(89  + t * (28  - 89));
+    return `rgba(${r},${g},${b},0.85)`;
+  }
+
+  const map = L.map('map', { center:[30,5], zoom:2, minZoom:1.5, maxZoom:7, zoomControl:true, renderer:L.canvas() });
+
+  // CartoDB dark tiles
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    maxZoom:8
+  }).addTo(map);
+
+  fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
+    .then(r => r.json())
+    .then(world => {
+      const geojson = topojson.feature(world, world.objects.countries);
+
+      // ISO numeric → display name and alpha-2 code
+      const isoMeta = {
+        36:  { name:'Australia',      a2:'AU' },
+        56:  { name:'Belgium',        a2:'BE' },
+        124: { name:'Canada',         a2:'CA' },
+        756: { name:'Switzerland',    a2:'CH' },
+        276: { name:'Germany',        a2:'DE' },
+        208: { name:'Denmark',        a2:'DK' },
+        250: { name:'France',         a2:'FR' },
+        826: { name:'United Kingdom', a2:'GB' },
+        372: { name:'Ireland',        a2:'IE' },
+        528: { name:'Netherlands',    a2:'NL' },
+        578: { name:'Norway',         a2:'NO' },
+        752: { name:'Sweden',         a2:'SE' },
+        840: { name:'United States',  a2:'US' },
+      };
+
+      // Flag emoji from ISO alpha-2
+      function flag(a2) {
+        return [...a2.toUpperCase()].map(c => String.fromCodePoint(c.charCodeAt(0) + 127397)).join('');
+      }
+
+      // Merge GB + UK entries where needed
+      function hoursFor(a2) {
+        const h = (DATA.country_hourly[a2] || []).slice();
+        if (a2 === 'GB' && DATA.country_hourly['UK']) {
+          return h.map((v, i) => v + DATA.country_hourly['UK'][i]);
+        }
+        return h;
+      }
+      function gamesFor(a2) {
+        let list = (DATA.games_by_country[a2] || []).slice();
+        if (a2 === 'GB' && DATA.games_by_country['UK']) {
+          const merged = {};
+          for (const g of list) merged[g.name] = (merged[g.name] || 0) + g.plays;
+          for (const g of DATA.games_by_country['UK']) merged[g.name] = (merged[g.name] || 0) + g.plays;
+          list = Object.entries(merged).map(([name, plays]) => ({ name, plays })).sort((a,b) => b.plays - a.plays).slice(0, 5);
+        }
+        return list;
+      }
+
+      // Build popup HTML for a country
+      function buildPopup(meta, totalPlays) {
+        const { name, a2 } = meta;
+        const hours  = hoursFor(a2);
+        const games  = gamesFor(a2);
+        const maxH   = Math.max(...hours, 1);
+        const peakH  = hours.indexOf(maxH);
+        const sessDur = DATA.avg_session_by_country[a2];
+
+        const bars = hours.map((v, i) =>
+          `<div class="cp-bar${i === peakH ? ' hi' : ''}" style="height:${Math.max(2, Math.round(v / maxH * 100))}%"></div>`
+        ).join('');
+
+        const gameRows = games.map((g, i) =>
+          `<div class="cp-game">
+            <div class="cp-rank">${i + 1}</div>
+            <div class="cp-gname">${g.name.replace(/_/g, ' ')}</div>
+            <div class="cp-gcount">${g.plays.toLocaleString()}</div>
+          </div>`
+        ).join('');
+
+        return `<div class="cp">
+          <div class="cp-head">
+            <div>
+              <div class="cp-name">${name}</div>
+              <div class="cp-plays">${totalPlays.toLocaleString()} total plays</div>
+            </div>
+            <div class="cp-flag">${flag(a2)}</div>
+          </div>
+          <div class="cp-hr"></div>
+          <div class="cp-lbl">Top games</div>
+          <div class="cp-games">${gameRows}</div>
+          <div class="cp-hr"></div>
+          ${sessDur ? `<div class="cp-lbl">Avg session &nbsp;<span class="cp-peak-val">${sessDur.avg_duration.toFixed(1)} min</span></div>` : ''}
+          <div class="cp-lbl">Peak hour &nbsp;<span class="cp-peak-val">${String(peakH).padStart(2,'0')}:00</span></div>
+          <div class="cp-lbl" style="margin-top:10px">Plays by hour (local time)</div>
+          <div class="cp-bars">${bars}</div>
+        </div>`;
+      }
+
+      L.geoJSON(geojson, {
+        smoothFactor: 2,
+        style: f => ({
+          fillColor:   getColor(playsByISO[f.id]),
+          fillOpacity: playsByISO[f.id] ? 0.88 : 0.5,
+          color:       'transparent',
+          weight:      0
+        }),
+        onEachFeature: (f, layer) => {
+          const plays = playsByISO[f.id] || 0;
+          const meta  = isoMeta[f.id];
+
+          if (plays > 0 && meta) {
+            layer.bindPopup(buildPopup(meta, plays), { maxWidth:320, className:'cp-popup' });
+            layer.bindTooltip(`<strong>${meta.name}</strong> · ${plays.toLocaleString()} plays`, { sticky:true, opacity:1 });
+          }
+
+          layer.on('mouseover', e => {
+            e.target.setStyle({ fillOpacity:1, color:'rgba(244,97,28,0.8)', weight: plays > 0 ? 1.5 : 0 });
+          });
+          layer.on('mouseout', e => {
+            e.target.setStyle({ fillOpacity: plays ? 0.88 : 0.5, color:'transparent', weight:0 });
+          });
+        }
+      }).addTo(map);
+    });
+}
+
+
+// ── Game Explorer ────────────────────────────────────────────────────────
+let gdCountryChart = null, gdHourlyChart = null, gdSeasonalChart = null;
+
+function buildGameExplorer() {
+  const sel = document.getElementById('game-detail-sel');
+  Object.keys(GAME_DATA.country).sort().forEach(g => {
+    sel.appendChild(Object.assign(document.createElement('option'), { value: g, textContent: g.replace(/_/g,' ') }));
+  });
+  updateGameDetail();
+}
+
+function filterGames(q) {
+  const sel = document.getElementById('game-detail-sel');
+  const lq = q.toLowerCase();
+  Array.from(sel.options).forEach(o => { o.hidden = q ? !o.value.toLowerCase().includes(lq) : false; });
+  const first = Array.from(sel.options).find(o => !o.hidden);
+  if (first && first.value !== sel.value) { sel.value = first.value; updateGameDetail(); }
+}
+
+function updateGameDetail() {
+  const game = document.getElementById('game-detail-sel').value;
+  if (!game) return;
+  const stat      = DATA.all_game_stats.find(g => g.name === game) || {};
+  const countries = GAME_DATA.country[game]  || {};
+  const hourly    = GAME_DATA.hourly[game]   || new Array(24).fill(0);
+  const seasonal  = GAME_DATA.seasonal[game] || {};
+  const ccEntries = Object.entries(countries).sort((a,b) => b[1]-a[1]);
+  const topCC     = ccEntries[0];
+  const peakH     = hourly.indexOf(Math.max(...hourly, 1));
+
+  document.getElementById('game-detail-kpi').innerHTML = [
+    { icon:'\u{1F3AE}', bg:'rgba(244,97,28,.18)',  val: (stat.launches||0).toLocaleString(), lbl:'Total sessions' },
+    { icon:'\u23F1', bg:'rgba(245,158,11,.18)', val: stat.avg_duration ? stat.avg_duration+' min' : 'n/a', lbl:'Avg session' },
+    { icon:'\u{1F30D}', bg:'rgba(168,85,247,.18)', val: topCC ? topCC[0] : 'n/a',             lbl:'Most played in' },
+    { icon:'\u{1F550}', bg:'rgba(59,130,246,.18)', val: String(peakH).padStart(2,'0')+':00',  lbl:'Peak hour' },
+  ].map(i => `<div class="stat-card"><div class="stat-icon" style="background:${i.bg}">${i.icon}</div><div class="stat-val">${i.val}</div><div class="stat-lbl">${i.lbl}</div></div>`).join('');
+
+  const hBar = {
+    ...barOpts(true),
+    scales: { x: { grid: { color: GRID } }, y: { grid: { display: false } } },
+    plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => `  ${ctx.parsed.x.toLocaleString()} plays` } } }
+  };
+
+  if (gdCountryChart) gdCountryChart.destroy();
+  gdCountryChart = new Chart(document.getElementById('chart-gd-country'), {
+    type: 'bar',
+    data: { labels: ccEntries.map(([cc])=>cc), datasets: [{ data: ccEntries.map(([,v])=>v), backgroundColor: PALETTE.concat(PALETTE), borderRadius: 3 }] },
+    options: hBar
+  });
+
+  if (gdHourlyChart) gdHourlyChart.destroy();
+  gdHourlyChart = new Chart(document.getElementById('chart-gd-hourly'), {
+    type: 'bar',
+    data: { labels: Array.from({length:24},(_,i)=>fmt(i)), datasets: [{ data: hourly, backgroundColor: BRAND, borderRadius: 3 }] },
+    options: barOpts(false)
+  });
+
+  const SEASON_COLORS = { Winter:'#3b82f6', Spring:'#22c55e', Summer:'#f59e0b', Autumn:'#F4611C' };
+  const seasonOrder = ['Winter','Spring','Summer','Autumn'];
+  if (gdSeasonalChart) gdSeasonalChart.destroy();
+  gdSeasonalChart = new Chart(document.getElementById('chart-gd-seasonal'), {
+    type: 'bar',
+    data: { labels: seasonOrder, datasets: [{ data: seasonOrder.map(s => seasonal[s]||0), backgroundColor: seasonOrder.map(s => SEASON_COLORS[s]), borderRadius: 4 }] },
+    options: barOpts(false)
+  });
+}
+
+
+
+// ── Boot ─────────────────────────────────────────────────────────────────
+(async function init() {
+  const overlay = document.getElementById('loading-overlay');
+  try {
+    [DATA, GAME_DATA] = await Promise.all([
+      fetch('/api/analytics').then(r => r.json()),
+      fetch('/api/game-data').then(r => r.json())
+    ]);
+  } catch (e) {
+    overlay.innerHTML = '<p style="color:#e55;font-family:sans-serif">Failed to load data. Is the Flask server running?</p>';
+    return;
+  }
+  overlay.style.display = 'none';
+  buildKPIs();
+  buildHourlyCharts();
+  buildSeasonal();
+  buildUsageInsights();
+  buildCountryHourlySelector();
+  buildGameCharts();
+  buildGameScatter();
+  buildCountryGamesSelector();
+  buildAvgSessionByCountry();
+  buildHeatGrid();
+  buildDeviceSelector();
+  buildRetention();
+  buildGameExplorer();
+})();
+</script>
+</body>
+</html>
