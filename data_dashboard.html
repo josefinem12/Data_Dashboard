@@ -149,6 +149,10 @@ input.sel::placeholder{color:var(--muted2)}
 }
 .leaflet-control-attribution{background:rgba(14,28,47,.7)!important;color:var(--muted2)!important;font-size:10px!important}
 .leaflet-control-attribution a{color:var(--muted)!important}
+.leaflet-tile {
+    border: 1px solid transparent;
+    margin: -1px;
+}
 
 .map-legend{
   display:flex;align-items:center;gap:10px;flex-wrap:wrap;
@@ -1024,8 +1028,8 @@ function initMap() {
         style: f => ({
           fillColor:   getColor(playsByISO[f.id]),
           fillOpacity: playsByISO[f.id] ? 0.88 : 0.5,
-          color:       'transparent',
-          weight:      0
+          color:       'rgba(255,255,255,0.15)',
+          weight:      0.8
         }),
         onEachFeature: (f, layer) => {
           const plays = playsByISO[f.id] || 0;
@@ -1040,7 +1044,7 @@ function initMap() {
             e.target.setStyle({ fillOpacity:1, color:'rgba(244,97,28,0.8)', weight: plays > 0 ? 1.5 : 0 });
           });
           layer.on('mouseout', e => {
-            e.target.setStyle({ fillOpacity: plays ? 0.88 : 0.5, color:'transparent', weight:0 });
+            e.target.setStyle({ fillOpacity: plays ? 0.88 : 0.5, color:'rgba(255,255,255,0.15)', weight:0.8 });
           });
         }
       }).addTo(map);
