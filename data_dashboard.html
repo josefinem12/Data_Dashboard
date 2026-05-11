@@ -925,7 +925,7 @@ function initMap() {
     return `rgba(${r},${g},${b},0.85)`;
   }
 
-  const map = L.map('map', { center:[30,5], zoom:2, minZoom:1.5, maxZoom:7, zoomControl:true });
+  const map = L.map('map', { center:[30,5], zoom:2, minZoom:1.5, maxZoom:7, zoomControl:true, worldCopyJump:true });
 
   // CartoDB dark tiles
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
@@ -1019,7 +1019,10 @@ function initMap() {
         </div>`;
       }
 
+      // ISO 643 = Russia — its polygon crosses the antimeridian and Leaflet draws
+      // a horizontal line across the entire map when rendering it.
       L.geoJSON(geojson, {
+        filter: f => f.id !== 643,
         style: f => ({
           fillColor:   getColor(playsByISO[f.id]),
           fillOpacity: playsByISO[f.id] ? 0.88 : 0.5,
