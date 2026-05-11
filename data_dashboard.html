@@ -13,14 +13,14 @@
 /* ── Design tokens (mirror dashboard.css) ─────────────────────────────────── */
 :root{
   --navy:#0e1c2f;--navy2:#132238;--navy3:#1a2f47;--navy4:#243d59;--navy-lt:#2e5073;
-  --white:#ffffff;--offwhite:#e8eff7;--muted:#8eaac8;--muted2:#6080a0;
-  --blue:#3b82f6;   --blue-lt:rgba(135, 175, 239, 0.18);
+  --white:#ffffff;--offwhite:#e8eff7;--muted:#c4d2dc;--muted2:#9ab4c4;
+  --blue:#3b82f6;   --blue-lt:rgba(104, 157, 243, 0.18);
   --green:#22c55e;  --green-lt:rgba(34,197,94,.18);
   --purple:#a855f7; --purple-lt:rgba(168,85,247,.18);
-  --orange:#F4611C; --orange-lt:rgba(244,97,28,.18);
+  --orange:#D4A843; --orange-lt:rgba(212,168,67,.18);
   --gold:#f59e0b;   --gold-lt:rgba(245,158,11,.18);
-  --brand:#F4611C;
-  --grad:linear-gradient(135deg,#F4611C,#f0922b);
+  --brand:#D4A843;
+  --grad:linear-gradient(135deg,#D4A843,#e8be55);
   --radius:16px;--radius-sm:10px;--radius-pill:100px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -89,14 +89,14 @@ body{
 /* ── Section heading ─────────────────────────────────────────────────────── */
 .sh{margin-bottom:1.5rem}
 .sh h2{font-family:'Source Serif Pro',serif;font-weight:700;font-size:28px;color:var(--white);line-height:1.1;margin-bottom:.35rem}
-.sh p{font-size:14px;font-weight:300;color:var(--muted)}
+.sh p{font-size:15px;font-weight:300;color:var(--muted)}
 
 /* ── KPI stat row ─────────────────────────────────────────────────────────── */
 .stat-row{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;margin-bottom:2rem}
 .stat-card{background:var(--navy3);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.25rem}
 .stat-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:.75rem;font-size:18px}
 .stat-val{font-family:'Source Serif Pro',serif;font-weight:700;font-size:26px;color:var(--white);line-height:1.1;margin-bottom:.2rem}
-.stat-lbl{font-size:12px;color:var(--muted);font-weight:300}
+.stat-lbl{font-size:13px;color:var(--muted);font-weight:300}
 
 /* ── Card grid ─────────────────────────────────────────────────────────────── */
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
@@ -106,13 +106,13 @@ body{
 
 .card{background:var(--navy3);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.5rem}
 .card h3{font-family:'Source Serif Pro',serif;font-weight:700;font-size:16px;color:var(--white);line-height:1.1;margin-bottom:.25rem}
-.card .sub{font-size:12px;font-weight:300;color:var(--muted2);margin-bottom:1rem}
+.card .sub{font-size:13px;font-weight:300;color:var(--muted);margin-bottom:1rem}
 
 /* ── Insight pills ─────────────────────────────────────────────────────────── */
 .insight-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1.25rem}
 .insight{
   background:var(--orange-lt);color:var(--orange);
-  border:1px solid rgba(244,97,28,.3);
+  border:1px solid rgba(212,168,67,.3);
   font-size:12px;font-weight:600;padding:5px 12px;border-radius:var(--radius-pill);
 }
 
@@ -456,7 +456,7 @@ input.sel::placeholder{color:var(--muted2)}
     <div class="page" id="page-geography">
       <div class="sh">
         <h2>Geographic</h2>
-        <p>Game usage across 14 countries through a map, country breakdowns, and hourly heatmaps.</p>
+        <p>Game usage across 14 countries through a map, country breakdowns, and hourly graphs.</p>
       </div>
       <div class="two-col">
         <div class="card full">
@@ -488,7 +488,7 @@ input.sel::placeholder{color:var(--muted2)}
         </div>
 
         <div class="card full">
-          <h3>Hourly usage heatmap (all countries)</h3>
+          <h3>Hourly usage bar charts (all countries)</h3>
           <div class="sub">Plays by local hour of day for every country in the dataset</div>
           <div class="heat-grid" id="heat-grid"></div>
         </div>
@@ -567,15 +567,15 @@ input.sel::placeholder{color:var(--muted2)}
 let DATA, GAME_DATA;
 
 // ── Chart.js global defaults (dark theme) ──────────────────────────────────
-Chart.defaults.color = '#8eaac8';
+Chart.defaults.color = '#c4d2dc';
 Chart.defaults.borderColor = 'rgba(255,255,255,0.07)';
 Chart.defaults.font.family = "'Source Sans Pro', sans-serif";
 Chart.defaults.font.size = 12;
 
-const BRAND   = '#F4611C';
-const PALETTE = ['#F4611C','#3b82f6','#22c55e','#a855f7','#f59e0b','#e8eff7','#60a5fa','#4ade80','#c084fc','#fbbf24'];
+const BRAND   = '#D4A843';
+const PALETTE = ['#D4A843','#3b82f6','#22c55e','#a855f7','#f59e0b','#e8eff7','#60a5fa','#4ade80','#c084fc','#fbbf24'];
 const GRID    = 'rgba(255,255,255,0.07)';
-const TRANS   = 'rgba(244,97,28,0.15)';
+const TRANS   = 'rgba(212,168,67,0.15)';
 
 function fmt(h) { return String(h).padStart(2,'0') + ':00'; }
 
@@ -635,7 +635,7 @@ function buildHourlyCharts() {
 
 // ── Seasonal ───────────────────────────────────────────────────────────────
 function buildSeasonal() {
-  const SEASON_COLORS = { Winter:'#3b82f6', Spring:'#22c55e', Summer:'#f59e0b', Autumn:'#F4611C' };
+  const SEASON_COLORS = { Winter:'#3b82f6', Spring:'#22c55e', Summer:'#f59e0b', Autumn:'#D4A843' };
   new Chart(document.getElementById('chart-seasonal'), {
     type:'bar',
     data:{
@@ -915,13 +915,13 @@ function initMap() {
 
   const maxPlays = Math.max(...Object.values(playsByISO));
 
-  // Log-normalised color: navy4 (#243d59) → brand (#F4611C)
+  // Log-normalised color: navy4 (#243d59) → brand (#D4A843)
   function getColor(plays) {
     if (!plays) return 'rgba(20,38,62,0.8)';
     const t = Math.log(plays + 1) / Math.log(maxPlays + 1);
-    const r = Math.round(36  + t * (244 - 36));
-    const g = Math.round(61  + t * (97  - 61));
-    const b = Math.round(89  + t * (28  - 89));
+    const r = Math.round(36  + t * (212 - 36));
+    const g = Math.round(61  + t * (168 - 61));
+    const b = Math.round(89  + t * (67  - 89));
     return `rgba(${r},${g},${b},0.85)`;
   }
 
@@ -1040,7 +1040,7 @@ function initMap() {
           }
 
           layer.on('mouseover', e => {
-            e.target.setStyle({ fillOpacity:1, weight:1.5, color:'rgba(244,97,28,0.7)' });
+            e.target.setStyle({ fillOpacity:1, weight:1.5, color:'rgba(212,168,67,0.7)' });
           });
           layer.on('mouseout', e => {
             e.target.setStyle({ fillOpacity: plays ? 0.88 : 0.5, weight:0.5, color:'rgba(255,255,255,0.06)' });
@@ -1108,7 +1108,7 @@ function updateGameDetail() {
     options: barOpts(false)
   });
 
-  const SEASON_COLORS = { Winter:'#3b82f6', Spring:'#22c55e', Summer:'#f59e0b', Autumn:'#F4611C' };
+  const SEASON_COLORS = { Winter:'#3b82f6', Spring:'#22c55e', Summer:'#f59e0b', Autumn:'#D4A843' };
   const seasonOrder = ['Winter','Spring','Summer','Autumn'];
   if (gdSeasonalChart) gdSeasonalChart.destroy();
   gdSeasonalChart = new Chart(document.getElementById('chart-gd-seasonal'), {
