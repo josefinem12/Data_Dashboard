@@ -271,6 +271,42 @@ kpi_data = {
 }
 
 # ─────────────────────────────────────────────────────────────────
+# 12. Per-hostname stats
+# ─────────────────────────────────────────────────────────────────
+print("Computing per-hostname stats...")
+
+hostname_data = {}
+for hostname, grp_games in df_games.groupby('hostname'):
+    key = str(hostname)
+
+    game_counts = grp_games['generic_string'].value_counts()
+    top_game = str(game_counts.index[0]) if len(game_counts) > 0 else 'Unknown'
+    top_games = [{"name": str(k), "plays": int(v)} for k, v in game_counts.head(5).items()]
+
+    cc_clean = grp_games[grp_games['geoip.country_code'] != '-']['geoip.country_code']
+    country = str(cc_clean.mode().iloc[0]) if len(cc_clean) > 0 else 'Unknown'
+
+    hourly = [0] * 24
+    for h, cnt in grp_games['local_hour'].dropna().value_counts().items():
+        h = int(h)
+        if 0 <= h <= 23:
+            hourly[h] = int(cnt)
+
+    host_sessions = valid_sessions[valid_sessions['hostname'] == hostname]
+    n_sessions = len(host_sessions)
+    avg_dur = round(float(host_sessions['duration_minutes'].mean()), 2) if n_sessions > 0 else 0.0
+
+    hostname_data[key] = {
+        'sessions': n_sessions,
+        'avg_duration': avg_dur,
+        'top_game': top_game,
+        'country': country,
+        'top_games': top_games,
+        'hourly': hourly,
+        'total_plays': int(len(grp_games))
+    }
+
+# ─────────────────────────────────────────────────────────────────
 # Bundle and write
 # ─────────────────────────────────────────────────────────────────
 analytics = {
@@ -297,6 +333,8 @@ for key, value in analytics.items():
                  (key, json.dumps(value, separators=(',', ':'))))
 conn.execute('INSERT OR REPLACE INTO analytics (key, value) VALUES (?, ?)',
              ('game_data', json.dumps(game_detail, separators=(',', ':'))))
+conn.execute('INSERT OR REPLACE INTO analytics (key, value) VALUES (?, ?)',
+             ('hostname_data', json.dumps(hostname_data, separators=(',', ':'))))
 conn.commit()
 conn.close()
 

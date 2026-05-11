@@ -48,6 +48,17 @@ def game_data():
     return app.response_class(row[0], mimetype='application/json')
 
 
+@app.route('/api/hostname-data')
+def hostname_data():
+    db = get_db()
+    row = db.execute(
+        "SELECT value FROM analytics WHERE key = 'hostname_data'"
+    ).fetchone()
+    if row is None:
+        return jsonify({}), 404
+    return app.response_class(row[0], mimetype='application/json')
+
+
 if __name__ == '__main__':
     if not os.path.exists(DB_PATH):
         print("ERROR: tover.db not found. Run compute_analytics.py first.")

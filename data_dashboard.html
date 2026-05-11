@@ -290,6 +290,15 @@ input.sel::placeholder{color:var(--muted2)}
         </svg>
         Game Explorer
       </button>
+
+      <button class="nav-btn" data-tab="device-explorer" onclick="switchTab('device-explorer')">
+        <svg viewBox="0 0 18 18" fill="none">
+          <rect x="2" y="5" width="14" height="9" rx="2" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M6 14v2M12 14v2M4 16h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <circle cx="9" cy="9.5" r="1.5" fill="currentColor"/>
+        </svg>
+        Device Explorer
+      </button>
     </div>
 
     <div class="sidebar-bottom">
@@ -316,6 +325,7 @@ input.sel::placeholder{color:var(--muted2)}
         <button class="tab-btn"        data-tab="devices"    onclick="switchTab('devices')">By Device Type</button>
         <button class="tab-btn"        data-tab="retention"     onclick="switchTab('retention')">Retention</button>
         <button class="tab-btn"        data-tab="game-explorer" onclick="switchTab('game-explorer')">Game Explorer</button>
+        <button class="tab-btn"        data-tab="device-explorer" onclick="switchTab('device-explorer')">Device Explorer</button>
       </div>
     </div>
 
@@ -559,12 +569,39 @@ input.sel::placeholder{color:var(--muted2)}
       </div>
     </div>
 
+    <!-- ══ DEVICE EXPLORER ══ -->
+    <div class="page" id="page-device-explorer">
+      <div class="sh">
+        <h2>Device Explorer</h2>
+        <p>Select any device (hostname) to see its full profile — sessions, most played games, country, and when it's used most.</p>
+      </div>
+      <div class="card" style="margin-bottom:1.5rem">
+        <div class="sel-row" style="gap:12px">
+          <label>Filter</label>
+          <input type="text" class="sel" id="device-search" placeholder="Type to filter..." oninput="filterDevices(this.value)">
+          <select class="sel" id="device-detail-sel" onchange="updateDeviceDetail()"></select>
+        </div>
+        <div class="stat-row" id="device-detail-kpi" style="grid-template-columns:repeat(4,1fr);margin:1.25rem 0 0"></div>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <h3>Top games on this device</h3>
+          <div class="sub">Most launched games by session count</div>
+          <canvas id="chart-dd-games" style="max-height:320px"></canvas>
+        </div>
+        <div class="card">
+          <h3>Plays by hour (local time)</h3>
+          <div class="sub">When is this device used most?</div>
+          <canvas id="chart-dd-hourly" style="max-height:320px"></canvas>
+        </div>
+      </div>
+    </div>
 
   </main>
 </div>
 
 <script>
-let DATA, GAME_DATA;
+let DATA, GAME_DATA, HOST_DATA;
 
 // ── Chart.js global defaults (dark theme) ──────────────────────────────────
 Chart.defaults.color = '#c4d2dc';
@@ -1120,6 +1157,60 @@ function updateGameDetail() {
 
 
 
+// ── Device Explorer ───────────────────────────────────────────────────────
+let ddGamesChart = null, ddHourlyChart = null;
+
+function buildDeviceExplorer() {
+  if (!HOST_DATA || Object.keys(HOST_DATA).length === 0) return;
+  const sel = document.getElementById('device-detail-sel');
+  Object.keys(HOST_DATA).sort().forEach(h => {
+    sel.appendChild(Object.assign(document.createElement('option'), { value: h, textContent: h }));
+  });
+  updateDeviceDetail();
+}
+
+function filterDevices(q) {
+  const sel = document.getElementById('device-detail-sel');
+  const lq = q.toLowerCase();
+  Array.from(sel.options).forEach(o => { o.hidden = q ? !o.value.toLowerCase().includes(lq) : false; });
+  const first = Array.from(sel.options).find(o => !o.hidden);
+  if (first && first.value !== sel.value) { sel.value = first.value; updateDeviceDetail(); }
+}
+
+function updateDeviceDetail() {
+  const hostname = document.getElementById('device-detail-sel').value;
+  if (!hostname || !HOST_DATA[hostname]) return;
+  const d = HOST_DATA[hostname];
+  const peakH = d.hourly.indexOf(Math.max(...d.hourly, 1));
+
+  document.getElementById('device-detail-kpi').innerHTML = [
+    { icon:'📋', bg:'rgba(59,130,246,.18)',  val: d.sessions.toLocaleString(),              lbl:'Sessions' },
+    { icon:'⏱️', bg:'rgba(245,158,11,.18)',  val: d.avg_duration + ' min',                  lbl:'Avg session' },
+    { icon:'🌍', bg:'rgba(168,85,247,.18)',  val: d.country,                                lbl:'Country' },
+    { icon:'🕐', bg:'rgba(212,168,67,.18)',  val: String(peakH).padStart(2,'0') + ':00',    lbl:'Peak hour' },
+  ].map(i => `<div class="stat-card"><div class="stat-icon" style="background:${i.bg}">${i.icon}</div><div class="stat-val">${i.val}</div><div class="stat-lbl">${i.lbl}</div></div>`).join('');
+
+  const hBar = {
+    ...barOpts(true),
+    scales: { x: { grid: { color: GRID } }, y: { grid: { display: false } } },
+    plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => `  ${ctx.parsed.x.toLocaleString()} plays` } } }
+  };
+
+  if (ddGamesChart) ddGamesChart.destroy();
+  ddGamesChart = new Chart(document.getElementById('chart-dd-games'), {
+    type: 'bar',
+    data: { labels: d.top_games.map(g => g.name.replace(/_/g,' ')), datasets: [{ data: d.top_games.map(g => g.plays), backgroundColor: PALETTE.concat(PALETTE), borderRadius: 3 }] },
+    options: hBar
+  });
+
+  if (ddHourlyChart) ddHourlyChart.destroy();
+  ddHourlyChart = new Chart(document.getElementById('chart-dd-hourly'), {
+    type: 'bar',
+    data: { labels: Array.from({length:24},(_,i)=>fmt(i)), datasets: [{ data: d.hourly, backgroundColor: BRAND, borderRadius: 3 }] },
+    options: barOpts(false)
+  });
+}
+
 // ── Boot ─────────────────────────────────────────────────────────────────
 (async function init() {
   const overlay = document.getElementById('loading-overlay');
@@ -1146,6 +1237,12 @@ function updateGameDetail() {
   buildDeviceSelector();
   buildRetention();
   buildGameExplorer();
+
+  // Hostname data is optional — only available after compute_analytics.py is re-run
+  fetch('/api/hostname-data')
+    .then(r => r.ok ? r.json() : {})
+    .then(d => { HOST_DATA = d; buildDeviceExplorer(); })
+    .catch(() => {});
 })();
 </script>
 </body>
