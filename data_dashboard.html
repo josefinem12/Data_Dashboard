@@ -149,14 +149,6 @@ input.sel::placeholder{color:var(--muted2)}
 }
 .leaflet-control-attribution{background:rgba(14,28,47,.7)!important;color:var(--muted2)!important;font-size:10px!important}
 .leaflet-control-attribution a{color:var(--muted)!important}
-.leaflet-tile {
-    border: 2px solid transparent !important;
-    margin: -2px !important;
-}
-.leaflet-tile-pane {
-    will-change: transform;
-    transform: translateZ(0);
-}
 
 .map-legend{
   display:flex;align-items:center;gap:10px;flex-wrap:wrap;
@@ -935,11 +927,6 @@ function initMap() {
 
   const map = L.map('map', { center:[30,5], zoom:2, minZoom:1.5, maxZoom:7, zoomControl:true });
 
-  // CartoDB dark tiles
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
-    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    maxZoom:8
-  }).addTo(map);
 
   fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
     .then(r => r.json())
