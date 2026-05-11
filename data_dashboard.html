@@ -390,7 +390,7 @@ input.sel::placeholder{color:var(--muted2)}
           <canvas id="chart-seasonal"></canvas>
         </div>
         <div class="card">
-          <h3>Hourly usage — global (local time)</h3>
+          <h3>Hourly usage globally (local time)</h3>
           <div class="sub">All GAME_START events by local hour of day</div>
           <canvas id="chart-hourly-ov"></canvas>
         </div>
@@ -401,12 +401,12 @@ input.sel::placeholder{color:var(--muted2)}
     <div class="page" id="page-usage">
       <div class="sh">
         <h2>Usage Patterns</h2>
-        <p>When are Tovertafel devices used — by hour, season, and country.</p>
+        <p>When are Tovertafel devices used, by hour, season, and country.</p>
       </div>
       <div class="insight-row" id="usage-insights"></div>
       <div class="two-col">
         <div class="card full">
-          <h3>Daily usage trend — plays by hour of day</h3>
+          <h3>Daily usage trend, plays by hour of day</h3>
           <div class="sub">Based on original.time (device local time), all countries combined</div>
           <canvas id="chart-hourly-full" style="max-height:340px"></canvas>
         </div>
@@ -446,7 +446,7 @@ input.sel::placeholder{color:var(--muted2)}
         </div>
       </div>
       <div class="card full" style="margin-top:1.5rem">
-        <h3>Session duration vs popularity — all 140 games</h3>
+        <h3>Session duration vs popularity, all 140 games</h3>
         <div class="sub">Each dot is a game (min 5 sessions). Games to the right have longer average sessions; games higher up are launched more. Hover for details.</div>
         <canvas id="chart-game-scatter" style="max-height:460px"></canvas>
       </div>
@@ -456,12 +456,12 @@ input.sel::placeholder{color:var(--muted2)}
     <div class="page" id="page-geography">
       <div class="sh">
         <h2>Geographic</h2>
-        <p>Game usage across 14 countries — map, country breakdown, and hourly heatmaps.</p>
+        <p>Game usage across 14 countries through a map, country breakdowns, and hourly heatmaps.</p>
       </div>
       <div class="two-col">
         <div class="card full">
-          <h3>Plays by country — world map</h3>
-          <div class="sub">Choropleth showing total game plays per country. Darker orange = more plays. Countries with no data shown in dark navy.</div>
+          <h3>World map with Plays by Country</h3>
+          <div class="sub">Map showing total game plays per country. Darker orange = more plays. Countries with no data shown in dark navy.</div>
           <div id="map"></div>
           <div class="map-legend">
             <span>Fewer plays</span>
@@ -488,7 +488,7 @@ input.sel::placeholder{color:var(--muted2)}
         </div>
 
         <div class="card full">
-          <h3>Hourly usage heatmap — all countries</h3>
+          <h3>Hourly usage heatmap (all countries)</h3>
           <div class="sub">Plays by local hour of day for every country in the dataset</div>
           <div class="heat-grid" id="heat-grid"></div>
         </div>
@@ -530,7 +530,7 @@ input.sel::placeholder{color:var(--muted2)}
     <div class="page" id="page-game-explorer">
       <div class="sh">
         <h2>Game Explorer</h2>
-        <p>Select any game to see its full breakdown — sessions, average duration, where it's played, when, and across which seasons.</p>
+        <p>Select any game to see its full breakdown. See their sessions, average duration, where it's played, when, and across which seasons.</p>
       </div>
       <div class="card" style="margin-bottom:1.5rem">
         <div class="sel-row" style="gap:12px">
