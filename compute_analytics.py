@@ -232,7 +232,7 @@ daily_retention = (
     .sort_values('days_since_activation')
 )
 retention_plot = daily_retention[
-    (daily_retention['days_since_activation'] >= 5) &
+    (daily_retention['days_since_activation'] >= 1) &
     (daily_retention['days_since_activation'] <= 500)
 ]
 retention_data = [

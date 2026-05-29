@@ -620,6 +620,22 @@
   },
   "retention": [
     {
+      "day": 1,
+      "devices": 215
+    },
+    {
+      "day": 2,
+      "devices": 101
+    },
+    {
+      "day": 3,
+      "devices": 77
+    },
+    {
+      "day": 4,
+      "devices": 68
+    },
+    {
       "day": 5,
       "devices": 98
     },

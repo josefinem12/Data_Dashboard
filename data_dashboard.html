@@ -530,7 +530,7 @@ input.sel::placeholder{color:var(--muted2)}
       </div>
       <div class="insight-row" id="retention-insights"></div>
       <div class="card">
-        <h3>Unique devices active by days since first activation (day 5+)</h3>
+        <h3>Unique devices active by days since first activation (day 1+)</h3>
         <div class="sub">Each point = number of distinct hostnames that logged at least one event on that day after their first activation</div>
         <canvas id="chart-retention" style="max-height:440px"></canvas>
       </div>
@@ -919,7 +919,7 @@ function buildRetention() {
   const d30  = ret.find(d => d.day >= 30);
   const pct  = d30 ? Math.round(d30.devices / base * 100) : '?';
   document.getElementById('retention-insights').innerHTML = [
-    `${base} devices active at day 5`,
+    `${base} devices active at day 1`,
     `~${pct}% still active at day 30`,
     `${DATA.kpi.unique_devices} total unique devices`,
   ].map(t => `<span class="insight">${t}</span>`).join('');
