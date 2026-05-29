@@ -30,7 +30,7 @@ df['date'] = pd.to_datetime(df['date'])
 df['activation_date'] = pd.to_datetime(df['activation_date'])
 df['days_since_activation'] = (df['date'] - df['activation_date']).dt.days
 
-# ── Per-device timezone (use most common known timezone per hostname) ──────
+# ── Per-device timezone (most common known timezone per hostname) ───────────
 device_tz = (
     df[
         df['original.timezone'].notna() &
@@ -43,9 +43,26 @@ device_tz = (
     .rename(columns={'original.timezone': 'device_timezone'})
 )
 
+# ── Per-country fallback timezone (most common tz among devices with known tz)
+hostname_country = df[['hostname', 'geoip.country_code']].drop_duplicates('hostname')
+device_tz_country = device_tz.merge(hostname_country, on='hostname', how='left')
+country_tz = (
+    device_tz_country[
+        device_tz_country['geoip.country_code'].notna() &
+        (device_tz_country['geoip.country_code'] != '-')
+    ]
+    .groupby('geoip.country_code')['device_timezone']
+    .agg(lambda x: x.mode().iloc[0])
+    .reset_index()
+    .rename(columns={'device_timezone': 'country_timezone'})
+)
+
 # ── GAME_START subset ─────────────────────────────────────────────
 df_games = df[df['event'] == 'GAME_START'].copy()
 df_games = df_games.merge(device_tz, on='hostname', how='left')
+df_games = df_games.merge(country_tz, on='geoip.country_code', how='left')
+# Fill missing device timezone with country fallback
+df_games['device_timezone'] = df_games['device_timezone'].fillna(df_games['country_timezone'])
 
 tz_offset = df_games['device_timezone'].str.extract(r'([+-]\d{4})')[0]
 df_games['utc_offset'] = pd.to_timedelta(
