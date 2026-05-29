@@ -196,18 +196,17 @@ retention_data = [
 # ─────────────────────────────────────────────────────────────────
 # 7b. Cumulative device activations over time
 # ─────────────────────────────────────────────────────────────────
-device_activations = (
-    df.drop_duplicates(subset='hostname')[['hostname', 'activation_date']]
+daily_new_devices = (
+    df.drop_duplicates(subset='hostname')
+    .groupby('activation_date')
+    .size()
+    .reset_index(name='new_devices')
     .sort_values('activation_date')
-    .reset_index(drop=True)
 )
-device_activations['cumulative'] = range(1, len(device_activations) + 1)
-# Sample to ~500 points max so JSON stays small
-step = max(1, len(device_activations) // 500)
-sampled = device_activations.iloc[::step]
+daily_new_devices['cumulative'] = daily_new_devices['new_devices'].cumsum()
 cumulative_activations_data = [
     {"date": str(r['activation_date'].date()), "cumulative": int(r['cumulative'])}
-    for _, r in sampled.iterrows()
+    for _, r in daily_new_devices.iterrows()
 ]
 
 # ─────────────────────────────────────────────────────────────────
