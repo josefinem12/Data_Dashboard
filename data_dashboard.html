@@ -267,14 +267,6 @@ input.sel::placeholder{color:var(--muted2)}
         Geographic
       </button>
 
-      <button class="nav-btn" data-tab="devices" onclick="switchTab('devices')">
-        <svg viewBox="0 0 18 18" fill="none">
-          <rect x="2" y="4" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/>
-          <path d="M6 14v2M12 14v2M4 16h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-        </svg>
-        By Device Type
-      </button>
-
       <button class="nav-btn" data-tab="retention" onclick="switchTab('retention')">
         <svg viewBox="0 0 18 18" fill="none">
           <path d="M2 14l4-5 4 2 6-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -322,7 +314,6 @@ input.sel::placeholder{color:var(--muted2)}
         <button class="tab-btn"        data-tab="usage"      onclick="switchTab('usage')">Usage Patterns</button>
         <button class="tab-btn"        data-tab="games"      onclick="switchTab('games')">Game Analysis</button>
         <button class="tab-btn"        data-tab="geography"  onclick="switchTab('geography')">Geographic</button>
-        <button class="tab-btn"        data-tab="devices"    onclick="switchTab('devices')">By Device Type</button>
         <button class="tab-btn"        data-tab="retention"     onclick="switchTab('retention')">Retention</button>
         <button class="tab-btn"        data-tab="game-explorer" onclick="switchTab('game-explorer')">Game Explorer</button>
         <button class="tab-btn"        data-tab="device-explorer" onclick="switchTab('device-explorer')">Device Explorer</button>
@@ -339,7 +330,7 @@ input.sel::placeholder{color:var(--muted2)}
 
       <div class="card" style="margin-bottom:1.25rem">
         <h3>Key takeaways</h3>
-        <div class="sub">Six things the data tells us about how Tovertafel is used. Note: data collection goes back to 2023, with usage growing exponentially in recent years. Most events in this dataset are from the past 1 to 2 years.</div>
+        <div class="sub">Three things the data tells us about how Tovertafel is used. Note: data collection goes back to 2023, with usage growing exponentially in recent years. Most events in this dataset are from the past 1 to 2 years.</div>
         <div class="takeaway-grid">
 
           <div class="takeaway">
@@ -353,37 +344,13 @@ input.sel::placeholder{color:var(--muted2)}
           <div class="takeaway">
             <div class="t-num">2</div>
             <div class="t-body">
-              <h4>People play most in the evening</h4>
-              <p>The busiest hour globally is <strong>23:00 local time</strong> with 15,115 plays, and activity stays high from 16:00 right through to midnight. This points strongly to Tovertafel being part of regular evening care routines, likely used as a way to keep residents engaged and help them wind down before sleep.</p>
+              <h4>The retention drop-off is partly an artefact of a growing fleet</h4>
+              <p>Across <strong>1,025 unique devices</strong>, activity appears to fall sharply in the weeks after activation. A significant part of this is structural: the fleet is growing rapidly, so newer devices naturally have fewer days of data behind them. The tail of long-term active devices — still playing well past 300 days — shows that committed adoption does happen once devices are embedded in care routines.</p>
             </div>
           </div>
 
           <div class="takeaway">
             <div class="t-num">3</div>
-            <div class="t-body">
-              <h4>Germany plays completely different games from everyone else</h4>
-              <p><strong>BEACHBALL</strong> and <strong>LEAVES</strong> top the charts in almost every country. Germany is the clear exception. Its top five games are GARDENING, FIREFLIES, KITES, SPINNINGTOPS and DINNER PARTY, none of which feature in the global top ten. The Netherlands also stands out, with BIRTHDAY ranked first. These differences likely come down to local care staff choices and cultural context.</p>
-            </div>
-          </div>
-
-          <div class="takeaway">
-            <div class="t-num">4</div>
-            <div class="t-body">
-              <h4>How long people play matters as much as how often they start</h4>
-              <p>The typical session lasts <strong>5.2 minutes</strong> (median) with an average of <strong>6 minutes</strong>, fitting the drop-in style of care home use. Even so, <strong>PUZZLE</strong> has built up significant cumulative play time because titles like PUZZLE UGC and SNOEZEL CLOUDS hold attention for 14 to 15 minutes at a time. Raw launch counts do not tell the full story.</p>
-            </div>
-          </div>
-
-          <div class="takeaway">
-            <div class="t-num">5</div>
-            <div class="t-body">
-              <h4>Most devices drop off within the first month</h4>
-              <p>Across <strong>1,025 unique devices</strong>, most drop off within the first month after activation. By day 30 only about <strong>a third of those still active at day 5 remain</strong>. After that the curve levels off, and a small group of committed devices keeps playing well past 300 days. The early drop-off is likely a mix of trial periods at new care facilities and the typical onboarding curve for any new technology.</p>
-            </div>
-          </div>
-
-          <div class="takeaway">
-            <div class="t-num">6</div>
             <div class="t-body">
               <h4>The US leads in volume, but Europe shows far more variety</h4>
               <p>The US accounts for <strong>roughly half of all plays</strong>, with Australia and Canada close behind. European countries have lower totals but show much more variety in which games they prefer. This suggests that local care philosophy and staff choices shape game selection more than anything else, and that there is real room to tailor recommendations by country.</p>
