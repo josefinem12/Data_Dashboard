@@ -30,9 +30,30 @@ df['date'] = pd.to_datetime(df['date'])
 df['activation_date'] = pd.to_datetime(df['activation_date'])
 df['days_since_activation'] = (df['date'] - df['activation_date']).dt.days
 
+# ── Per-device timezone (use most common known timezone per hostname) ──────
+device_tz = (
+    df[
+        df['original.timezone'].notna() &
+        (df['original.timezone'] != 'NaN') &
+        (df['original.timezone'] != '-')
+    ]
+    .groupby('hostname')['original.timezone']
+    .agg(lambda x: x.mode().iloc[0])
+    .reset_index()
+    .rename(columns={'original.timezone': 'device_timezone'})
+)
+
 # ── GAME_START subset ─────────────────────────────────────────────
 df_games = df[df['event'] == 'GAME_START'].copy()
-df_games['local_hour'] = df_games['original.time'].dt.hour
+df_games = df_games.merge(device_tz, on='hostname', how='left')
+
+tz_offset = df_games['device_timezone'].str.extract(r'([+-]\d{4})')[0]
+df_games['utc_offset'] = pd.to_timedelta(
+    tz_offset.str[0] + tz_offset.str[1:3] + ':' + tz_offset.str[3:5] + ':00',
+    errors='coerce'
+).fillna(pd.Timedelta(0))
+df_games['local_hour'] = (df_games['@timestamp'] + df_games['utc_offset']).dt.hour
+
 df_games = df_games[df_games['geoip.country_code'].notna()]
 df_games_clean = df_games[df_games['geoip.country_code'] != '-'].copy()
 

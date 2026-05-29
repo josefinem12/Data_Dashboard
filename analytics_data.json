@@ -1,140 +1,139 @@
 {
   "kpi": {
-    "total_sessions": 173182,
-    "unique_devices": 835,
+    "total_sessions": 328154,
+    "unique_devices": 1025,
     "unique_countries": 14,
-    "total_game_plays": 280905,
+    "total_game_plays": 439215,
     "median_session_min": 5.2,
-    "avg_session_min": 6.08,
-    "top_game": "BEACHBALL"
+    "avg_session_min": 6.01,
+    "top_game": "LEAVES"
   },
   "hourly_usage": [
     {
       "hour": 0,
-      "plays": 13081
+      "plays": 18947
     },
     {
       "hour": 1,
-      "plays": 12289
+      "plays": 18478
     },
     {
       "hour": 2,
-      "plays": 9869
+      "plays": 16131
     },
     {
       "hour": 3,
-      "plays": 8111
+      "plays": 14110
     },
     {
       "hour": 4,
-      "plays": 10168
+      "plays": 16025
     },
     {
       "hour": 5,
-      "plays": 12468
+      "plays": 18160
     },
     {
       "hour": 6,
-      "plays": 12309
+      "plays": 17902
     },
     {
       "hour": 7,
-      "plays": 11663
+      "plays": 16778
     },
     {
       "hour": 8,
-      "plays": 11053
+      "plays": 16819
     },
     {
       "hour": 9,
-      "plays": 9120
+      "plays": 15030
     },
     {
       "hour": 10,
-      "plays": 9058
+      "plays": 15753
     },
     {
       "hour": 11,
-      "plays": 9644
+      "plays": 15852
     },
     {
       "hour": 12,
-      "plays": 9654
+      "plays": 15379
     },
     {
       "hour": 13,
-      "plays": 9372
+      "plays": 17253
     },
     {
       "hour": 14,
-      "plays": 10127
+      "plays": 18582
     },
     {
       "hour": 15,
-      "plays": 11919
+      "plays": 21054
     },
     {
       "hour": 16,
-      "plays": 14195
+      "plays": 22606
     },
     {
       "hour": 17,
-      "plays": 13413
+      "plays": 21481
     },
     {
       "hour": 18,
-      "plays": 12559
+      "plays": 20560
     },
     {
       "hour": 19,
-      "plays": 13780
+      "plays": 20882
     },
     {
       "hour": 20,
-      "plays": 13830
+      "plays": 19937
     },
     {
       "hour": 21,
-      "plays": 14533
+      "plays": 20759
     },
     {
       "hour": 22,
-      "plays": 13575
+      "plays": 19534
     },
     {
       "hour": 23,
-      "plays": 15115
+      "plays": 21203
     }
   ],
   "country_hourly": {
     "AU": [
-      1120,
-      1144,
-      1221,
-      1171,
-      1264,
-      1280,
-      1350,
-      1470,
-      2233,
-      2132,
-      2185,
-      1586,
-      1073,
-      983,
-      865,
-      833,
-      934,
-      919,
-      921,
-      937,
-      945,
-      940,
-      940,
-      1379
+      2953,
+      3103,
+      3200,
+      3527,
+      3706,
+      3801,
+      3849,
+      3739,
+      4454,
+      4244,
+      4165,
+      3520,
+      2876,
+      2714,
+      2657,
+      2718,
+      2667,
+      2668,
+      2698,
+      2709,
+      2668,
+      2691,
+      2761,
+      3192
     ],
     "BE": [
-      11,
       9,
       9,
       11,
@@ -144,46 +143,47 @@
       10,
       9,
       12,
-      19,
-      48,
-      77,
-      104,
-      81,
-      76,
-      112,
-      73,
-      64,
+      55,
+      114,
       70,
+      38,
+      115,
+      95,
+      81,
+      98,
+      72,
+      65,
+      78,
       16,
       11,
-      11,
-      9
+      9,
+      11
     ],
     "CA": [
-      2449,
-      2525,
-      1932,
-      1506,
-      1356,
-      1237,
-      1058,
-      1023,
-      1276,
-      1179,
-      1209,
-      1116,
-      908,
-      885,
-      883,
-      995,
-      1150,
-      1230,
-      1413,
-      1686,
-      1742,
-      1910,
-      2008,
-      2592
+      3459,
+      3424,
+      2787,
+      2270,
+      2089,
+      1978,
+      1748,
+      1694,
+      1916,
+      1803,
+      1803,
+      1663,
+      1504,
+      1463,
+      1468,
+      1712,
+      2179,
+      2405,
+      2563,
+      2982,
+      3065,
+      3080,
+      3037,
+      3651
     ],
     "CH": [
       0,
@@ -195,50 +195,49 @@
       0,
       0,
       0,
-      0,
       33,
-      10,
+      22,
+      22,
       3,
-      0,
       0,
       5,
-      4,
-      3,
-      0,
-      0,
-      0,
-      0,
-      0,
+      20,
+      22,
+      51,
+      36,
+      46,
+      59,
+      41,
+      11,
       0
     ],
     "DE": [
-      82,
-      34,
-      43,
-      36,
-      19,
-      41,
-      28,
-      18,
-      24,
-      161,
-      486,
-      1042,
-      1148,
-      835,
-      942,
-      1107,
-      791,
-      626,
-      410,
-      239,
-      1181,
-      1540,
-      1184,
-      1345
+      144,
+      138,
+      128,
+      106,
+      106,
+      125,
+      100,
+      93,
+      263,
+      712,
+      1334,
+      1226,
+      1280,
+      1430,
+      1196,
+      1193,
+      1023,
+      657,
+      472,
+      383,
+      1360,
+      1682,
+      1348,
+      1442
     ],
     "DK": [
-      0,
       0,
       0,
       0,
@@ -261,723 +260,724 @@
       0,
       0,
       0,
+      0,
       0
     ],
     "FR": [
-      337,
-      339,
-      362,
-      174,
-      174,
-      193,
-      179,
-      142,
-      178,
-      189,
-      318,
-      825,
-      1378,
-      1287,
-      1093,
-      2221,
-      3585,
-      3179,
-      2008,
-      1198,
-      657,
-      406,
-      335,
-      406
+      543,
+      501,
+      476,
+      293,
+      282,
+      266,
+      293,
+      257,
+      292,
+      599,
+      1323,
+      1740,
+      2262,
+      3144,
+      3137,
+      4271,
+      5130,
+      4281,
+      2629,
+      1711,
+      801,
+      602,
+      500,
+      533
     ],
     "GB": [
-      1965,
-      1834,
-      1459,
-      1620,
-      1569,
-      1403,
-      1343,
-      1572,
-      1231,
-      974,
-      936,
-      819,
-      732,
-      575,
-      593,
-      769,
-      1169,
-      1295,
-      1372,
-      1386,
-      1322,
-      1332,
-      1630,
-      1829
+      2751,
+      2792,
+      2574,
+      2690,
+      2539,
+      2362,
+      2205,
+      2296,
+      2003,
+      1806,
+      1666,
+      1611,
+      1396,
+      1435,
+      1815,
+      2122,
+      2387,
+      2474,
+      2478,
+      2340,
+      2390,
+      2321,
+      2502,
+      2771
     ],
     "IE": [
-      84,
-      35,
-      21,
-      19,
-      20,
-      19,
-      21,
-      19,
-      19,
-      32,
-      38,
+      96,
       89,
-      144,
-      179,
-      279,
-      495,
-      618,
-      506,
-      455,
-      323,
-      249,
-      292,
-      260,
-      183
+      80,
+      80,
+      77,
+      81,
+      79,
+      78,
+      98,
+      155,
+      276,
+      352,
+      435,
+      546,
+      760,
+      767,
+      714,
+      582,
+      386,
+      379,
+      371,
+      327,
+      219,
+      112
     ],
     "NL": [
-      303,
-      309,
-      320,
-      328,
-      322,
+      315,
       334,
-      241,
+      336,
+      329,
+      346,
+      244,
       247,
-      263,
-      428,
-      381,
-      445,
-      426,
-      444,
-      493,
-      454,
-      502,
-      339,
-      352,
-      475,
-      752,
-      334,
-      221,
-      213
+      251,
+      812,
+      461,
+      503,
+      665,
+      541,
+      721,
+      525,
+      670,
+      745,
+      653,
+      838,
+      571,
+      337,
+      237,
+      231,
+      319
     ],
     "NO": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      5,
-      5,
-      6,
-      6,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
+      22,
+      19,
+      21,
+      20,
+      19,
+      20,
+      22,
+      19,
+      20,
+      21,
+      16,
+      71,
+      152,
+      162,
+      185,
+      96,
+      48,
+      35,
+      80,
+      28,
+      21,
+      21,
+      20,
+      17
     ],
     "SE": [
-      36,
-      24,
-      22,
+      35,
+      25,
       22,
       21,
       22,
       22,
       22,
       22,
-      31,
-      29,
-      42,
-      96,
-      22,
-      19,
-      27,
-      16,
-      62,
-      10,
-      12,
-      24,
-      25,
-      22,
-      26
+      38,
+      80,
+      77,
+      189,
+      105,
+      114,
+      113,
+      262,
+      211,
+      77,
+      57,
+      89,
+      57,
+      23,
+      21,
+      27
     ],
     "UK": [
-      20,
-      13,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      10,
       9,
-      24,
       10,
-      14,
-      98,
+      11,
       10,
+      10,
+      8,
+      11,
+      10,
+      10,
+      11,
       19,
-      22,
+      33,
+      28,
+      27,
+      124,
+      46,
+      50,
+      50,
+      59,
+      57,
+      42,
       30,
-      22,
-      16,
-      19,
-      21
+      26
     ],
     "US": [
-      6674,
-      6023,
-      4480,
-      3224,
-      5412,
-      7929,
-      8057,
-      7140,
-      5798,
-      3982,
-      3424,
-      3608,
-      3632,
-      4032,
-      4848,
-      4834,
-      5304,
-      5161,
-      5532,
-      7424,
-      6920,
-      7727,
-      6945,
-      7112
+      8610,
+      8035,
+      6486,
+      4752,
+      6819,
+      9241,
+      9319,
+      8309,
+      6901,
+      5051,
+      4443,
+      4696,
+      4744,
+      5370,
+      6594,
+      7018,
+      7336,
+      7476,
+      8208,
+      9507,
+      8735,
+      9681,
+      8845,
+      9102
     ]
   },
   "seasonal": [
     {
       "season": "Winter",
-      "plays": 113397
+      "plays": 125165
     },
     {
       "season": "Spring",
-      "plays": 125647
+      "plays": 234687
     },
     {
       "season": "Summer",
-      "plays": 11551
+      "plays": 32276
     },
     {
       "season": "Autumn",
-      "plays": 30310
+      "plays": 47087
     }
   ],
   "sessions": {
     "top_launches": [
       {
         "name": "BEACHBALL",
-        "total_launches": 9575.0
+        "total_launches": 18836.0
       },
       {
         "name": "LEAVES",
-        "total_launches": 9549.0
+        "total_launches": 18833.0
       },
       {
         "name": "FISHES",
-        "total_launches": 9227.0
+        "total_launches": 18152.0
       },
       {
         "name": "BIRTHDAY",
-        "total_launches": 9056.0
-      },
-      {
-        "name": "MUSICORGAN",
-        "total_launches": 8613.0
+        "total_launches": 17901.0
       },
       {
         "name": "PUZZLE",
-        "total_launches": 8600.0
+        "total_launches": 17260.0
+      },
+      {
+        "name": "MUSICORGAN",
+        "total_launches": 17123.0
       },
       {
         "name": "BUTTERFLIES",
-        "total_launches": 5055.0
+        "total_launches": 9424.0
       },
       {
         "name": "BUBBLES",
-        "total_launches": 4899.0
+        "total_launches": 9104.0
       },
       {
         "name": "FLOWERS",
-        "total_launches": 4777.0
+        "total_launches": 8823.0
       },
       {
         "name": "STARGAZING",
-        "total_launches": 4710.0
+        "total_launches": 8695.0
       }
     ],
     "top_avg_duration": [
       {
+        "name": "MEMORY_ORIGINAL",
+        "avg_duration": 25.08
+      },
+      {
         "name": "PUZZLE_UGC",
-        "avg_duration": 15.37
+        "avg_duration": 17.2
       },
       {
         "name": "SNOEZEL_CLOUDS",
         "avg_duration": 15.19
       },
       {
-        "name": "SUITCASE",
-        "avg_duration": 14.31
-      },
-      {
-        "name": "MEMORY_ORIGINAL",
-        "avg_duration": 12.23
+        "name": "RHYMES",
+        "avg_duration": 8.59
       },
       {
         "name": "PAINTSPLATTERS_UGC",
-        "avg_duration": 9.11
+        "avg_duration": 8.43
       },
       {
-        "name": "FLOWERS",
-        "avg_duration": 8.28
+        "name": "SUITCASE",
+        "avg_duration": 8.2
       },
       {
         "name": "LANDMARKS",
-        "avg_duration": 8.15
+        "avg_duration": 8.12
       },
       {
         "name": "FIREFLIES",
-        "avg_duration": 8.1
+        "avg_duration": 8.07
       },
       {
         "name": "PUZZLE",
         "avg_duration": 8.02
       },
       {
-        "name": "GARDENING",
-        "avg_duration": 7.95
+        "name": "MEMORY_UGC",
+        "avg_duration": 7.99
       }
     ],
     "top_cumulative": [
       {
         "name": "PUZZLE",
-        "total_duration": 68962.96
+        "total_duration": 138500.17
       },
       {
         "name": "MUSICORGAN",
-        "total_duration": 62753.28
+        "total_duration": 125742.55
       },
       {
         "name": "FISHES",
-        "total_duration": 58638.05
+        "total_duration": 104257.18
       },
       {
         "name": "BEACHBALL",
-        "total_duration": 53892.93
+        "total_duration": 101801.09
       },
       {
         "name": "LEAVES",
-        "total_duration": 51350.41
+        "total_duration": 99304.88
       },
       {
         "name": "BIRTHDAY",
-        "total_duration": 45811.76
-      },
-      {
-        "name": "FLOWERS",
-        "total_duration": 39573.06
+        "total_duration": 90440.52
       },
       {
         "name": "FIREFLIES",
-        "total_duration": 37464.11
+        "total_duration": 69819.03
+      },
+      {
+        "name": "PAINTSPLATTERS",
+        "total_duration": 64273.4
       },
       {
         "name": "PAINTSPLATTERS_UGC",
-        "total_duration": 36430.55
+        "total_duration": 63386.11
       },
       {
         "name": "LANDMARKS",
-        "total_duration": 32618.3
+        "total_duration": 61570.54
       }
     ]
   },
   "retention": [
     {
       "day": 5,
-      "devices": 80
+      "devices": 98
     },
     {
       "day": 6,
-      "devices": 70
+      "devices": 85
     },
     {
       "day": 7,
-      "devices": 77
+      "devices": 96
     },
     {
       "day": 8,
-      "devices": 63
+      "devices": 71
     },
     {
       "day": 9,
-      "devices": 60
+      "devices": 71
     },
     {
       "day": 10,
-      "devices": 56
+      "devices": 65
     },
     {
       "day": 11,
-      "devices": 47
-    },
-    {
-      "day": 12,
-      "devices": 53
-    },
-    {
-      "day": 13,
       "devices": 54
     },
     {
+      "day": 12,
+      "devices": 59
+    },
+    {
+      "day": 13,
+      "devices": 67
+    },
+    {
       "day": 14,
-      "devices": 64
+      "devices": 79
     },
     {
       "day": 15,
-      "devices": 52
+      "devices": 64
     },
     {
       "day": 16,
-      "devices": 47
+      "devices": 61
     },
     {
       "day": 17,
-      "devices": 37
+      "devices": 49
     },
     {
       "day": 18,
-      "devices": 47
+      "devices": 64
     },
     {
       "day": 19,
-      "devices": 46
+      "devices": 55
     },
     {
       "day": 20,
-      "devices": 44
-    },
-    {
-      "day": 21,
-      "devices": 46
-    },
-    {
-      "day": 22,
-      "devices": 50
-    },
-    {
-      "day": 23,
-      "devices": 36
-    },
-    {
-      "day": 24,
-      "devices": 32
-    },
-    {
-      "day": 25,
-      "devices": 25
-    },
-    {
-      "day": 26,
-      "devices": 38
-    },
-    {
-      "day": 27,
-      "devices": 45
-    },
-    {
-      "day": 28,
       "devices": 58
     },
     {
-      "day": 29,
-      "devices": 40
+      "day": 21,
+      "devices": 57
     },
     {
-      "day": 30,
-      "devices": 25
+      "day": 22,
+      "devices": 62
     },
     {
-      "day": 31,
-      "devices": 25
+      "day": 23,
+      "devices": 46
     },
     {
-      "day": 32,
-      "devices": 28
-    },
-    {
-      "day": 33,
-      "devices": 34
-    },
-    {
-      "day": 34,
-      "devices": 41
-    },
-    {
-      "day": 35,
+      "day": 24,
       "devices": 43
     },
     {
+      "day": 25,
+      "devices": 31
+    },
+    {
+      "day": 26,
+      "devices": 42
+    },
+    {
+      "day": 27,
+      "devices": 54
+    },
+    {
+      "day": 28,
+      "devices": 68
+    },
+    {
+      "day": 29,
+      "devices": 46
+    },
+    {
+      "day": 30,
+      "devices": 34
+    },
+    {
+      "day": 31,
+      "devices": 34
+    },
+    {
+      "day": 32,
+      "devices": 39
+    },
+    {
+      "day": 33,
+      "devices": 44
+    },
+    {
+      "day": 34,
+      "devices": 52
+    },
+    {
+      "day": 35,
+      "devices": 55
+    },
+    {
       "day": 36,
-      "devices": 38
+      "devices": 43
     },
     {
       "day": 37,
-      "devices": 33
+      "devices": 42
     },
     {
       "day": 38,
-      "devices": 24
+      "devices": 35
     },
     {
       "day": 39,
-      "devices": 28
+      "devices": 36
     },
     {
       "day": 40,
-      "devices": 27
+      "devices": 39
     },
     {
       "day": 41,
-      "devices": 32
+      "devices": 44
     },
     {
       "day": 42,
-      "devices": 30
+      "devices": 41
     },
     {
       "day": 43,
-      "devices": 24
+      "devices": 34
     },
     {
       "day": 44,
-      "devices": 21
+      "devices": 36
     },
     {
       "day": 45,
-      "devices": 11
+      "devices": 22
     },
     {
       "day": 46,
-      "devices": 21
+      "devices": 39
     },
     {
       "day": 47,
-      "devices": 14
+      "devices": 38
     },
     {
       "day": 48,
-      "devices": 10
+      "devices": 36
     },
     {
       "day": 49,
-      "devices": 9
+      "devices": 40
     },
     {
       "day": 50,
-      "devices": 11
+      "devices": 31
     },
     {
       "day": 51,
-      "devices": 8
+      "devices": 30
     },
     {
       "day": 52,
-      "devices": 11
+      "devices": 34
     },
     {
       "day": 53,
-      "devices": 7
+      "devices": 31
     },
     {
       "day": 54,
-      "devices": 10
+      "devices": 30
     },
     {
       "day": 55,
-      "devices": 11
+      "devices": 37
     },
     {
       "day": 56,
-      "devices": 9
+      "devices": 36
     },
     {
       "day": 57,
-      "devices": 10
+      "devices": 37
     },
     {
       "day": 58,
-      "devices": 6
+      "devices": 37
     },
     {
       "day": 59,
-      "devices": 7
+      "devices": 31
     },
     {
       "day": 60,
-      "devices": 2
+      "devices": 29
     },
     {
       "day": 61,
-      "devices": 7
+      "devices": 26
     },
     {
       "day": 62,
-      "devices": 4
+      "devices": 31
     },
     {
       "day": 63,
-      "devices": 7
+      "devices": 41
     },
     {
       "day": 64,
-      "devices": 5
+      "devices": 31
     },
     {
       "day": 65,
-      "devices": 5
+      "devices": 28
     },
     {
       "day": 66,
-      "devices": 4
+      "devices": 24
     },
     {
       "day": 67,
-      "devices": 4
+      "devices": 28
     },
     {
       "day": 68,
-      "devices": 4
+      "devices": 30
     },
     {
       "day": 69,
-      "devices": 6
+      "devices": 28
     },
     {
       "day": 70,
-      "devices": 5
+      "devices": 37
     },
     {
       "day": 71,
-      "devices": 4
+      "devices": 39
     },
     {
       "day": 72,
-      "devices": 7
+      "devices": 32
     },
     {
       "day": 73,
-      "devices": 4
+      "devices": 22
     },
     {
       "day": 74,
-      "devices": 5
+      "devices": 26
     },
     {
       "day": 75,
-      "devices": 8
+      "devices": 26
     },
     {
       "day": 76,
-      "devices": 5
+      "devices": 24
     },
     {
       "day": 77,
-      "devices": 6
+      "devices": 25
     },
     {
       "day": 78,
-      "devices": 4
+      "devices": 20
     },
     {
       "day": 79,
-      "devices": 4
+      "devices": 22
     },
     {
       "day": 80,
-      "devices": 4
+      "devices": 11
     },
     {
       "day": 81,
-      "devices": 4
+      "devices": 14
     },
     {
       "day": 82,
-      "devices": 1
+      "devices": 10
     },
     {
       "day": 83,
-      "devices": 1
+      "devices": 15
     },
     {
       "day": 84,
-      "devices": 7
+      "devices": 14
     },
     {
       "day": 85,
-      "devices": 6
+      "devices": 14
     },
     {
       "day": 86,
-      "devices": 6
+      "devices": 11
     },
     {
       "day": 87,
-      "devices": 6
+      "devices": 11
     },
     {
       "day": 88,
-      "devices": 3
+      "devices": 7
     },
     {
       "day": 89,
-      "devices": 5
+      "devices": 11
     },
     {
       "day": 90,
-      "devices": 5
+      "devices": 9
     },
     {
       "day": 91,
-      "devices": 5
+      "devices": 9
     },
     {
       "day": 92,
-      "devices": 3
+      "devices": 8
     },
     {
       "day": 93,
-      "devices": 2
+      "devices": 5
     },
     {
       "day": 94,
-      "devices": 3
+      "devices": 5
     },
     {
       "day": 95,
@@ -985,7 +985,7 @@
     },
     {
       "day": 96,
-      "devices": 4
+      "devices": 5
     },
     {
       "day": 97,
@@ -993,163 +993,167 @@
     },
     {
       "day": 98,
-      "devices": 4
-    },
-    {
-      "day": 99,
-      "devices": 3
-    },
-    {
-      "day": 100,
-      "devices": 3
-    },
-    {
-      "day": 101,
-      "devices": 5
-    },
-    {
-      "day": 102,
-      "devices": 3
-    },
-    {
-      "day": 103,
-      "devices": 6
-    },
-    {
-      "day": 104,
-      "devices": 2
-    },
-    {
-      "day": 105,
-      "devices": 3
-    },
-    {
-      "day": 106,
-      "devices": 2
-    },
-    {
-      "day": 107,
-      "devices": 2
-    },
-    {
-      "day": 108,
-      "devices": 2
-    },
-    {
-      "day": 109,
-      "devices": 5
-    },
-    {
-      "day": 110,
-      "devices": 1
-    },
-    {
-      "day": 111,
-      "devices": 2
-    },
-    {
-      "day": 112,
-      "devices": 7
-    },
-    {
-      "day": 113,
-      "devices": 3
-    },
-    {
-      "day": 114,
-      "devices": 6
-    },
-    {
-      "day": 115,
-      "devices": 4
-    },
-    {
-      "day": 116,
-      "devices": 4
-    },
-    {
-      "day": 117,
-      "devices": 1
-    },
-    {
-      "day": 118,
-      "devices": 1
-    },
-    {
-      "day": 119,
-      "devices": 2
-    },
-    {
-      "day": 120,
-      "devices": 2
-    },
-    {
-      "day": 122,
-      "devices": 3
-    },
-    {
-      "day": 123,
       "devices": 8
     },
     {
-      "day": 124,
-      "devices": 4
+      "day": 99,
+      "devices": 6
     },
     {
-      "day": 125,
-      "devices": 2
+      "day": 100,
+      "devices": 6
     },
     {
-      "day": 126,
-      "devices": 2
+      "day": 101,
+      "devices": 8
     },
     {
-      "day": 127,
-      "devices": 3
-    },
-    {
-      "day": 128,
-      "devices": 2
-    },
-    {
-      "day": 129,
-      "devices": 2
-    },
-    {
-      "day": 130,
-      "devices": 1
-    },
-    {
-      "day": 131,
-      "devices": 2
-    },
-    {
-      "day": 132,
-      "devices": 2
-    },
-    {
-      "day": 133,
+      "day": 102,
       "devices": 5
     },
     {
-      "day": 134,
+      "day": 103,
+      "devices": 8
+    },
+    {
+      "day": 104,
+      "devices": 4
+    },
+    {
+      "day": 105,
+      "devices": 8
+    },
+    {
+      "day": 106,
+      "devices": 7
+    },
+    {
+      "day": 107,
+      "devices": 6
+    },
+    {
+      "day": 108,
+      "devices": 5
+    },
+    {
+      "day": 109,
+      "devices": 8
+    },
+    {
+      "day": 110,
+      "devices": 5
+    },
+    {
+      "day": 111,
+      "devices": 5
+    },
+    {
+      "day": 112,
+      "devices": 10
+    },
+    {
+      "day": 113,
+      "devices": 5
+    },
+    {
+      "day": 114,
+      "devices": 10
+    },
+    {
+      "day": 115,
+      "devices": 9
+    },
+    {
+      "day": 116,
+      "devices": 9
+    },
+    {
+      "day": 117,
+      "devices": 5
+    },
+    {
+      "day": 118,
+      "devices": 4
+    },
+    {
+      "day": 119,
+      "devices": 9
+    },
+    {
+      "day": 120,
+      "devices": 6
+    },
+    {
+      "day": 121,
+      "devices": 5
+    },
+    {
+      "day": 122,
+      "devices": 8
+    },
+    {
+      "day": 123,
+      "devices": 11
+    },
+    {
+      "day": 124,
+      "devices": 7
+    },
+    {
+      "day": 125,
+      "devices": 5
+    },
+    {
+      "day": 126,
+      "devices": 6
+    },
+    {
+      "day": 127,
+      "devices": 6
+    },
+    {
+      "day": 128,
+      "devices": 8
+    },
+    {
+      "day": 129,
+      "devices": 4
+    },
+    {
+      "day": 130,
       "devices": 3
+    },
+    {
+      "day": 131,
+      "devices": 4
+    },
+    {
+      "day": 132,
+      "devices": 5
+    },
+    {
+      "day": 133,
+      "devices": 6
+    },
+    {
+      "day": 134,
+      "devices": 6
     },
     {
       "day": 135,
-      "devices": 2
+      "devices": 5
     },
     {
       "day": 136,
-      "devices": 1
+      "devices": 2
     },
     {
       "day": 137,
-      "devices": 3
+      "devices": 4
     },
     {
       "day": 138,
-      "devices": 1
+      "devices": 3
     },
     {
       "day": 139,
@@ -1157,15 +1161,15 @@
     },
     {
       "day": 140,
-      "devices": 2
+      "devices": 6
     },
     {
       "day": 141,
-      "devices": 5
+      "devices": 9
     },
     {
       "day": 142,
-      "devices": 4
+      "devices": 8
     },
     {
       "day": 143,
@@ -1173,7 +1177,7 @@
     },
     {
       "day": 144,
-      "devices": 3
+      "devices": 5
     },
     {
       "day": 145,
@@ -1181,119 +1185,119 @@
     },
     {
       "day": 146,
-      "devices": 3
-    },
-    {
-      "day": 147,
-      "devices": 3
-    },
-    {
-      "day": 148,
-      "devices": 3
-    },
-    {
-      "day": 149,
-      "devices": 1
-    },
-    {
-      "day": 150,
-      "devices": 2
-    },
-    {
-      "day": 151,
       "devices": 6
     },
     {
+      "day": 147,
+      "devices": 8
+    },
+    {
+      "day": 148,
+      "devices": 6
+    },
+    {
+      "day": 149,
+      "devices": 4
+    },
+    {
+      "day": 150,
+      "devices": 6
+    },
+    {
+      "day": 151,
+      "devices": 9
+    },
+    {
       "day": 152,
-      "devices": 2
+      "devices": 6
     },
     {
       "day": 153,
-      "devices": 2
+      "devices": 4
     },
     {
       "day": 154,
-      "devices": 5
-    },
-    {
-      "day": 155,
-      "devices": 4
-    },
-    {
-      "day": 156,
       "devices": 7
     },
     {
+      "day": 155,
+      "devices": 10
+    },
+    {
+      "day": 156,
+      "devices": 11
+    },
+    {
       "day": 157,
-      "devices": 3
+      "devices": 5
     },
     {
       "day": 158,
-      "devices": 3
+      "devices": 6
     },
     {
       "day": 159,
-      "devices": 2
+      "devices": 6
     },
     {
       "day": 160,
-      "devices": 2
+      "devices": 6
     },
     {
       "day": 161,
-      "devices": 1
+      "devices": 5
     },
     {
       "day": 162,
-      "devices": 2
+      "devices": 3
     },
     {
       "day": 163,
-      "devices": 1
+      "devices": 6
     },
     {
       "day": 164,
-      "devices": 2
+      "devices": 6
     },
     {
       "day": 165,
-      "devices": 3
+      "devices": 6
     },
     {
       "day": 166,
-      "devices": 4
+      "devices": 7
     },
     {
       "day": 167,
-      "devices": 2
-    },
-    {
-      "day": 168,
-      "devices": 1
-    },
-    {
-      "day": 169,
-      "devices": 4
-    },
-    {
-      "day": 170,
-      "devices": 2
-    },
-    {
-      "day": 171,
-      "devices": 2
-    },
-    {
-      "day": 172,
       "devices": 3
     },
     {
+      "day": 168,
+      "devices": 3
+    },
+    {
+      "day": 169,
+      "devices": 8
+    },
+    {
+      "day": 170,
+      "devices": 5
+    },
+    {
+      "day": 171,
+      "devices": 3
+    },
+    {
+      "day": 172,
+      "devices": 4
+    },
+    {
       "day": 173,
-      "devices": 2
+      "devices": 5
     },
     {
       "day": 174,
-      "devices": 1
+      "devices": 3
     },
     {
       "day": 175,
@@ -1301,11 +1305,11 @@
     },
     {
       "day": 176,
-      "devices": 1
+      "devices": 3
     },
     {
       "day": 177,
-      "devices": 4
+      "devices": 6
     },
     {
       "day": 178,
@@ -1321,27 +1325,27 @@
     },
     {
       "day": 181,
-      "devices": 1
-    },
-    {
-      "day": 182,
       "devices": 2
     },
     {
+      "day": 182,
+      "devices": 4
+    },
+    {
       "day": 183,
-      "devices": 1
+      "devices": 4
     },
     {
       "day": 184,
-      "devices": 1
+      "devices": 3
     },
     {
       "day": 185,
-      "devices": 1
+      "devices": 2
     },
     {
       "day": 187,
-      "devices": 3
+      "devices": 5
     },
     {
       "day": 188,
@@ -1357,75 +1361,123 @@
     },
     {
       "day": 191,
-      "devices": 3
+      "devices": 6
     },
     {
       "day": 192,
-      "devices": 1
+      "devices": 5
     },
     {
       "day": 193,
-      "devices": 2
+      "devices": 7
     },
     {
       "day": 194,
-      "devices": 2
+      "devices": 9
     },
     {
-      "day": 198,
-      "devices": 2
-    },
-    {
-      "day": 200,
-      "devices": 1
-    },
-    {
-      "day": 203,
-      "devices": 2
-    },
-    {
-      "day": 207,
-      "devices": 2
-    },
-    {
-      "day": 208,
-      "devices": 1
-    },
-    {
-      "day": 209,
-      "devices": 1
-    },
-    {
-      "day": 210,
+      "day": 195,
       "devices": 3
     },
     {
-      "day": 211,
+      "day": 196,
+      "devices": 4
+    },
+    {
+      "day": 197,
+      "devices": 4
+    },
+    {
+      "day": 198,
+      "devices": 3
+    },
+    {
+      "day": 199,
+      "devices": 3
+    },
+    {
+      "day": 200,
+      "devices": 3
+    },
+    {
+      "day": 201,
+      "devices": 4
+    },
+    {
+      "day": 202,
       "devices": 2
+    },
+    {
+      "day": 203,
+      "devices": 4
+    },
+    {
+      "day": 204,
+      "devices": 4
+    },
+    {
+      "day": 205,
+      "devices": 5
+    },
+    {
+      "day": 206,
+      "devices": 4
+    },
+    {
+      "day": 207,
+      "devices": 7
+    },
+    {
+      "day": 208,
+      "devices": 6
+    },
+    {
+      "day": 209,
+      "devices": 6
+    },
+    {
+      "day": 210,
+      "devices": 7
+    },
+    {
+      "day": 211,
+      "devices": 4
     },
     {
       "day": 212,
-      "devices": 1
+      "devices": 3
+    },
+    {
+      "day": 213,
+      "devices": 2
+    },
+    {
+      "day": 214,
+      "devices": 3
     },
     {
       "day": 215,
-      "devices": 1
+      "devices": 4
     },
     {
       "day": 216,
-      "devices": 2
+      "devices": 3
     },
     {
       "day": 217,
       "devices": 2
     },
     {
-      "day": 219,
+      "day": 218,
       "devices": 1
     },
     {
+      "day": 219,
+      "devices": 5
+    },
+    {
       "day": 220,
-      "devices": 1
+      "devices": 2
     },
     {
       "day": 221,
@@ -1433,19 +1485,19 @@
     },
     {
       "day": 222,
-      "devices": 1
+      "devices": 4
     },
     {
       "day": 223,
-      "devices": 1
+      "devices": 3
     },
     {
       "day": 224,
-      "devices": 1
+      "devices": 3
     },
     {
       "day": 225,
-      "devices": 1
+      "devices": 3
     },
     {
       "day": 226,
@@ -1453,7 +1505,7 @@
     },
     {
       "day": 227,
-      "devices": 2
+      "devices": 4
     },
     {
       "day": 228,
@@ -1476,6 +1528,10 @@
       "devices": 1
     },
     {
+      "day": 233,
+      "devices": 1
+    },
+    {
       "day": 234,
       "devices": 1
     },
@@ -1485,7 +1541,7 @@
     },
     {
       "day": 236,
-      "devices": 1
+      "devices": 3
     },
     {
       "day": 237,
@@ -1493,7 +1549,7 @@
     },
     {
       "day": 238,
-      "devices": 3
+      "devices": 4
     },
     {
       "day": 239,
@@ -1501,11 +1557,11 @@
     },
     {
       "day": 240,
-      "devices": 3
+      "devices": 4
     },
     {
       "day": 241,
-      "devices": 1
+      "devices": 2
     },
     {
       "day": 243,
@@ -1521,11 +1577,15 @@
     },
     {
       "day": 247,
+      "devices": 2
+    },
+    {
+      "day": 248,
       "devices": 1
     },
     {
       "day": 249,
-      "devices": 2
+      "devices": 4
     },
     {
       "day": 250,
@@ -1545,11 +1605,19 @@
     },
     {
       "day": 254,
+      "devices": 2
+    },
+    {
+      "day": 255,
+      "devices": 2
+    },
+    {
+      "day": 257,
       "devices": 1
     },
     {
       "day": 258,
-      "devices": 1
+      "devices": 2
     },
     {
       "day": 260,
@@ -1557,6 +1625,10 @@
     },
     {
       "day": 261,
+      "devices": 2
+    },
+    {
+      "day": 262,
       "devices": 1
     },
     {
@@ -1564,8 +1636,16 @@
       "devices": 2
     },
     {
-      "day": 266,
+      "day": 264,
+      "devices": 1
+    },
+    {
+      "day": 265,
       "devices": 2
+    },
+    {
+      "day": 266,
+      "devices": 3
     },
     {
       "day": 267,
@@ -1576,11 +1656,23 @@
       "devices": 1
     },
     {
-      "day": 271,
+      "day": 270,
       "devices": 1
     },
     {
+      "day": 271,
+      "devices": 2
+    },
+    {
+      "day": 272,
+      "devices": 2
+    },
+    {
       "day": 273,
+      "devices": 2
+    },
+    {
+      "day": 274,
       "devices": 1
     },
     {
@@ -1589,11 +1681,11 @@
     },
     {
       "day": 277,
-      "devices": 4
+      "devices": 5
     },
     {
       "day": 278,
-      "devices": 2
+      "devices": 3
     },
     {
       "day": 279,
@@ -1605,15 +1697,15 @@
     },
     {
       "day": 281,
-      "devices": 1
+      "devices": 2
     },
     {
       "day": 284,
-      "devices": 1
+      "devices": 3
     },
     {
       "day": 285,
-      "devices": 2
+      "devices": 3
     },
     {
       "day": 286,
@@ -1621,7 +1713,7 @@
     },
     {
       "day": 287,
-      "devices": 2
+      "devices": 3
     },
     {
       "day": 290,
@@ -1632,56 +1724,80 @@
       "devices": 1
     },
     {
-      "day": 294,
+      "day": 293,
       "devices": 1
     },
     {
+      "day": 294,
+      "devices": 2
+    },
+    {
       "day": 295,
-      "devices": 3
+      "devices": 4
+    },
+    {
+      "day": 296,
+      "devices": 1
     },
     {
       "day": 297,
+      "devices": 3
+    },
+    {
+      "day": 298,
+      "devices": 1
+    },
+    {
+      "day": 299,
+      "devices": 1
+    },
+    {
+      "day": 302,
+      "devices": 1
+    },
+    {
+      "day": 303,
       "devices": 2
     },
     {
       "day": 304,
-      "devices": 1
+      "devices": 2
     },
     {
       "day": 305,
-      "devices": 1
+      "devices": 2
     },
     {
       "day": 306,
-      "devices": 2
-    },
-    {
-      "day": 307,
-      "devices": 1
-    },
-    {
-      "day": 308,
-      "devices": 5
-    },
-    {
-      "day": 309,
-      "devices": 4
-    },
-    {
-      "day": 310,
       "devices": 3
     },
     {
-      "day": 311,
-      "devices": 1
-    },
-    {
-      "day": 312,
+      "day": 307,
       "devices": 2
     },
     {
+      "day": 308,
+      "devices": 6
+    },
+    {
+      "day": 309,
+      "devices": 5
+    },
+    {
+      "day": 310,
+      "devices": 4
+    },
+    {
+      "day": 311,
+      "devices": 3
+    },
+    {
+      "day": 312,
+      "devices": 4
+    },
+    {
       "day": 313,
-      "devices": 1
+      "devices": 4
     },
     {
       "day": 314,
@@ -1693,15 +1809,19 @@
     },
     {
       "day": 316,
-      "devices": 1
+      "devices": 3
     },
     {
       "day": 317,
       "devices": 1
     },
     {
+      "day": 318,
+      "devices": 1
+    },
+    {
       "day": 319,
-      "devices": 2
+      "devices": 3
     },
     {
       "day": 320,
@@ -1713,7 +1833,7 @@
     },
     {
       "day": 322,
-      "devices": 1
+      "devices": 2
     },
     {
       "day": 323,
@@ -1728,7 +1848,23 @@
       "devices": 1
     },
     {
+      "day": 326,
+      "devices": 1
+    },
+    {
+      "day": 327,
+      "devices": 2
+    },
+    {
+      "day": 328,
+      "devices": 1
+    },
+    {
       "day": 329,
+      "devices": 3
+    },
+    {
+      "day": 330,
       "devices": 1
     },
     {
@@ -1737,50 +1873,74 @@
     },
     {
       "day": 332,
-      "devices": 1
+      "devices": 2
+    },
+    {
+      "day": 333,
+      "devices": 2
+    },
+    {
+      "day": 334,
+      "devices": 2
     },
     {
       "day": 335,
-      "devices": 2
+      "devices": 4
     },
     {
       "day": 336,
-      "devices": 3
+      "devices": 5
     },
     {
       "day": 337,
-      "devices": 2
+      "devices": 4
     },
     {
       "day": 338,
-      "devices": 2
-    },
-    {
-      "day": 339,
       "devices": 3
     },
     {
+      "day": 339,
+      "devices": 6
+    },
+    {
       "day": 340,
-      "devices": 1
+      "devices": 2
+    },
+    {
+      "day": 341,
+      "devices": 2
     },
     {
       "day": 342,
-      "devices": 1
+      "devices": 2
     },
     {
       "day": 343,
-      "devices": 1
+      "devices": 2
     },
     {
       "day": 344,
-      "devices": 1
+      "devices": 3
     },
     {
       "day": 345,
+      "devices": 2
+    },
+    {
+      "day": 346,
+      "devices": 1
+    },
+    {
+      "day": 348,
       "devices": 1
     },
     {
       "day": 350,
+      "devices": 1
+    },
+    {
+      "day": 351,
       "devices": 1
     },
     {
@@ -1801,35 +1961,67 @@
     },
     {
       "day": 357,
+      "devices": 2
+    },
+    {
+      "day": 361,
       "devices": 1
     },
     {
       "day": 362,
+      "devices": 2
+    },
+    {
+      "day": 363,
       "devices": 1
     },
     {
       "day": 364,
+      "devices": 2
+    },
+    {
+      "day": 365,
+      "devices": 3
+    },
+    {
+      "day": 366,
+      "devices": 2
+    },
+    {
+      "day": 367,
       "devices": 1
     },
     {
       "day": 368,
+      "devices": 2
+    },
+    {
+      "day": 369,
+      "devices": 1
+    },
+    {
+      "day": 370,
       "devices": 1
     },
     {
       "day": 371,
-      "devices": 1
+      "devices": 3
     },
     {
       "day": 372,
+      "devices": 2
+    },
+    {
+      "day": 373,
       "devices": 1
     },
     {
       "day": 374,
-      "devices": 2
+      "devices": 3
     },
     {
       "day": 375,
-      "devices": 2
+      "devices": 3
     },
     {
       "day": 376,
@@ -1837,82 +2029,194 @@
     },
     {
       "day": 377,
-      "devices": 1
+      "devices": 2
     },
     {
       "day": 378,
+      "devices": 2
+    },
+    {
+      "day": 379,
       "devices": 1
     },
     {
       "day": 380,
-      "devices": 2
-    },
-    {
-      "day": 381,
-      "devices": 1
-    },
-    {
-      "day": 382,
       "devices": 3
     },
     {
-      "day": 385,
+      "day": 381,
+      "devices": 3
+    },
+    {
+      "day": 382,
+      "devices": 5
+    },
+    {
+      "day": 383,
       "devices": 1
+    },
+    {
+      "day": 384,
+      "devices": 2
+    },
+    {
+      "day": 385,
+      "devices": 2
     },
     {
       "day": 386,
-      "devices": 1
+      "devices": 2
     },
     {
       "day": 387,
+      "devices": 3
+    },
+    {
+      "day": 388,
+      "devices": 2
+    },
+    {
+      "day": 389,
+      "devices": 2
+    },
+    {
+      "day": 390,
+      "devices": 2
+    },
+    {
+      "day": 391,
       "devices": 1
+    },
+    {
+      "day": 394,
+      "devices": 1
+    },
+    {
+      "day": 396,
+      "devices": 1
+    },
+    {
+      "day": 397,
+      "devices": 2
     },
     {
       "day": 398,
       "devices": 1
     },
     {
-      "day": 400,
-      "devices": 1
-    },
-    {
-      "day": 401,
-      "devices": 3
-    },
-    {
-      "day": 402,
+      "day": 399,
       "devices": 2
     },
     {
+      "day": 400,
+      "devices": 2
+    },
+    {
+      "day": 401,
+      "devices": 5
+    },
+    {
+      "day": 402,
+      "devices": 3
+    },
+    {
       "day": 403,
-      "devices": 1
+      "devices": 2
     },
     {
       "day": 404,
+      "devices": 2
+    },
+    {
+      "day": 405,
+      "devices": 1
+    },
+    {
+      "day": 406,
+      "devices": 1
+    },
+    {
+      "day": 407,
+      "devices": 2
+    },
+    {
+      "day": 408,
       "devices": 1
     },
     {
       "day": 409,
-      "devices": 2
+      "devices": 3
     },
     {
       "day": 410,
-      "devices": 1
+      "devices": 2
     },
     {
       "day": 411,
       "devices": 1
     },
     {
+      "day": 413,
+      "devices": 1
+    },
+    {
+      "day": 414,
+      "devices": 1
+    },
+    {
+      "day": 415,
+      "devices": 1
+    },
+    {
+      "day": 416,
+      "devices": 1
+    },
+    {
+      "day": 417,
+      "devices": 1
+    },
+    {
+      "day": 418,
+      "devices": 2
+    },
+    {
+      "day": 419,
+      "devices": 1
+    },
+    {
       "day": 420,
+      "devices": 3
+    },
+    {
+      "day": 421,
       "devices": 2
     },
     {
       "day": 422,
-      "devices": 1
+      "devices": 2
     },
     {
       "day": 423,
+      "devices": 3
+    },
+    {
+      "day": 424,
+      "devices": 1
+    },
+    {
+      "day": 425,
+      "devices": 3
+    },
+    {
+      "day": 426,
+      "devices": 2
+    },
+    {
+      "day": 427,
+      "devices": 1
+    },
+    {
+      "day": 428,
       "devices": 1
     },
     {
@@ -1933,47 +2237,123 @@
     },
     {
       "day": 436,
+      "devices": 3
+    },
+    {
+      "day": 437,
       "devices": 1
     },
     {
       "day": 438,
-      "devices": 1
+      "devices": 2
+    },
+    {
+      "day": 439,
+      "devices": 2
+    },
+    {
+      "day": 440,
+      "devices": 2
     },
     {
       "day": 441,
+      "devices": 3
+    },
+    {
+      "day": 442,
       "devices": 1
     },
     {
+      "day": 443,
+      "devices": 2
+    },
+    {
+      "day": 444,
+      "devices": 2
+    },
+    {
       "day": 445,
+      "devices": 2
+    },
+    {
+      "day": 446,
+      "devices": 2
+    },
+    {
+      "day": 447,
+      "devices": 1
+    },
+    {
+      "day": 448,
+      "devices": 1
+    },
+    {
+      "day": 449,
+      "devices": 1
+    },
+    {
+      "day": 450,
+      "devices": 2
+    },
+    {
+      "day": 451,
+      "devices": 1
+    },
+    {
+      "day": 452,
+      "devices": 1
+    },
+    {
+      "day": 453,
+      "devices": 1
+    },
+    {
+      "day": 454,
+      "devices": 2
+    },
+    {
+      "day": 455,
+      "devices": 1
+    },
+    {
+      "day": 456,
+      "devices": 1
+    },
+    {
+      "day": 457,
+      "devices": 1
+    },
+    {
+      "day": 458,
       "devices": 1
     },
     {
       "day": 459,
-      "devices": 1
+      "devices": 2
     },
     {
       "day": 460,
-      "devices": 1
+      "devices": 3
     },
     {
       "day": 461,
-      "devices": 2
+      "devices": 3
     },
     {
       "day": 462,
-      "devices": 1
+      "devices": 4
     },
     {
       "day": 463,
-      "devices": 2
+      "devices": 3
     },
     {
       "day": 464,
-      "devices": 2
+      "devices": 3
     },
     {
       "day": 465,
-      "devices": 2
+      "devices": 3
     },
     {
       "day": 466,
@@ -1985,11 +2365,11 @@
     },
     {
       "day": 468,
-      "devices": 1
+      "devices": 2
     },
     {
       "day": 469,
-      "devices": 3
+      "devices": 4
     },
     {
       "day": 470,
@@ -2013,6 +2393,10 @@
     },
     {
       "day": 475,
+      "devices": 1
+    },
+    {
+      "day": 479,
       "devices": 1
     },
     {
@@ -2044,12 +2428,16 @@
       "devices": 1
     },
     {
+      "day": 492,
+      "devices": 1
+    },
+    {
       "day": 493,
       "devices": 2
     },
     {
       "day": 494,
-      "devices": 1
+      "devices": 2
     },
     {
       "day": 495,
@@ -2082,1217 +2470,1517 @@
       "cumulative": 4
     },
     {
-      "date": "2023-06-12",
+      "date": "2023-06-05",
       "cumulative": 5
     },
     {
-      "date": "2023-06-30",
+      "date": "2023-06-12",
       "cumulative": 6
     },
     {
-      "date": "2023-07-07",
+      "date": "2023-06-19",
       "cumulative": 7
     },
     {
-      "date": "2023-07-19",
+      "date": "2023-06-30",
       "cumulative": 8
     },
     {
-      "date": "2023-07-20",
-      "cumulative": 9
-    },
-    {
-      "date": "2023-07-28",
+      "date": "2023-07-07",
       "cumulative": 10
     },
     {
-      "date": "2023-09-18",
+      "date": "2023-07-20",
       "cumulative": 11
     },
     {
-      "date": "2023-09-29",
+      "date": "2023-07-28",
       "cumulative": 12
     },
     {
-      "date": "2023-10-02",
+      "date": "2023-08-21",
       "cumulative": 13
     },
     {
-      "date": "2023-10-26",
+      "date": "2023-09-15",
       "cumulative": 14
     },
     {
-      "date": "2023-11-13",
+      "date": "2023-09-18",
       "cumulative": 15
     },
     {
-      "date": "2023-11-29",
+      "date": "2023-09-27",
       "cumulative": 16
     },
     {
-      "date": "2023-12-15",
+      "date": "2023-09-29",
       "cumulative": 17
     },
     {
-      "date": "2023-12-26",
+      "date": "2023-10-02",
       "cumulative": 18
     },
     {
-      "date": "2024-03-18",
+      "date": "2023-10-26",
+      "cumulative": 19
+    },
+    {
+      "date": "2023-11-13",
       "cumulative": 20
     },
     {
-      "date": "2024-03-28",
+      "date": "2023-11-29",
       "cumulative": 21
     },
     {
-      "date": "2024-03-29",
+      "date": "2023-12-15",
       "cumulative": 22
     },
     {
-      "date": "2024-04-04",
+      "date": "2023-12-26",
       "cumulative": 23
     },
     {
-      "date": "2024-04-15",
+      "date": "2024-02-23",
       "cumulative": 24
     },
     {
-      "date": "2024-05-01",
+      "date": "2024-03-04",
       "cumulative": 25
     },
     {
-      "date": "2024-05-06",
-      "cumulative": 26
-    },
-    {
-      "date": "2024-05-14",
+      "date": "2024-03-18",
       "cumulative": 27
     },
     {
-      "date": "2024-05-17",
+      "date": "2024-03-29",
+      "cumulative": 28
+    },
+    {
+      "date": "2024-04-04",
       "cumulative": 29
     },
     {
-      "date": "2024-05-20",
+      "date": "2024-04-15",
       "cumulative": 30
     },
     {
-      "date": "2024-05-23",
+      "date": "2024-05-01",
       "cumulative": 31
     },
     {
-      "date": "2024-06-04",
+      "date": "2024-05-06",
       "cumulative": 32
     },
     {
-      "date": "2024-06-09",
+      "date": "2024-05-08",
       "cumulative": 33
     },
     {
-      "date": "2024-06-12",
+      "date": "2024-05-14",
       "cumulative": 35
     },
     {
-      "date": "2024-06-21",
+      "date": "2024-05-15",
       "cumulative": 36
     },
     {
-      "date": "2024-06-22",
-      "cumulative": 37
-    },
-    {
-      "date": "2024-06-28",
+      "date": "2024-05-17",
       "cumulative": 38
     },
     {
-      "date": "2024-06-30",
+      "date": "2024-05-20",
       "cumulative": 39
     },
     {
-      "date": "2024-07-01",
+      "date": "2024-05-23",
       "cumulative": 40
     },
     {
-      "date": "2024-07-03",
+      "date": "2024-06-03",
       "cumulative": 41
     },
     {
-      "date": "2024-07-04",
+      "date": "2024-06-04",
+      "cumulative": 42
+    },
+    {
+      "date": "2024-06-05",
       "cumulative": 43
     },
     {
-      "date": "2024-07-05",
+      "date": "2024-06-09",
       "cumulative": 44
     },
     {
-      "date": "2024-07-06",
+      "date": "2024-06-10",
       "cumulative": 45
     },
     {
-      "date": "2024-07-08",
+      "date": "2024-06-12",
       "cumulative": 47
     },
     {
-      "date": "2024-07-09",
+      "date": "2024-06-18",
       "cumulative": 48
     },
     {
-      "date": "2024-07-10",
+      "date": "2024-06-21",
       "cumulative": 49
     },
     {
-      "date": "2024-07-12",
+      "date": "2024-06-22",
       "cumulative": 50
     },
     {
-      "date": "2024-07-23",
+      "date": "2024-06-24",
       "cumulative": 51
     },
     {
-      "date": "2024-07-24",
+      "date": "2024-06-25",
       "cumulative": 52
     },
     {
-      "date": "2024-07-28",
+      "date": "2024-06-30",
       "cumulative": 53
     },
     {
-      "date": "2024-07-29",
+      "date": "2024-07-01",
       "cumulative": 54
     },
     {
-      "date": "2024-08-14",
-      "cumulative": 56
+      "date": "2024-07-03",
+      "cumulative": 55
     },
     {
-      "date": "2024-08-16",
+      "date": "2024-07-04",
       "cumulative": 57
     },
     {
-      "date": "2024-08-19",
+      "date": "2024-07-05",
+      "cumulative": 58
+    },
+    {
+      "date": "2024-07-06",
       "cumulative": 59
     },
     {
-      "date": "2024-08-24",
-      "cumulative": 60
-    },
-    {
-      "date": "2024-08-29",
+      "date": "2024-07-08",
       "cumulative": 61
     },
     {
-      "date": "2024-09-01",
+      "date": "2024-07-09",
       "cumulative": 62
     },
     {
-      "date": "2024-09-03",
+      "date": "2024-07-10",
       "cumulative": 63
     },
     {
-      "date": "2024-09-05",
+      "date": "2024-07-12",
       "cumulative": 64
     },
     {
-      "date": "2024-09-09",
+      "date": "2024-07-22",
       "cumulative": 65
     },
     {
-      "date": "2024-09-10",
+      "date": "2024-07-23",
       "cumulative": 66
     },
     {
-      "date": "2024-09-11",
+      "date": "2024-07-24",
+      "cumulative": 67
+    },
+    {
+      "date": "2024-07-29",
       "cumulative": 68
     },
     {
-      "date": "2024-09-22",
+      "date": "2024-07-31",
       "cumulative": 69
     },
     {
-      "date": "2024-09-23",
+      "date": "2024-08-02",
       "cumulative": 70
     },
     {
-      "date": "2024-09-26",
+      "date": "2024-08-04",
+      "cumulative": 71
+    },
+    {
+      "date": "2024-08-13",
       "cumulative": 72
     },
     {
-      "date": "2024-09-27",
-      "cumulative": 73
-    },
-    {
-      "date": "2024-09-28",
+      "date": "2024-08-14",
       "cumulative": 74
     },
     {
-      "date": "2024-09-29",
-      "cumulative": 75
-    },
-    {
-      "date": "2024-09-30",
+      "date": "2024-08-15",
       "cumulative": 76
     },
     {
-      "date": "2024-10-09",
-      "cumulative": 77
+      "date": "2024-08-16",
+      "cumulative": 78
     },
     {
-      "date": "2024-10-10",
-      "cumulative": 79
-    },
-    {
-      "date": "2024-10-16",
+      "date": "2024-08-19",
       "cumulative": 80
     },
     {
-      "date": "2024-10-17",
+      "date": "2024-08-24",
+      "cumulative": 81
+    },
+    {
+      "date": "2024-08-29",
       "cumulative": 82
     },
     {
-      "date": "2024-10-25",
+      "date": "2024-09-02",
       "cumulative": 83
     },
     {
-      "date": "2024-11-13",
+      "date": "2024-09-03",
       "cumulative": 84
     },
     {
-      "date": "2024-11-15",
+      "date": "2024-09-05",
       "cumulative": 85
     },
     {
-      "date": "2024-11-19",
+      "date": "2024-09-09",
       "cumulative": 86
     },
     {
-      "date": "2025-01-02",
+      "date": "2024-09-10",
       "cumulative": 87
     },
     {
-      "date": "2025-01-13",
+      "date": "2024-09-11",
       "cumulative": 89
     },
     {
-      "date": "2025-01-16",
+      "date": "2024-09-17",
       "cumulative": 90
     },
     {
-      "date": "2025-01-20",
+      "date": "2024-09-20",
       "cumulative": 91
     },
     {
-      "date": "2025-01-27",
+      "date": "2024-09-21",
       "cumulative": 92
     },
     {
-      "date": "2025-01-31",
+      "date": "2024-09-22",
       "cumulative": 93
     },
     {
-      "date": "2025-02-06",
+      "date": "2024-09-23",
       "cumulative": 94
     },
     {
-      "date": "2025-02-10",
+      "date": "2024-09-26",
       "cumulative": 95
     },
     {
-      "date": "2025-02-13",
+      "date": "2024-09-27",
       "cumulative": 96
     },
     {
-      "date": "2025-02-16",
+      "date": "2024-09-29",
       "cumulative": 97
     },
     {
-      "date": "2025-02-17",
+      "date": "2024-09-30",
       "cumulative": 98
     },
     {
-      "date": "2025-03-30",
+      "date": "2024-10-02",
       "cumulative": 99
     },
     {
-      "date": "2025-04-08",
-      "cumulative": 100
-    },
-    {
-      "date": "2025-04-09",
+      "date": "2024-10-09",
       "cumulative": 101
     },
     {
-      "date": "2025-04-24",
-      "cumulative": 102
-    },
-    {
-      "date": "2025-04-30",
+      "date": "2024-10-10",
       "cumulative": 103
     },
     {
-      "date": "2025-05-09",
-      "cumulative": 104
-    },
-    {
-      "date": "2025-05-14",
+      "date": "2024-10-17",
       "cumulative": 105
     },
     {
-      "date": "2025-05-21",
+      "date": "2024-10-18",
       "cumulative": 106
     },
     {
-      "date": "2025-06-02",
+      "date": "2024-10-25",
       "cumulative": 107
     },
     {
-      "date": "2025-06-05",
+      "date": "2024-10-28",
       "cumulative": 108
     },
     {
-      "date": "2025-06-29",
+      "date": "2024-11-05",
       "cumulative": 109
     },
     {
-      "date": "2025-07-14",
+      "date": "2024-11-08",
+      "cumulative": 110
+    },
+    {
+      "date": "2024-11-12",
       "cumulative": 111
     },
     {
-      "date": "2025-08-10",
+      "date": "2024-11-15",
       "cumulative": 112
     },
     {
-      "date": "2025-08-26",
+      "date": "2024-11-19",
+      "cumulative": 113
+    },
+    {
+      "date": "2024-11-21",
       "cumulative": 114
     },
     {
-      "date": "2025-08-29",
+      "date": "2025-01-02",
       "cumulative": 115
     },
     {
-      "date": "2025-09-01",
-      "cumulative": 116
-    },
-    {
-      "date": "2025-09-08",
+      "date": "2025-01-13",
       "cumulative": 117
     },
     {
-      "date": "2025-09-18",
+      "date": "2025-01-16",
+      "cumulative": 118
+    },
+    {
+      "date": "2025-01-20",
       "cumulative": 119
     },
     {
-      "date": "2025-09-25",
+      "date": "2025-01-24",
       "cumulative": 120
     },
     {
-      "date": "2025-10-04",
+      "date": "2025-01-27",
       "cumulative": 121
     },
     {
-      "date": "2025-10-05",
+      "date": "2025-01-31",
       "cumulative": 122
     },
     {
-      "date": "2025-10-07",
+      "date": "2025-02-06",
       "cumulative": 123
     },
     {
-      "date": "2025-10-08",
+      "date": "2025-02-10",
       "cumulative": 124
     },
     {
-      "date": "2025-10-14",
+      "date": "2025-02-15",
       "cumulative": 125
     },
     {
-      "date": "2025-10-15",
+      "date": "2025-02-16",
       "cumulative": 126
     },
     {
-      "date": "2025-10-17",
+      "date": "2025-02-17",
       "cumulative": 127
     },
     {
-      "date": "2025-10-18",
+      "date": "2025-02-18",
+      "cumulative": 128
+    },
+    {
+      "date": "2025-03-07",
       "cumulative": 129
     },
     {
-      "date": "2025-10-20",
+      "date": "2025-03-30",
+      "cumulative": 130
+    },
+    {
+      "date": "2025-04-02",
       "cumulative": 131
     },
     {
-      "date": "2025-10-23",
+      "date": "2025-04-08",
       "cumulative": 132
     },
     {
-      "date": "2025-10-25",
+      "date": "2025-04-09",
+      "cumulative": 133
+    },
+    {
+      "date": "2025-04-23",
       "cumulative": 134
     },
     {
-      "date": "2025-10-29",
+      "date": "2025-04-24",
       "cumulative": 135
     },
     {
-      "date": "2025-11-06",
+      "date": "2025-04-30",
+      "cumulative": 136
+    },
+    {
+      "date": "2025-05-06",
       "cumulative": 137
     },
     {
-      "date": "2025-11-09",
+      "date": "2025-05-09",
       "cumulative": 138
     },
     {
-      "date": "2025-11-10",
+      "date": "2025-05-14",
       "cumulative": 139
     },
     {
-      "date": "2025-11-11",
+      "date": "2025-05-21",
       "cumulative": 141
     },
     {
-      "date": "2025-11-18",
+      "date": "2025-06-02",
       "cumulative": 142
     },
     {
-      "date": "2025-11-19",
+      "date": "2025-06-05",
       "cumulative": 143
     },
     {
-      "date": "2025-11-20",
+      "date": "2025-06-11",
       "cumulative": 144
     },
     {
-      "date": "2025-11-24",
+      "date": "2025-06-29",
+      "cumulative": 145
+    },
+    {
+      "date": "2025-07-14",
+      "cumulative": 147
+    },
+    {
+      "date": "2025-07-27",
+      "cumulative": 148
+    },
+    {
+      "date": "2025-08-10",
       "cumulative": 149
     },
     {
-      "date": "2025-11-25",
+      "date": "2025-08-14",
+      "cumulative": 150
+    },
+    {
+      "date": "2025-08-24",
+      "cumulative": 151
+    },
+    {
+      "date": "2025-08-26",
+      "cumulative": 152
+    },
+    {
+      "date": "2025-08-29",
+      "cumulative": 153
+    },
+    {
+      "date": "2025-09-01",
+      "cumulative": 154
+    },
+    {
+      "date": "2025-09-08",
+      "cumulative": 155
+    },
+    {
+      "date": "2025-09-18",
+      "cumulative": 156
+    },
+    {
+      "date": "2025-09-25",
+      "cumulative": 157
+    },
+    {
+      "date": "2025-10-04",
+      "cumulative": 158
+    },
+    {
+      "date": "2025-10-05",
       "cumulative": 159
     },
     {
-      "date": "2025-11-26",
+      "date": "2025-10-07",
+      "cumulative": 160
+    },
+    {
+      "date": "2025-10-08",
+      "cumulative": 161
+    },
+    {
+      "date": "2025-10-10",
+      "cumulative": 162
+    },
+    {
+      "date": "2025-10-14",
+      "cumulative": 163
+    },
+    {
+      "date": "2025-10-15",
+      "cumulative": 164
+    },
+    {
+      "date": "2025-10-17",
+      "cumulative": 166
+    },
+    {
+      "date": "2025-10-18",
       "cumulative": 168
     },
     {
-      "date": "2025-11-27",
-      "cumulative": 172
+      "date": "2025-10-20",
+      "cumulative": 170
     },
     {
-      "date": "2025-11-28",
+      "date": "2025-10-23",
+      "cumulative": 171
+    },
+    {
+      "date": "2025-10-25",
+      "cumulative": 173
+    },
+    {
+      "date": "2025-10-29",
       "cumulative": 174
     },
     {
-      "date": "2025-11-29",
-      "cumulative": 175
+      "date": "2025-11-06",
+      "cumulative": 176
     },
     {
-      "date": "2025-11-30",
+      "date": "2025-11-08",
+      "cumulative": 177
+    },
+    {
+      "date": "2025-11-09",
+      "cumulative": 178
+    },
+    {
+      "date": "2025-11-10",
+      "cumulative": 179
+    },
+    {
+      "date": "2025-11-11",
+      "cumulative": 180
+    },
+    {
+      "date": "2025-11-18",
       "cumulative": 181
     },
     {
-      "date": "2025-12-01",
-      "cumulative": 184
+      "date": "2025-11-19",
+      "cumulative": 182
     },
     {
-      "date": "2025-12-02",
-      "cumulative": 186
+      "date": "2025-11-20",
+      "cumulative": 183
     },
     {
-      "date": "2025-12-03",
-      "cumulative": 190
+      "date": "2025-11-24",
+      "cumulative": 187
     },
     {
-      "date": "2025-12-04",
-      "cumulative": 193
+      "date": "2025-11-25",
+      "cumulative": 197
     },
     {
-      "date": "2025-12-05",
-      "cumulative": 195
-    },
-    {
-      "date": "2025-12-06",
-      "cumulative": 198
-    },
-    {
-      "date": "2025-12-07",
-      "cumulative": 199
-    },
-    {
-      "date": "2025-12-08",
-      "cumulative": 201
-    },
-    {
-      "date": "2025-12-09",
-      "cumulative": 202
-    },
-    {
-      "date": "2025-12-10",
-      "cumulative": 203
-    },
-    {
-      "date": "2025-12-11",
-      "cumulative": 205
-    },
-    {
-      "date": "2025-12-12",
+      "date": "2025-11-26",
       "cumulative": 206
     },
     {
-      "date": "2025-12-14",
-      "cumulative": 207
-    },
-    {
-      "date": "2025-12-16",
-      "cumulative": 209
-    },
-    {
-      "date": "2025-12-17",
-      "cumulative": 210
-    },
-    {
-      "date": "2025-12-18",
+      "date": "2025-11-27",
       "cumulative": 211
     },
     {
-      "date": "2025-12-19",
-      "cumulative": 212
+      "date": "2025-11-28",
+      "cumulative": 213
     },
     {
-      "date": "2025-12-20",
+      "date": "2025-11-29",
       "cumulative": 214
     },
     {
-      "date": "2025-12-21",
-      "cumulative": 215
-    },
-    {
-      "date": "2025-12-23",
-      "cumulative": 216
-    },
-    {
-      "date": "2025-12-24",
-      "cumulative": 217
-    },
-    {
-      "date": "2025-12-26",
+      "date": "2025-11-30",
       "cumulative": 220
     },
     {
-      "date": "2025-12-27",
-      "cumulative": 221
-    },
-    {
-      "date": "2025-12-30",
+      "date": "2025-12-01",
       "cumulative": 223
     },
     {
-      "date": "2025-12-31",
-      "cumulative": 224
-    },
-    {
-      "date": "2026-01-01",
+      "date": "2025-12-02",
       "cumulative": 225
     },
     {
-      "date": "2026-01-02",
-      "cumulative": 226
-    },
-    {
-      "date": "2026-01-03",
-      "cumulative": 227
-    },
-    {
-      "date": "2026-01-04",
+      "date": "2025-12-03",
       "cumulative": 229
     },
     {
-      "date": "2026-01-05",
-      "cumulative": 230
+      "date": "2025-12-04",
+      "cumulative": 232
     },
     {
-      "date": "2026-01-07",
-      "cumulative": 233
+      "date": "2025-12-05",
+      "cumulative": 234
     },
     {
-      "date": "2026-01-08",
-      "cumulative": 235
-    },
-    {
-      "date": "2026-01-11",
-      "cumulative": 236
-    },
-    {
-      "date": "2026-01-12",
+      "date": "2025-12-06",
       "cumulative": 237
     },
     {
-      "date": "2026-01-13",
-      "cumulative": 239
+      "date": "2025-12-07",
+      "cumulative": 238
     },
     {
-      "date": "2026-01-14",
+      "date": "2025-12-08",
       "cumulative": 240
     },
     {
-      "date": "2026-01-15",
+      "date": "2025-12-09",
       "cumulative": 242
     },
     {
-      "date": "2026-01-16",
-      "cumulative": 243
-    },
-    {
-      "date": "2026-01-17",
+      "date": "2025-12-10",
       "cumulative": 244
     },
     {
-      "date": "2026-01-19",
+      "date": "2025-12-11",
       "cumulative": 246
     },
     {
-      "date": "2026-01-20",
+      "date": "2025-12-12",
+      "cumulative": 247
+    },
+    {
+      "date": "2025-12-14",
+      "cumulative": 248
+    },
+    {
+      "date": "2025-12-16",
       "cumulative": 250
     },
     {
-      "date": "2026-01-21",
+      "date": "2025-12-17",
+      "cumulative": 251
+    },
+    {
+      "date": "2025-12-18",
+      "cumulative": 252
+    },
+    {
+      "date": "2025-12-19",
       "cumulative": 253
     },
     {
-      "date": "2026-01-22",
-      "cumulative": 254
+      "date": "2025-12-20",
+      "cumulative": 255
     },
     {
-      "date": "2026-01-23",
+      "date": "2025-12-21",
+      "cumulative": 256
+    },
+    {
+      "date": "2025-12-22",
       "cumulative": 257
     },
     {
-      "date": "2026-01-24",
+      "date": "2025-12-23",
+      "cumulative": 258
+    },
+    {
+      "date": "2025-12-24",
       "cumulative": 259
     },
     {
-      "date": "2026-01-25",
-      "cumulative": 261
-    },
-    {
-      "date": "2026-01-26",
+      "date": "2025-12-26",
       "cumulative": 262
     },
     {
-      "date": "2026-01-28",
-      "cumulative": 263
+      "date": "2025-12-27",
+      "cumulative": 264
     },
     {
-      "date": "2026-01-29",
+      "date": "2025-12-30",
       "cumulative": 266
     },
     {
-      "date": "2026-01-30",
+      "date": "2025-12-31",
+      "cumulative": 267
+    },
+    {
+      "date": "2026-01-01",
       "cumulative": 268
     },
     {
-      "date": "2026-02-02",
-      "cumulative": 271
+      "date": "2026-01-02",
+      "cumulative": 269
     },
     {
-      "date": "2026-02-03",
+      "date": "2026-01-03",
+      "cumulative": 270
+    },
+    {
+      "date": "2026-01-04",
       "cumulative": 272
     },
     {
-      "date": "2026-02-04",
+      "date": "2026-01-05",
       "cumulative": 273
     },
     {
-      "date": "2026-02-05",
+      "date": "2026-01-06",
       "cumulative": 274
     },
     {
-      "date": "2026-02-08",
-      "cumulative": 276
+      "date": "2026-01-07",
+      "cumulative": 277
     },
     {
-      "date": "2026-02-09",
+      "date": "2026-01-08",
       "cumulative": 279
     },
     {
-      "date": "2026-02-10",
+      "date": "2026-01-10",
+      "cumulative": 280
+    },
+    {
+      "date": "2026-01-11",
+      "cumulative": 281
+    },
+    {
+      "date": "2026-01-12",
       "cumulative": 282
     },
     {
-      "date": "2026-02-11",
+      "date": "2026-01-13",
+      "cumulative": 284
+    },
+    {
+      "date": "2026-01-14",
       "cumulative": 285
     },
     {
-      "date": "2026-02-12",
-      "cumulative": 292
+      "date": "2026-01-15",
+      "cumulative": 287
     },
     {
-      "date": "2026-02-13",
+      "date": "2026-01-16",
+      "cumulative": 288
+    },
+    {
+      "date": "2026-01-17",
+      "cumulative": 289
+    },
+    {
+      "date": "2026-01-19",
+      "cumulative": 291
+    },
+    {
+      "date": "2026-01-20",
+      "cumulative": 295
+    },
+    {
+      "date": "2026-01-21",
       "cumulative": 298
     },
     {
-      "date": "2026-02-14",
-      "cumulative": 300
+      "date": "2026-01-22",
+      "cumulative": 299
     },
     {
-      "date": "2026-02-16",
+      "date": "2026-01-23",
       "cumulative": 303
     },
     {
-      "date": "2026-02-17",
+      "date": "2026-01-24",
       "cumulative": 306
     },
     {
-      "date": "2026-02-18",
-      "cumulative": 311
+      "date": "2026-01-25",
+      "cumulative": 308
     },
     {
-      "date": "2026-02-19",
+      "date": "2026-01-26",
+      "cumulative": 309
+    },
+    {
+      "date": "2026-01-28",
+      "cumulative": 310
+    },
+    {
+      "date": "2026-01-29",
       "cumulative": 313
     },
     {
-      "date": "2026-02-20",
+      "date": "2026-01-30",
       "cumulative": 315
     },
     {
-      "date": "2026-02-21",
-      "cumulative": 317
+      "date": "2026-02-01",
+      "cumulative": 316
     },
     {
-      "date": "2026-02-22",
-      "cumulative": 319
+      "date": "2026-02-02",
+      "cumulative": 320
     },
     {
-      "date": "2026-02-23",
-      "cumulative": 324
+      "date": "2026-02-03",
+      "cumulative": 321
     },
     {
-      "date": "2026-02-24",
-      "cumulative": 329
+      "date": "2026-02-04",
+      "cumulative": 322
     },
     {
-      "date": "2026-02-25",
+      "date": "2026-02-05",
+      "cumulative": 323
+    },
+    {
+      "date": "2026-02-08",
+      "cumulative": 325
+    },
+    {
+      "date": "2026-02-09",
+      "cumulative": 328
+    },
+    {
+      "date": "2026-02-10",
       "cumulative": 333
     },
     {
-      "date": "2026-02-26",
-      "cumulative": 338
+      "date": "2026-02-11",
+      "cumulative": 336
     },
     {
-      "date": "2026-02-27",
-      "cumulative": 342
+      "date": "2026-02-12",
+      "cumulative": 343
     },
     {
-      "date": "2026-02-28",
-      "cumulative": 346
+      "date": "2026-02-13",
+      "cumulative": 349
     },
     {
-      "date": "2026-03-01",
-      "cumulative": 348
+      "date": "2026-02-14",
+      "cumulative": 352
     },
     {
-      "date": "2026-03-02",
-      "cumulative": 350
+      "date": "2026-02-16",
+      "cumulative": 355
     },
     {
-      "date": "2026-03-03",
-      "cumulative": 356
+      "date": "2026-02-17",
+      "cumulative": 358
     },
     {
-      "date": "2026-03-04",
-      "cumulative": 365
+      "date": "2026-02-18",
+      "cumulative": 364
     },
     {
-      "date": "2026-03-05",
+      "date": "2026-02-19",
+      "cumulative": 366
+    },
+    {
+      "date": "2026-02-20",
+      "cumulative": 368
+    },
+    {
+      "date": "2026-02-21",
+      "cumulative": 370
+    },
+    {
+      "date": "2026-02-22",
+      "cumulative": 372
+    },
+    {
+      "date": "2026-02-23",
+      "cumulative": 377
+    },
+    {
+      "date": "2026-02-24",
+      "cumulative": 383
+    },
+    {
+      "date": "2026-02-25",
       "cumulative": 387
     },
     {
-      "date": "2026-03-06",
-      "cumulative": 413
+      "date": "2026-02-26",
+      "cumulative": 393
     },
     {
-      "date": "2026-03-07",
-      "cumulative": 427
+      "date": "2026-02-27",
+      "cumulative": 397
     },
     {
-      "date": "2026-03-08",
+      "date": "2026-02-28",
+      "cumulative": 402
+    },
+    {
+      "date": "2026-03-01",
+      "cumulative": 404
+    },
+    {
+      "date": "2026-03-02",
+      "cumulative": 405
+    },
+    {
+      "date": "2026-03-03",
+      "cumulative": 412
+    },
+    {
+      "date": "2026-03-04",
+      "cumulative": 421
+    },
+    {
+      "date": "2026-03-05",
       "cumulative": 442
     },
     {
+      "date": "2026-03-06",
+      "cumulative": 466
+    },
+    {
+      "date": "2026-03-07",
+      "cumulative": 479
+    },
+    {
+      "date": "2026-03-08",
+      "cumulative": 492
+    },
+    {
       "date": "2026-03-09",
-      "cumulative": 468
+      "cumulative": 514
     },
     {
       "date": "2026-03-10",
-      "cumulative": 484
+      "cumulative": 529
     },
     {
       "date": "2026-03-11",
-      "cumulative": 504
+      "cumulative": 544
     },
     {
       "date": "2026-03-12",
-      "cumulative": 533
+      "cumulative": 573
     },
     {
       "date": "2026-03-13",
-      "cumulative": 539
+      "cumulative": 579
     },
     {
       "date": "2026-03-14",
-      "cumulative": 553
+      "cumulative": 593
     },
     {
       "date": "2026-03-15",
-      "cumulative": 560
+      "cumulative": 600
     },
     {
       "date": "2026-03-16",
-      "cumulative": 581
+      "cumulative": 621
     },
     {
       "date": "2026-03-17",
-      "cumulative": 597
+      "cumulative": 635
     },
     {
       "date": "2026-03-18",
-      "cumulative": 615
+      "cumulative": 653
     },
     {
       "date": "2026-03-19",
-      "cumulative": 622
+      "cumulative": 658
     },
     {
       "date": "2026-03-20",
-      "cumulative": 633
+      "cumulative": 668
     },
     {
       "date": "2026-03-21",
-      "cumulative": 637
+      "cumulative": 672
     },
     {
       "date": "2026-03-22",
-      "cumulative": 643
+      "cumulative": 678
     },
     {
       "date": "2026-03-23",
-      "cumulative": 652
+      "cumulative": 687
     },
     {
       "date": "2026-03-24",
-      "cumulative": 666
+      "cumulative": 700
     },
     {
       "date": "2026-03-25",
-      "cumulative": 679
+      "cumulative": 712
     },
     {
       "date": "2026-03-26",
-      "cumulative": 693
+      "cumulative": 727
     },
     {
       "date": "2026-03-27",
-      "cumulative": 706
+      "cumulative": 739
     },
     {
       "date": "2026-03-28",
-      "cumulative": 709
+      "cumulative": 743
     },
     {
       "date": "2026-03-29",
-      "cumulative": 717
+      "cumulative": 750
     },
     {
       "date": "2026-03-30",
-      "cumulative": 725
+      "cumulative": 758
     },
     {
       "date": "2026-03-31",
-      "cumulative": 735
+      "cumulative": 769
     },
     {
       "date": "2026-04-01",
-      "cumulative": 747
+      "cumulative": 780
     },
     {
       "date": "2026-04-02",
-      "cumulative": 753
+      "cumulative": 787
     },
     {
       "date": "2026-04-03",
-      "cumulative": 755
-    },
-    {
-      "date": "2026-04-04",
-      "cumulative": 757
-    },
-    {
-      "date": "2026-04-05",
-      "cumulative": 759
-    },
-    {
-      "date": "2026-04-06",
-      "cumulative": 763
-    },
-    {
-      "date": "2026-04-07",
-      "cumulative": 771
-    },
-    {
-      "date": "2026-04-08",
-      "cumulative": 776
-    },
-    {
-      "date": "2026-04-09",
-      "cumulative": 781
-    },
-    {
-      "date": "2026-04-10",
-      "cumulative": 788
-    },
-    {
-      "date": "2026-04-11",
-      "cumulative": 789
-    },
-    {
-      "date": "2026-04-12",
       "cumulative": 790
     },
     {
+      "date": "2026-04-04",
+      "cumulative": 792
+    },
+    {
+      "date": "2026-04-05",
+      "cumulative": 795
+    },
+    {
+      "date": "2026-04-06",
+      "cumulative": 798
+    },
+    {
+      "date": "2026-04-07",
+      "cumulative": 807
+    },
+    {
+      "date": "2026-04-08",
+      "cumulative": 812
+    },
+    {
+      "date": "2026-04-09",
+      "cumulative": 818
+    },
+    {
+      "date": "2026-04-10",
+      "cumulative": 825
+    },
+    {
+      "date": "2026-04-11",
+      "cumulative": 828
+    },
+    {
+      "date": "2026-04-12",
+      "cumulative": 829
+    },
+    {
       "date": "2026-04-13",
-      "cumulative": 797
+      "cumulative": 835
     },
     {
       "date": "2026-04-14",
-      "cumulative": 804
+      "cumulative": 844
     },
     {
       "date": "2026-04-15",
-      "cumulative": 809
+      "cumulative": 849
     },
     {
       "date": "2026-04-16",
-      "cumulative": 815
+      "cumulative": 855
     },
     {
       "date": "2026-04-17",
-      "cumulative": 819
+      "cumulative": 859
     },
     {
       "date": "2026-04-18",
-      "cumulative": 821
+      "cumulative": 860
     },
     {
       "date": "2026-04-19",
-      "cumulative": 824
+      "cumulative": 863
     },
     {
       "date": "2026-04-20",
-      "cumulative": 830
+      "cumulative": 869
     },
     {
       "date": "2026-04-21",
-      "cumulative": 835
+      "cumulative": 876
+    },
+    {
+      "date": "2026-04-22",
+      "cumulative": 880
+    },
+    {
+      "date": "2026-04-23",
+      "cumulative": 889
+    },
+    {
+      "date": "2026-04-24",
+      "cumulative": 894
+    },
+    {
+      "date": "2026-04-25",
+      "cumulative": 896
+    },
+    {
+      "date": "2026-04-26",
+      "cumulative": 899
+    },
+    {
+      "date": "2026-04-27",
+      "cumulative": 901
+    },
+    {
+      "date": "2026-04-28",
+      "cumulative": 907
+    },
+    {
+      "date": "2026-04-29",
+      "cumulative": 918
+    },
+    {
+      "date": "2026-04-30",
+      "cumulative": 928
+    },
+    {
+      "date": "2026-05-01",
+      "cumulative": 934
+    },
+    {
+      "date": "2026-05-02",
+      "cumulative": 936
+    },
+    {
+      "date": "2026-05-03",
+      "cumulative": 938
+    },
+    {
+      "date": "2026-05-04",
+      "cumulative": 940
+    },
+    {
+      "date": "2026-05-05",
+      "cumulative": 945
+    },
+    {
+      "date": "2026-05-06",
+      "cumulative": 951
+    },
+    {
+      "date": "2026-05-07",
+      "cumulative": 955
+    },
+    {
+      "date": "2026-05-08",
+      "cumulative": 958
+    },
+    {
+      "date": "2026-05-09",
+      "cumulative": 959
+    },
+    {
+      "date": "2026-05-11",
+      "cumulative": 962
+    },
+    {
+      "date": "2026-05-12",
+      "cumulative": 969
+    },
+    {
+      "date": "2026-05-13",
+      "cumulative": 975
+    },
+    {
+      "date": "2026-05-14",
+      "cumulative": 977
+    },
+    {
+      "date": "2026-05-15",
+      "cumulative": 980
+    },
+    {
+      "date": "2026-05-16",
+      "cumulative": 982
+    },
+    {
+      "date": "2026-05-17",
+      "cumulative": 986
+    },
+    {
+      "date": "2026-05-18",
+      "cumulative": 992
+    },
+    {
+      "date": "2026-05-19",
+      "cumulative": 998
+    },
+    {
+      "date": "2026-05-20",
+      "cumulative": 1002
+    },
+    {
+      "date": "2026-05-21",
+      "cumulative": 1004
+    },
+    {
+      "date": "2026-05-22",
+      "cumulative": 1010
+    },
+    {
+      "date": "2026-05-23",
+      "cumulative": 1013
+    },
+    {
+      "date": "2026-05-24",
+      "cumulative": 1014
+    },
+    {
+      "date": "2026-05-25",
+      "cumulative": 1016
+    },
+    {
+      "date": "2026-05-26",
+      "cumulative": 1022
+    },
+    {
+      "date": "2026-05-27",
+      "cumulative": 1025
     }
   ],
   "active_freq": [
     {
       "bin_start": 1.0,
-      "count": 536
+      "count": 689
     },
     {
-      "bin_start": 2.5,
-      "count": 114
+      "bin_start": 4.0,
+      "count": 111
     },
     {
-      "bin_start": 4.1,
-      "count": 23
+      "bin_start": 7.0,
+      "count": 55
     },
     {
-      "bin_start": 5.6,
-      "count": 34
+      "bin_start": 10.0,
+      "count": 30
     },
     {
-      "bin_start": 7.2,
-      "count": 13
+      "bin_start": 13.0,
+      "count": 27
     },
     {
-      "bin_start": 8.7,
-      "count": 20
+      "bin_start": 16.0,
+      "count": 32
     },
     {
-      "bin_start": 10.2,
-      "count": 11
-    },
-    {
-      "bin_start": 11.8,
-      "count": 8
-    },
-    {
-      "bin_start": 13.3,
-      "count": 5
-    },
-    {
-      "bin_start": 14.9,
-      "count": 10
-    },
-    {
-      "bin_start": 16.4,
-      "count": 4
-    },
-    {
-      "bin_start": 17.9,
+      "bin_start": 19.0,
       "count": 9
     },
     {
-      "bin_start": 19.5,
-      "count": 7
+      "bin_start": 22.0,
+      "count": 13
     },
     {
-      "bin_start": 21.0,
-      "count": 4
+      "bin_start": 25.0,
+      "count": 15
     },
     {
-      "bin_start": 22.6,
-      "count": 5
+      "bin_start": 28.0,
+      "count": 6
     },
     {
-      "bin_start": 24.1,
-      "count": 2
+      "bin_start": 31.0,
+      "count": 8
     },
     {
-      "bin_start": 25.6,
-      "count": 7
+      "bin_start": 34.0,
+      "count": 8
     },
     {
-      "bin_start": 27.2,
-      "count": 0
+      "bin_start": 37.0,
+      "count": 1
     },
     {
-      "bin_start": 28.7,
+      "bin_start": 40.0,
       "count": 3
     },
     {
-      "bin_start": 30.3,
+      "bin_start": 43.0,
       "count": 2
     },
     {
-      "bin_start": 31.8,
-      "count": 3
-    },
-    {
-      "bin_start": 33.3,
+      "bin_start": 46.0,
       "count": 0
     },
     {
-      "bin_start": 34.9,
+      "bin_start": 49.0,
       "count": 2
     },
     {
-      "bin_start": 36.4,
-      "count": 2
-    },
-    {
-      "bin_start": 38.0,
+      "bin_start": 52.0,
       "count": 0
     },
     {
-      "bin_start": 39.5,
+      "bin_start": 55.0,
       "count": 1
-    },
-    {
-      "bin_start": 41.0,
-      "count": 1
-    },
-    {
-      "bin_start": 42.6,
-      "count": 1
-    },
-    {
-      "bin_start": 44.1,
-      "count": 1
-    },
-    {
-      "bin_start": 45.7,
-      "count": 2
-    },
-    {
-      "bin_start": 47.2,
-      "count": 0
-    },
-    {
-      "bin_start": 48.7,
-      "count": 0
-    },
-    {
-      "bin_start": 50.3,
-      "count": 0
-    },
-    {
-      "bin_start": 51.8,
-      "count": 0
-    },
-    {
-      "bin_start": 53.4,
-      "count": 0
-    },
-    {
-      "bin_start": 54.9,
-      "count": 2
-    },
-    {
-      "bin_start": 56.4,
-      "count": 0
     },
     {
       "bin_start": 58.0,
-      "count": 0
+      "count": 2
     },
     {
-      "bin_start": 59.5,
-      "count": 0
-    },
-    {
-      "bin_start": 61.1,
-      "count": 0
-    },
-    {
-      "bin_start": 62.6,
-      "count": 0
-    },
-    {
-      "bin_start": 64.1,
-      "count": 0
-    },
-    {
-      "bin_start": 65.7,
+      "bin_start": 61.0,
       "count": 1
     },
     {
-      "bin_start": 67.2,
+      "bin_start": 64.0,
       "count": 0
     },
     {
-      "bin_start": 68.8,
-      "count": 0
-    },
-    {
-      "bin_start": 70.3,
-      "count": 0
-    },
-    {
-      "bin_start": 71.8,
-      "count": 0
-    },
-    {
-      "bin_start": 73.4,
-      "count": 0
-    },
-    {
-      "bin_start": 74.9,
+      "bin_start": 67.0,
       "count": 1
     },
     {
-      "bin_start": 76.5,
+      "bin_start": 70.0,
+      "count": 2
+    },
+    {
+      "bin_start": 73.0,
+      "count": 2
+    },
+    {
+      "bin_start": 76.0,
+      "count": 2
+    },
+    {
+      "bin_start": 79.0,
+      "count": 1
+    },
+    {
+      "bin_start": 82.0,
+      "count": 1
+    },
+    {
+      "bin_start": 85.0,
+      "count": 0
+    },
+    {
+      "bin_start": 88.0,
+      "count": 0
+    },
+    {
+      "bin_start": 91.0,
+      "count": 0
+    },
+    {
+      "bin_start": 94.0,
+      "count": 0
+    },
+    {
+      "bin_start": 97.0,
+      "count": 0
+    },
+    {
+      "bin_start": 100.0,
+      "count": 0
+    },
+    {
+      "bin_start": 103.0,
+      "count": 0
+    },
+    {
+      "bin_start": 106.0,
+      "count": 0
+    },
+    {
+      "bin_start": 109.0,
+      "count": 0
+    },
+    {
+      "bin_start": 112.0,
+      "count": 0
+    },
+    {
+      "bin_start": 115.0,
+      "count": 0
+    },
+    {
+      "bin_start": 118.0,
+      "count": 0
+    },
+    {
+      "bin_start": 121.0,
+      "count": 0
+    },
+    {
+      "bin_start": 124.0,
+      "count": 0
+    },
+    {
+      "bin_start": 127.0,
+      "count": 0
+    },
+    {
+      "bin_start": 130.0,
+      "count": 0
+    },
+    {
+      "bin_start": 133.0,
+      "count": 0
+    },
+    {
+      "bin_start": 136.0,
+      "count": 0
+    },
+    {
+      "bin_start": 139.0,
+      "count": 0
+    },
+    {
+      "bin_start": 142.0,
+      "count": 0
+    },
+    {
+      "bin_start": 145.0,
+      "count": 0
+    },
+    {
+      "bin_start": 148.0,
       "count": 1
     }
   ],
@@ -3301,212 +3989,212 @@
     {
       "day": 0,
       "game": "LEAVES",
-      "plays": 2600
+      "plays": 2836
     },
     {
       "day": 1,
       "game": "BEACHBALL",
-      "plays": 2039
+      "plays": 2259
     },
     {
       "day": 2,
       "game": "FISHES",
-      "plays": 525
+      "plays": 676
     },
     {
       "day": 3,
-      "game": "BEACHBALL",
-      "plays": 151
+      "game": "MUSICORGAN",
+      "plays": 399
     },
     {
       "day": 4,
       "game": "LEAVES",
-      "plays": 219
+      "plays": 308
     },
     {
       "day": 5,
-      "game": "CONFETTI_PARTY_ORIGINAL",
-      "plays": 374
+      "game": "PUZZLE",
+      "plays": 474
     },
     {
       "day": 6,
-      "game": "MUSICORGAN",
-      "plays": 162
+      "game": "BIRTHDAY",
+      "plays": 241
     },
     {
       "day": 7,
-      "game": "BIRTHDAY",
-      "plays": 133
+      "game": "BEACHBALL",
+      "plays": 209
     },
     {
       "day": 8,
       "game": "LEAVES",
-      "plays": 132
+      "plays": 188
     },
     {
       "day": 9,
       "game": "SPINNINGTOPS",
-      "plays": 350
+      "plays": 367
     },
     {
       "day": 10,
-      "game": "FIREFLIES",
-      "plays": 282
+      "game": "BEACHBALL",
+      "plays": 323
     },
     {
       "day": 11,
       "game": "FISHES",
-      "plays": 219
+      "plays": 254
     },
     {
       "day": 12,
       "game": "PAINTSPLATTERS_UGC",
-      "plays": 365
+      "plays": 382
     },
     {
       "day": 13,
       "game": "BIRTHDAY",
-      "plays": 216
+      "plays": 273
     },
     {
       "day": 14,
       "game": "BEACHBALL",
-      "plays": 168
+      "plays": 258
     },
     {
       "day": 15,
       "game": "FISHES",
-      "plays": 180
+      "plays": 288
     },
     {
       "day": 16,
       "game": "BEACHBALL",
-      "plays": 193
+      "plays": 274
     },
     {
       "day": 17,
       "game": "BEACHBALL",
-      "plays": 770
+      "plays": 844
     },
     {
       "day": 18,
       "game": "FISHES",
-      "plays": 155
+      "plays": 216
     },
     {
       "day": 19,
       "game": "BEACHBALL",
-      "plays": 120
+      "plays": 186
     },
     {
       "day": 20,
       "game": "LEAVES",
-      "plays": 102
+      "plays": 120
     },
     {
       "day": 21,
       "game": "BEACHBALL",
-      "plays": 98
+      "plays": 123
     },
     {
       "day": 22,
-      "game": "BIRTHDAY",
-      "plays": 118
+      "game": "LEAVES",
+      "plays": 178
     },
     {
       "day": 23,
       "game": "LEAVES",
-      "plays": 127
+      "plays": 182
     },
     {
       "day": 24,
       "game": "FISHES",
-      "plays": 122
+      "plays": 184
     },
     {
       "day": 25,
-      "game": "BEACHBALL",
-      "plays": 85
+      "game": "LEAVES",
+      "plays": 137
     },
     {
       "day": 26,
       "game": "BEACHBALL",
-      "plays": 133
+      "plays": 142
     },
     {
       "day": 27,
       "game": "BEACHBALL",
-      "plays": 253
+      "plays": 286
     },
     {
       "day": 28,
       "game": "BEACHBALL",
-      "plays": 166
+      "plays": 235
     },
     {
       "day": 29,
       "game": "BEACHBALL",
-      "plays": 150
+      "plays": 212
     },
     {
       "day": 30,
-      "game": "BEACHBALL",
-      "plays": 122
+      "game": "LEAVES",
+      "plays": 161
     },
     {
       "day": 31,
       "game": "LEAVES",
-      "plays": 181
+      "plays": 255
     },
     {
       "day": 32,
       "game": "PUZZLE",
-      "plays": 142
+      "plays": 201
     },
     {
       "day": 33,
       "game": "MUSICORGAN",
-      "plays": 487
+      "plays": 507
     },
     {
       "day": 34,
       "game": "FISHES",
-      "plays": 331
+      "plays": 346
     },
     {
       "day": 35,
-      "game": "LEAVES",
-      "plays": 69
+      "game": "BEACHBALL",
+      "plays": 88
     },
     {
       "day": 36,
       "game": "BIRTHDAY",
-      "plays": 62
+      "plays": 80
     },
     {
       "day": 37,
       "game": "BEACHBALL",
-      "plays": 123
+      "plays": 145
     },
     {
       "day": 38,
       "game": "BIRTHDAY",
-      "plays": 88
+      "plays": 117
     },
     {
       "day": 39,
       "game": "BEACHBALL",
-      "plays": 75
+      "plays": 112
     },
     {
       "day": 40,
       "game": "LEAVES",
-      "plays": 69
+      "plays": 106
     },
     {
       "day": 41,
       "game": "MUSICORGAN",
-      "plays": 128
+      "plays": 152
     },
     {
       "day": 42,
@@ -3516,111 +4204,111 @@
     {
       "day": 43,
       "game": "BEACHBALL",
-      "plays": 62
+      "plays": 77
     },
     {
       "day": 44,
-      "game": "PAINTSPLATTERS_UGC",
-      "plays": 106
+      "game": "LEAVES",
+      "plays": 141
     },
     {
       "day": 45,
       "game": "BEACHBALL",
-      "plays": 46
+      "plays": 66
     },
     {
       "day": 46,
-      "game": "LEAVES",
-      "plays": 37
+      "game": "BEACHBALL",
+      "plays": 87
     },
     {
       "day": 47,
-      "game": "FISHES",
-      "plays": 38
+      "game": "BEACHBALL",
+      "plays": 112
     },
     {
       "day": 48,
       "game": "BIRTHDAY",
-      "plays": 17
+      "plays": 69
     },
     {
       "day": 49,
-      "game": "BIRTHDAY",
-      "plays": 7
+      "game": "LEAVES",
+      "plays": 107
     },
     {
       "day": 50,
-      "game": "BEACHBALL",
-      "plays": 21
+      "game": "BIRTHDAY",
+      "plays": 107
     },
     {
       "day": 51,
-      "game": "LEAVES",
-      "plays": 54
+      "game": "BIRTHDAY",
+      "plays": 190
     },
     {
       "day": 52,
-      "game": "BIRTHDAY",
-      "plays": 45
+      "game": "BEACHBALL",
+      "plays": 161
     },
     {
       "day": 53,
       "game": "BEACHBALL",
-      "plays": 48
+      "plays": 151
     },
     {
       "day": 54,
       "game": "BIRTHDAY",
-      "plays": 46
+      "plays": 115
     },
     {
       "day": 55,
       "game": "LEAVES",
-      "plays": 43
+      "plays": 118
     },
     {
       "day": 56,
-      "game": "BIRTHDAY",
-      "plays": 28
+      "game": "LEAVES",
+      "plays": 98
     },
     {
       "day": 57,
-      "game": "MUSICORGAN",
-      "plays": 58
+      "game": "LEAVES",
+      "plays": 164
     },
     {
       "day": 58,
       "game": "LEAVES",
-      "plays": 49
+      "plays": 132
     },
     {
       "day": 59,
-      "game": "FISHES",
-      "plays": 33
+      "game": "MUSICORGAN",
+      "plays": 134
     },
     {
       "day": 60,
-      "game": "BALL_TOSS_ORIGINAL",
-      "plays": 145
+      "game": "PUZZLE",
+      "plays": 249
     }
   ],
   "games_by_device": {
     "0": [
       {
         "name": "BEACHBALL",
-        "plays": 5870
+        "plays": 5868
       },
       {
         "name": "LEAVES",
-        "plays": 5791
+        "plays": 5789
       },
       {
         "name": "FISHES",
-        "plays": 5484
+        "plays": 5482
       },
       {
         "name": "BIRDFEEDER",
-        "plays": 4314
+        "plays": 4311
       },
       {
         "name": "KITES",
@@ -3628,19 +4316,19 @@
       },
       {
         "name": "SPINNINGTOPS",
-        "plays": 4221
+        "plays": 4219
       },
       {
         "name": "BUBBLES",
-        "plays": 4165
+        "plays": 4164
       },
       {
         "name": "FIREFLIES",
-        "plays": 4066
+        "plays": 4064
       },
       {
         "name": "FLOWERS",
-        "plays": 3993
+        "plays": 3992
       },
       {
         "name": "MUSICORGAN",
@@ -3650,169 +4338,169 @@
     "2": [
       {
         "name": "LEAVES",
-        "plays": 8611
+        "plays": 18004
       },
       {
         "name": "BEACHBALL",
-        "plays": 8551
+        "plays": 17880
       },
       {
         "name": "FISHES",
-        "plays": 8253
+        "plays": 17242
       },
       {
         "name": "BIRTHDAY",
-        "plays": 8193
+        "plays": 17132
       },
       {
         "name": "PUZZLE",
-        "plays": 7908
+        "plays": 16652
       },
       {
         "name": "MUSICORGAN",
-        "plays": 7905
+        "plays": 16477
       },
       {
         "name": "BUTTERFLIES",
-        "plays": 4468
+        "plays": 8874
       },
       {
         "name": "BUBBLES",
-        "plays": 4274
+        "plays": 8553
       },
       {
         "name": "FLOWERS",
-        "plays": 4212
+        "plays": 8323
       },
       {
         "name": "SPINNINGTOPS",
-        "plays": 4158
+        "plays": 8202
       }
     ],
     "3": [
       {
         "name": "BUBBLES",
-        "plays": 235
+        "plays": 279
       },
       {
         "name": "ANEMONES",
-        "plays": 232
+        "plays": 277
       },
       {
         "name": "BUTTERFLIES",
-        "plays": 231
-      },
-      {
-        "name": "FLOWERS",
-        "plays": 230
-      },
-      {
-        "name": "LEAVES",
-        "plays": 230
+        "plays": 277
       },
       {
         "name": "BEACHBALL",
-        "plays": 229
+        "plays": 276
       },
       {
         "name": "KITES",
-        "plays": 229
+        "plays": 275
       },
       {
-        "name": "STARGAZING",
-        "plays": 227
+        "name": "LEAVES",
+        "plays": 275
+      },
+      {
+        "name": "FLOWERS",
+        "plays": 273
       },
       {
         "name": "FISHES",
-        "plays": 226
+        "plays": 271
       },
       {
         "name": "BIRDFEEDER",
-        "plays": 223
+        "plays": 269
+      },
+      {
+        "name": "SPINNINGTOPS",
+        "plays": 269
       }
     ],
     "4": [
       {
-        "name": "FISHES",
-        "plays": 13
-      },
-      {
         "name": "TOVER_PETS",
-        "plays": 13
-      },
-      {
-        "name": "SNOEZEL_STARS",
-        "plays": 12
+        "plays": 27
       },
       {
         "name": "BUTTERFLIES",
-        "plays": 11
-      },
-      {
-        "name": "PAINTSPLATTERS",
-        "plays": 10
+        "plays": 25
       },
       {
         "name": "BIRDFEEDER",
-        "plays": 9
+        "plays": 20
       },
       {
-        "name": "RISE_AND_SHINE",
-        "plays": 9
-      },
-      {
-        "name": "PAINTSPLATTERS_UGC",
-        "plays": 8
+        "name": "FISHES",
+        "plays": 20
       },
       {
         "name": "ANEMONES",
-        "plays": 7
+        "plays": 18
       },
       {
         "name": "BEACHBALL",
-        "plays": 7
+        "plays": 17
+      },
+      {
+        "name": "STARGAZING",
+        "plays": 16
+      },
+      {
+        "name": "LEAVES",
+        "plays": 15
+      },
+      {
+        "name": "PAINTSPLATTERS_UGC",
+        "plays": 15
+      },
+      {
+        "name": "SNOEZEL_STARS",
+        "plays": 15
       }
     ],
     "5": [
       {
         "name": "LEAVES",
-        "plays": 218
+        "plays": 221
       },
       {
         "name": "BEACHBALL",
-        "plays": 216
-      },
-      {
-        "name": "FISHES",
-        "plays": 214
+        "plays": 218
       },
       {
         "name": "BIRTHDAY",
-        "plays": 213
+        "plays": 217
+      },
+      {
+        "name": "FISHES",
+        "plays": 217
       },
       {
         "name": "PUZZLE",
-        "plays": 212
+        "plays": 213
       },
       {
         "name": "MUSICORGAN",
-        "plays": 189
-      },
-      {
-        "name": "BUBBLES",
-        "plays": 76
+        "plays": 191
       },
       {
         "name": "BUTTERFLIES",
-        "plays": 76
-      },
-      {
-        "name": "FLOWERS",
-        "plays": 76
+        "plays": 80
       },
       {
         "name": "STARGAZING",
-        "plays": 76
+        "plays": 79
+      },
+      {
+        "name": "FLOWERS",
+        "plays": 78
+      },
+      {
+        "name": "BUBBLES",
+        "plays": 77
       }
     ]
   },
@@ -3820,111 +4508,111 @@
     "AU": [
       {
         "name": "LEAVES",
-        "plays": 2297
+        "plays": 5439
       },
       {
         "name": "BEACHBALL",
-        "plays": 2289
+        "plays": 5402
       },
       {
         "name": "FISHES",
-        "plays": 2150
+        "plays": 5194
       },
       {
         "name": "BIRTHDAY",
-        "plays": 1699
+        "plays": 4473
       },
       {
-        "name": "MUSICORGAN",
-        "plays": 1592
+        "name": "PUZZLE",
+        "plays": 4442
       }
     ],
     "BE": [
       {
-        "name": "MEMORY_KIDS_UGC",
-        "plays": 29
+        "name": "PAINTSPLATTERS_UP",
+        "plays": 31
       },
       {
-        "name": "BALL_TOSS",
-        "plays": 27
+        "name": "MEMORY_KIDS_UGC",
+        "plays": 30
       },
       {
         "name": "STARSIGNS",
-        "plays": 26
+        "plays": 30
+      },
+      {
+        "name": "BALL_TOSS",
+        "plays": 28
       },
       {
         "name": "POND",
-        "plays": 24
-      },
-      {
-        "name": "PAINTSPLATTERS_UP",
-        "plays": 23
+        "plays": 28
       }
     ],
     "CA": [
       {
-        "name": "BEACHBALL",
-        "plays": 2681
+        "name": "LEAVES",
+        "plays": 4846
       },
       {
-        "name": "LEAVES",
-        "plays": 2677
+        "name": "BEACHBALL",
+        "plays": 4843
       },
       {
         "name": "FISHES",
-        "plays": 2676
+        "plays": 4700
       },
       {
         "name": "MUSICORGAN",
-        "plays": 2623
+        "plays": 4668
       },
       {
         "name": "PUZZLE",
-        "plays": 2558
+        "plays": 4609
       }
     ],
     "CH": [
       {
-        "name": "COLOURFUL_MEMORIES",
-        "plays": 4
+        "name": "ANEMONES",
+        "plays": 26
       },
       {
-        "name": "LANDMARKS",
-        "plays": 4
+        "name": "BAKING",
+        "plays": 25
       },
       {
-        "name": "PUZZLE",
-        "plays": 4
+        "name": "SPORTS_TOURNEY_ORIGINAL",
+        "plays": 19
       },
       {
-        "name": "BEACHBALL",
-        "plays": 3
+        "name": "MOLES_ORIGINAL",
+        "plays": 18
       },
       {
-        "name": "BIRDFEEDER",
-        "plays": 3
+        "name": "FLOWERS",
+        "plays": 15
       }
     ],
     "DE": [
       {
+        "name": "BIRTHDAY",
+        "plays": 514
+      },
+      {
         "name": "GARDENING",
-        "plays": 423
-      },
-      {
-        "name": "FIREFLIES",
-        "plays": 422
-      },
-      {
-        "name": "KITES",
-        "plays": 418
+        "plays": 490
       },
       {
         "name": "SPINNINGTOPS",
-        "plays": 414
+        "plays": 488
       },
       {
-        "name": "DINNER_PARTY",
-        "plays": 413
+        "name": "FIREFLIES",
+        "plays": 486
+      },
+      {
+        "name": "DRAWINGS_ORIGINAL",
+        "plays": 483
       }
     ],
     "DK": [
@@ -3952,753 +4640,768 @@
     "FR": [
       {
         "name": "BEACHBALL",
-        "plays": 1047
+        "plays": 1832
       },
       {
         "name": "LEAVES",
-        "plays": 987
+        "plays": 1742
       },
       {
         "name": "FISHES",
-        "plays": 896
+        "plays": 1609
       },
       {
         "name": "BIRTHDAY",
-        "plays": 869
+        "plays": 1605
       },
       {
         "name": "PUZZLE",
-        "plays": 812
+        "plays": 1483
       }
     ],
     "GB": [
       {
         "name": "LEAVES",
-        "plays": 1486
+        "plays": 2743
       },
       {
         "name": "BEACHBALL",
-        "plays": 1444
-      },
-      {
-        "name": "FISHES",
-        "plays": 1425
+        "plays": 2694
       },
       {
         "name": "BIRTHDAY",
-        "plays": 1416
+        "plays": 2677
+      },
+      {
+        "name": "FISHES",
+        "plays": 2660
       },
       {
         "name": "MUSICORGAN",
-        "plays": 1326
+        "plays": 2530
       }
     ],
     "IE": [
       {
-        "name": "ANEMONES",
-        "plays": 152
-      },
-      {
-        "name": "BUTTERFLIES",
-        "plays": 152
-      },
-      {
-        "name": "SPINNINGTOPS",
-        "plays": 149
-      },
-      {
-        "name": "FLOWERS",
-        "plays": 148
-      },
-      {
         "name": "LEAVES",
-        "plays": 146
+        "plays": 360
+      },
+      {
+        "name": "FISHES",
+        "plays": 358
+      },
+      {
+        "name": "BEACHBALL",
+        "plays": 356
+      },
+      {
+        "name": "BIRTHDAY",
+        "plays": 354
+      },
+      {
+        "name": "PUZZLE",
+        "plays": 350
       }
     ],
     "NL": [
       {
         "name": "BIRTHDAY",
-        "plays": 382
+        "plays": 448
       },
       {
         "name": "LEAVES",
-        "plays": 318
+        "plays": 327
       },
       {
         "name": "BEACHBALL",
-        "plays": 308
+        "plays": 315
       },
       {
         "name": "FISHES",
-        "plays": 304
+        "plays": 311
       },
       {
         "name": "PUZZLE",
-        "plays": 290
+        "plays": 298
       }
     ],
     "NO": [
       {
-        "name": "FISHES",
-        "plays": 2
+        "name": "BIRTHDAY",
+        "plays": 73
       },
       {
         "name": "LEAVES",
-        "plays": 2
-      },
-      {
-        "name": "MOLES_ORIGINAL",
-        "plays": 2
+        "plays": 61
       },
       {
         "name": "MUSICORGAN",
-        "plays": 2
+        "plays": 58
       },
       {
-        "name": "SNOEZEL_STARS",
-        "plays": 2
+        "name": "PUZZLE",
+        "plays": 57
+      },
+      {
+        "name": "BEACHBALL",
+        "plays": 56
       }
     ],
     "SE": [
       {
+        "name": "FISHES",
+        "plays": 89
+      },
+      {
         "name": "BEACHBALL",
-        "plays": 52
-      },
-      {
-        "name": "BIRTHDAY",
-        "plays": 52
-      },
-      {
-        "name": "PUZZLE",
-        "plays": 52
-      },
-      {
-        "name": "STARGAZING",
-        "plays": 49
+        "plays": 84
       },
       {
         "name": "BUBBLES",
-        "plays": 48
+        "plays": 80
+      },
+      {
+        "name": "LEAVES",
+        "plays": 80
+      },
+      {
+        "name": "FLOWERS",
+        "plays": 74
       }
     ],
     "UK": [
       {
-        "name": "BEACHBALL",
-        "plays": 21
-      },
-      {
         "name": "BIRTHDAY",
-        "plays": 21
+        "plays": 33
       },
       {
         "name": "BUTTERFLIES",
-        "plays": 21
+        "plays": 33
       },
       {
-        "name": "MUSICORGAN",
-        "plays": 20
+        "name": "BEACHBALL",
+        "plays": 32
       },
       {
         "name": "PUZZLE",
-        "plays": 20
+        "plays": 32
+      },
+      {
+        "name": "LEAVES",
+        "plays": 30
       }
     ],
     "US": [
       {
         "name": "BEACHBALL",
-        "plays": 6546
+        "plays": 8221
       },
       {
         "name": "LEAVES",
-        "plays": 6511
+        "plays": 8217
       },
       {
         "name": "FISHES",
-        "plays": 6211
+        "plays": 7830
       },
       {
         "name": "PUZZLE",
-        "plays": 5294
+        "plays": 6864
       },
       {
         "name": "MUSICORGAN",
-        "plays": 5241
+        "plays": 6796
       }
     ]
   },
   "avg_session_by_country": {
     "US": {
-      "avg_duration": 7.13,
-      "sessions": 59593
+      "avg_duration": 6.97,
+      "sessions": 98207
     },
     "AU": {
-      "avg_duration": 6.12,
-      "sessions": 18289
+      "avg_duration": 6.11,
+      "sessions": 65189
     },
     "CA": {
-      "avg_duration": 6.04,
-      "sessions": 30031
+      "avg_duration": 6.01,
+      "sessions": 50383
     },
     "GB": {
-      "avg_duration": 5.89,
-      "sessions": 25380
+      "avg_duration": 5.86,
+      "sessions": 48188
     },
     "IE": {
-      "avg_duration": 5.77,
-      "sessions": 4345
+      "avg_duration": 5.82,
+      "sessions": 7055
+    },
+    "UK": {
+      "avg_duration": 5.35,
+      "sessions": 690
+    },
+    "NO": {
+      "avg_duration": 5.01,
+      "sessions": 1120
     },
     "DK": {
       "avg_duration": 4.99,
       "sessions": 33
     },
-    "NL": {
-      "avg_duration": 4.8,
-      "sessions": 8237
-    },
-    "UK": {
-      "avg_duration": 4.74,
-      "sessions": 342
-    },
-    "SE": {
-      "avg_duration": 4.61,
-      "sessions": 638
-    },
     "FR": {
-      "avg_duration": 4.59,
-      "sessions": 17740
+      "avg_duration": 4.52,
+      "sessions": 31817
     },
-    "BE": {
-      "avg_duration": 4.27,
-      "sessions": 567
+    "NL": {
+      "avg_duration": 4.39,
+      "sessions": 10463
     },
     "DE": {
-      "avg_duration": 4.08,
-      "sessions": 7916
+      "avg_duration": 4.37,
+      "sessions": 12361
+    },
+    "BE": {
+      "avg_duration": 3.89,
+      "sessions": 693
+    },
+    "SE": {
+      "avg_duration": 3.75,
+      "sessions": 1597
     },
     "CH": {
-      "avg_duration": 2.89,
-      "sessions": 55
-    },
-    "NO": {
-      "avg_duration": 1.9,
-      "sessions": 16
+      "avg_duration": 1.68,
+      "sessions": 358
     }
   },
   "all_game_stats": [
     {
       "name": "ANEMONES",
-      "launches": 3621,
-      "avg_duration": 7.92
+      "launches": 6027,
+      "avg_duration": 6.92
     },
     {
       "name": "ANIMALS",
-      "launches": 192,
-      "avg_duration": 4.11
+      "launches": 337,
+      "avg_duration": 4.07
     },
     {
       "name": "ANIMALS_UNQ",
-      "launches": 49,
-      "avg_duration": 2.5
+      "launches": 66,
+      "avg_duration": 2.11
     },
     {
       "name": "AUDIO_MEMORY",
-      "launches": 35,
-      "avg_duration": 3.17
+      "launches": 72,
+      "avg_duration": 2.45
     },
     {
       "name": "BABY_MONSTERS",
-      "launches": 90,
-      "avg_duration": 2.48
+      "launches": 182,
+      "avg_duration": 2.64
     },
     {
       "name": "BAKING",
-      "launches": 2464,
-      "avg_duration": 5.08
+      "launches": 4410,
+      "avg_duration": 5.06
     },
     {
       "name": "BALLGAME",
-      "launches": 190,
-      "avg_duration": 3.72
+      "launches": 321,
+      "avg_duration": 3.91
     },
     {
       "name": "BALLOON_PARTY",
-      "launches": 174,
-      "avg_duration": 4.03
+      "launches": 298,
+      "avg_duration": 4.22
     },
     {
       "name": "BALL_TOSS",
-      "launches": 227,
-      "avg_duration": 3.88
+      "launches": 366,
+      "avg_duration": 3.89
     },
     {
       "name": "BALL_TOSS_ORIGINAL",
-      "launches": 3771,
-      "avg_duration": 5.38
+      "launches": 7698,
+      "avg_duration": 5.2
     },
     {
       "name": "BEACHBALL",
-      "launches": 9575,
-      "avg_duration": 5.63
+      "launches": 18836,
+      "avg_duration": 5.4
     },
     {
       "name": "BEACHCOMBING",
-      "launches": 291,
-      "avg_duration": 3.39
+      "launches": 500,
+      "avg_duration": 3.38
     },
     {
       "name": "BEACH_ORIGINAL",
-      "launches": 308,
+      "launches": 392,
       "avg_duration": 5.11
     },
     {
       "name": "BIRDFEEDER",
-      "launches": 4655,
-      "avg_duration": 5.03
+      "launches": 8674,
+      "avg_duration": 5.15
     },
     {
       "name": "BIRTHDAY",
-      "launches": 9056,
-      "avg_duration": 5.06
+      "launches": 17901,
+      "avg_duration": 5.05
     },
     {
       "name": "BLOBNOTES",
-      "launches": 320,
-      "avg_duration": 4.2
+      "launches": 510,
+      "avg_duration": 4.09
     },
     {
       "name": "BODY_AWARENESS",
-      "launches": 2773,
-      "avg_duration": 4.97
+      "launches": 4754,
+      "avg_duration": 4.98
     },
     {
       "name": "BOGGLE",
-      "launches": 6,
-      "avg_duration": 1.69
+      "launches": 20,
+      "avg_duration": 2.41
     },
     {
       "name": "BOOKWORM",
-      "launches": 8,
-      "avg_duration": 0.15
+      "launches": 33,
+      "avg_duration": 0.19
     },
     {
       "name": "BOUQUET",
-      "launches": 323,
-      "avg_duration": 6.66
+      "launches": 503,
+      "avg_duration": 6.49
     },
     {
       "name": "BUBBLES",
-      "launches": 4899,
-      "avg_duration": 5.46
+      "launches": 9104,
+      "avg_duration": 5.8
     },
     {
       "name": "BUBBLES_UP",
-      "launches": 232,
-      "avg_duration": 3.46
+      "launches": 353,
+      "avg_duration": 3.53
     },
     {
       "name": "BUBBLE_BATH",
-      "launches": 116,
-      "avg_duration": 2.24
+      "launches": 186,
+      "avg_duration": 1.97
     },
     {
       "name": "BUBBLE_SUMS",
-      "launches": 12,
-      "avg_duration": 0.36
+      "launches": 48,
+      "avg_duration": 0.69
     },
     {
       "name": "BUTTERFLIES",
-      "launches": 5055,
-      "avg_duration": 5.19
+      "launches": 9424,
+      "avg_duration": 5.11
     },
     {
       "name": "CANDYFISH",
-      "launches": 82,
-      "avg_duration": 2.85
+      "launches": 158,
+      "avg_duration": 2.68
     },
     {
       "name": "CASH_REGISTER",
-      "launches": 115,
-      "avg_duration": 2.81
+      "launches": 247,
+      "avg_duration": 2.52
     },
     {
       "name": "CATERPILLARS",
-      "launches": 160,
-      "avg_duration": 3.62
+      "launches": 282,
+      "avg_duration": 3.57
     },
     {
       "name": "CHICKLETS",
-      "launches": 84,
-      "avg_duration": 3.1
+      "launches": 208,
+      "avg_duration": 2.86
     },
     {
       "name": "CLEANING",
-      "launches": 204,
-      "avg_duration": 3.71
+      "launches": 332,
+      "avg_duration": 3.89
     },
     {
       "name": "COLOURFUL_MEMORIES",
-      "launches": 2533,
-      "avg_duration": 4.83
+      "launches": 4494,
+      "avg_duration": 4.92
     },
     {
       "name": "COLOURINGBOOK",
-      "launches": 211,
-      "avg_duration": 3.34
+      "launches": 339,
+      "avg_duration": 3.57
     },
     {
       "name": "COLOURMILLS",
-      "launches": 85,
-      "avg_duration": 2.81
+      "launches": 159,
+      "avg_duration": 2.26
     },
     {
       "name": "COMBINATIONS",
-      "launches": 219,
-      "avg_duration": 3.87
+      "launches": 341,
+      "avg_duration": 4.08
     },
     {
       "name": "CONFETTI_PARTY_ORIGINAL",
-      "launches": 166,
-      "avg_duration": 5.14
+      "launches": 236,
+      "avg_duration": 5.15
     },
     {
       "name": "CROSSING",
-      "launches": 230,
-      "avg_duration": 3.62
+      "launches": 371,
+      "avg_duration": 3.68
     },
     {
       "name": "DINNER_PARTY",
-      "launches": 3936,
-      "avg_duration": 7.91
+      "launches": 7317,
+      "avg_duration": 7.92
     },
     {
       "name": "DRAWINGS_ORIGINAL",
-      "launches": 3935,
-      "avg_duration": 6.09
+      "launches": 7333,
+      "avg_duration": 5.59
     },
     {
       "name": "DRESS_UP",
-      "launches": 197,
-      "avg_duration": 3.71
+      "launches": 327,
+      "avg_duration": 3.88
     },
     {
       "name": "DUOS_ADULTS_UGC",
-      "launches": 267,
-      "avg_duration": 3.11
+      "launches": 388,
+      "avg_duration": 3.28
     },
     {
       "name": "DUOS_KIDS_UGC",
-      "launches": 59,
-      "avg_duration": 1.98
+      "launches": 92,
+      "avg_duration": 1.56
     },
     {
       "name": "DUOS_UGC",
-      "launches": 149,
-      "avg_duration": 5.09
+      "launches": 216,
+      "avg_duration": 5.13
     },
     {
       "name": "EASTER",
-      "launches": 3598,
-      "avg_duration": 4.95
+      "launches": 4494,
+      "avg_duration": 4.99
     },
     {
       "name": "EMOTIONS",
-      "launches": 44,
-      "avg_duration": 2.08
+      "launches": 85,
+      "avg_duration": 1.65
+    },
+    {
+      "name": "EMO_QUIZ",
+      "launches": 11,
+      "avg_duration": 0.26
     },
     {
       "name": "FIREFLIES",
-      "launches": 4624,
-      "avg_duration": 8.1
+      "launches": 8655,
+      "avg_duration": 8.07
     },
     {
       "name": "FISHES",
-      "launches": 9227,
-      "avg_duration": 6.36
+      "launches": 18152,
+      "avg_duration": 5.74
     },
     {
       "name": "FLOWERS",
-      "launches": 4777,
-      "avg_duration": 8.28
+      "launches": 8823,
+      "avg_duration": 6.84
     },
     {
       "name": "FLY_SWATTER",
-      "launches": 157,
-      "avg_duration": 4.79
+      "launches": 347,
+      "avg_duration": 4.73
     },
     {
       "name": "FOOTBALL",
-      "launches": 54,
-      "avg_duration": 2.43
+      "launches": 116,
+      "avg_duration": 2.67
     },
     {
       "name": "FROG_FEEDER",
-      "launches": 61,
+      "launches": 95,
       "avg_duration": 3.11
     },
     {
       "name": "FRUITS",
-      "launches": 160,
-      "avg_duration": 3.89
+      "launches": 254,
+      "avg_duration": 4.12
     },
     {
       "name": "GARDENING",
-      "launches": 3941,
-      "avg_duration": 7.95
+      "launches": 7327,
+      "avg_duration": 7.97
     },
     {
       "name": "GROCERIES",
-      "launches": 165,
-      "avg_duration": 3.78
+      "launches": 274,
+      "avg_duration": 3.89
     },
     {
       "name": "HAMSTER_MAZE",
-      "launches": 30,
-      "avg_duration": 1.67
+      "launches": 70,
+      "avg_duration": 1.15
     },
     {
       "name": "HIDEANDSEEK",
-      "launches": 111,
-      "avg_duration": 2.1
+      "launches": 187,
+      "avg_duration": 1.7
     },
     {
       "name": "INSTRUMENTS",
-      "launches": 340,
-      "avg_duration": 4.22
+      "launches": 520,
+      "avg_duration": 4.21
     },
     {
       "name": "KITES",
-      "launches": 4633,
-      "avg_duration": 4.91
+      "launches": 8602,
+      "avg_duration": 4.97
     },
     {
       "name": "LADYBUGS",
-      "launches": 373,
-      "avg_duration": 5.9
+      "launches": 569,
+      "avg_duration": 5.97
     },
     {
       "name": "LANDMARKS",
-      "launches": 4004,
-      "avg_duration": 8.15
+      "launches": 7580,
+      "avg_duration": 8.12
     },
     {
       "name": "LEAVES",
-      "launches": 9549,
-      "avg_duration": 5.38
+      "launches": 18833,
+      "avg_duration": 5.27
     },
     {
       "name": "MATCHMAKER",
-      "launches": 279,
-      "avg_duration": 4.49
-    },
-    {
-      "name": "MATCHMAKER_HOBBIES_UP",
-      "launches": 201,
-      "avg_duration": 3.71
-    },
-    {
-      "name": "MATCHMAKER_SPORTS",
-      "launches": 116,
-      "avg_duration": 3.62
-    },
-    {
-      "name": "MATHRACE",
-      "launches": 27,
-      "avg_duration": 1.01
-    },
-    {
-      "name": "MEMORY",
-      "launches": 256,
-      "avg_duration": 3.51
-    },
-    {
-      "name": "MEMORY_ADULTS_UGC",
-      "launches": 9,
-      "avg_duration": 4.04
-    },
-    {
-      "name": "MEMORY_KIDS_UGC",
-      "launches": 91,
-      "avg_duration": 1.61
-    },
-    {
-      "name": "MEMORY_ORIGINAL",
-      "launches": 178,
-      "avg_duration": 12.23
-    },
-    {
-      "name": "MEMORY_SPROUT",
-      "launches": 59,
-      "avg_duration": 2.13
-    },
-    {
-      "name": "MEMORY_UGC",
-      "launches": 3757,
-      "avg_duration": 7.23
-    },
-    {
-      "name": "MINECARTS",
-      "launches": 96,
-      "avg_duration": 2.59
-    },
-    {
-      "name": "MOLES_ORIGINAL",
-      "launches": 3933,
-      "avg_duration": 4.91
-    },
-    {
-      "name": "MONSTERS",
-      "launches": 85,
-      "avg_duration": 2.39
-    },
-    {
-      "name": "MUSICBOX",
-      "launches": 3942,
-      "avg_duration": 6.17
-    },
-    {
-      "name": "MUSICORGAN",
-      "launches": 8613,
-      "avg_duration": 7.29
-    },
-    {
-      "name": "MUSIC_HERO",
-      "launches": 228,
-      "avg_duration": 3.79
-    },
-    {
-      "name": "MUSIC_HERO_ORIGINAL",
-      "launches": 3776,
-      "avg_duration": 4.94
-    },
-    {
-      "name": "ODD_ONE_OUT",
-      "launches": 78,
-      "avg_duration": 4.79
-    },
-    {
-      "name": "PAINTSPLATTERS",
-      "launches": 3936,
-      "avg_duration": 7.77
-    },
-    {
-      "name": "PAINTSPLATTERS_ADULTS_UGC",
-      "launches": 424,
-      "avg_duration": 3.78
-    },
-    {
-      "name": "PAINTSPLATTERS_UGC",
-      "launches": 4000,
-      "avg_duration": 9.11
-    },
-    {
-      "name": "PAINTSPLATTERS_UP",
-      "launches": 544,
-      "avg_duration": 5.17
-    },
-    {
-      "name": "POND",
-      "launches": 429,
-      "avg_duration": 3.95
-    },
-    {
-      "name": "POOL_TABLE",
-      "launches": 2262,
+      "launches": 1117,
       "avg_duration": 5.07
     },
     {
-      "name": "PROVERBS",
-      "launches": 483,
-      "avg_duration": 6.61
+      "name": "MATCHMAKER_HOBBIES_UP",
+      "launches": 320,
+      "avg_duration": 3.76
     },
     {
-      "name": "PUPPIES",
-      "launches": 480,
+      "name": "MATCHMAKER_SPORTS",
+      "launches": 768,
+      "avg_duration": 4.79
+    },
+    {
+      "name": "MATHRACE",
+      "launches": 61,
+      "avg_duration": 0.68
+    },
+    {
+      "name": "MEMORY",
+      "launches": 426,
+      "avg_duration": 4.13
+    },
+    {
+      "name": "MEMORY_ADULTS_UGC",
+      "launches": 10,
+      "avg_duration": 3.75
+    },
+    {
+      "name": "MEMORY_KIDS_UGC",
+      "launches": 158,
+      "avg_duration": 1.47
+    },
+    {
+      "name": "MEMORY_ORIGINAL",
+      "launches": 282,
+      "avg_duration": 25.08
+    },
+    {
+      "name": "MEMORY_SPROUT",
+      "launches": 98,
+      "avg_duration": 1.78
+    },
+    {
+      "name": "MEMORY_UGC",
+      "launches": 7208,
+      "avg_duration": 7.99
+    },
+    {
+      "name": "MINECARTS",
+      "launches": 151,
+      "avg_duration": 2.47
+    },
+    {
+      "name": "MOLES_ORIGINAL",
+      "launches": 7954,
+      "avg_duration": 4.94
+    },
+    {
+      "name": "MONSTERS",
+      "launches": 141,
+      "avg_duration": 1.92
+    },
+    {
+      "name": "MUSICBOX",
+      "launches": 7492,
+      "avg_duration": 6.07
+    },
+    {
+      "name": "MUSICORGAN",
+      "launches": 17123,
+      "avg_duration": 7.34
+    },
+    {
+      "name": "MUSIC_HERO",
+      "launches": 374,
+      "avg_duration": 3.86
+    },
+    {
+      "name": "MUSIC_HERO_ORIGINAL",
+      "launches": 7658,
+      "avg_duration": 4.98
+    },
+    {
+      "name": "ODD_ONE_OUT",
+      "launches": 164,
+      "avg_duration": 4.5
+    },
+    {
+      "name": "PAINTSPLATTERS",
+      "launches": 8127,
+      "avg_duration": 7.91
+    },
+    {
+      "name": "PAINTSPLATTERS_ADULTS_UGC",
+      "launches": 633,
       "avg_duration": 3.85
     },
     {
+      "name": "PAINTSPLATTERS_UGC",
+      "launches": 7518,
+      "avg_duration": 8.43
+    },
+    {
+      "name": "PAINTSPLATTERS_UP",
+      "launches": 892,
+      "avg_duration": 4.89
+    },
+    {
+      "name": "POND",
+      "launches": 690,
+      "avg_duration": 3.65
+    },
+    {
+      "name": "POOL_TABLE",
+      "launches": 4115,
+      "avg_duration": 5.04
+    },
+    {
+      "name": "PROVERBS",
+      "launches": 912,
+      "avg_duration": 6.68
+    },
+    {
+      "name": "PUPPIES",
+      "launches": 761,
+      "avg_duration": 3.73
+    },
+    {
       "name": "PUZZLE",
-      "launches": 8600,
+      "launches": 17260,
       "avg_duration": 8.02
     },
     {
       "name": "PUZZLE_ADULTS_UGC",
-      "launches": 268,
-      "avg_duration": 4.51
+      "launches": 410,
+      "avg_duration": 5.37
     },
     {
       "name": "PUZZLE_TRANSPORTATION",
-      "launches": 323,
-      "avg_duration": 6.36
+      "launches": 514,
+      "avg_duration": 6.26
     },
     {
       "name": "PUZZLE_UGC",
-      "launches": 601,
-      "avg_duration": 15.37
+      "launches": 973,
+      "avg_duration": 17.2
     },
     {
       "name": "PUZZLE_UP",
-      "launches": 180,
-      "avg_duration": 5.22
+      "launches": 324,
+      "avg_duration": 5.56
     },
     {
       "name": "QUESTIONS",
-      "launches": 9,
-      "avg_duration": 1.36
+      "launches": 10,
+      "avg_duration": 1.49
     },
     {
       "name": "RAINBOW",
-      "launches": 513,
-      "avg_duration": 4.21
+      "launches": 819,
+      "avg_duration": 3.74
     },
     {
       "name": "RHYMES",
-      "launches": 317,
-      "avg_duration": 6.67
+      "launches": 597,
+      "avg_duration": 8.59
     },
     {
       "name": "RISE_AND_SHINE",
-      "launches": 13,
-      "avg_duration": 0.73
+      "launches": 16,
+      "avg_duration": 0.69
     },
     {
       "name": "RUMMYTILES",
-      "launches": 143,
-      "avg_duration": 4.11
+      "launches": 827,
+      "avg_duration": 4.83
+    },
+    {
+      "name": "SCENARIOS",
+      "launches": 14,
+      "avg_duration": 0.37
+    },
+    {
+      "name": "SINGALONG",
+      "launches": 7,
+      "avg_duration": 3.79
     },
     {
       "name": "SLIDE_PUZZLE",
-      "launches": 69,
-      "avg_duration": 6.25
+      "launches": 151,
+      "avg_duration": 4.46
     },
     {
       "name": "SLIDE_PUZZLE_UP",
-      "launches": 200,
-      "avg_duration": 3.94
+      "launches": 319,
+      "avg_duration": 4.04
     },
     {
       "name": "SLOT_CARS",
-      "launches": 86,
-      "avg_duration": 2.34
+      "launches": 140,
+      "avg_duration": 2.1
     },
     {
       "name": "SMOKE_SIMULATOR",
-      "launches": 102,
-      "avg_duration": 2.64
+      "launches": 239,
+      "avg_duration": 1.76
     },
     {
       "name": "SMUDGES",
-      "launches": 66,
-      "avg_duration": 2.25
+      "launches": 100,
+      "avg_duration": 2.02
     },
     {
       "name": "SNAKE",
-      "launches": 73,
-      "avg_duration": 2.42
+      "launches": 116,
+      "avg_duration": 2.18
     },
     {
       "name": "SNOEZEL_CIRCLES",
-      "launches": 7,
-      "avg_duration": 4.95
+      "launches": 9,
+      "avg_duration": 4.16
     },
     {
       "name": "SNOEZEL_CLOUDS",
@@ -4707,183 +5410,183 @@
     },
     {
       "name": "SNOEZEL_LAVALAMP",
-      "launches": 7,
-      "avg_duration": 0.97
+      "launches": 8,
+      "avg_duration": 0.94
     },
     {
       "name": "SNOEZEL_STARS",
-      "launches": 10,
-      "avg_duration": 0.43
+      "launches": 13,
+      "avg_duration": 1.58
     },
     {
       "name": "SOCCER_UP",
-      "launches": 401,
-      "avg_duration": 4.93
+      "launches": 632,
+      "avg_duration": 4.81
     },
     {
       "name": "SOUND_SAFARI",
-      "launches": 94,
-      "avg_duration": 4.66
+      "launches": 143,
+      "avg_duration": 4.14
     },
     {
       "name": "SOUND_SAFARI_ORIGINAL",
-      "launches": 126,
-      "avg_duration": 4.18
-    },
-    {
-      "name": "SPECIAL_OLYMPICS",
-      "launches": 211,
-      "avg_duration": 2.74
-    },
-    {
-      "name": "SPINNINGTOPS",
-      "launches": 4661,
-      "avg_duration": 5.0
-    },
-    {
-      "name": "SPORTS_TOURNEY_ORIGINAL",
-      "launches": 343,
-      "avg_duration": 6.11
-    },
-    {
-      "name": "STARDUST",
-      "launches": 96,
-      "avg_duration": 2.03
-    },
-    {
-      "name": "STARGAZING",
-      "launches": 4710,
+      "launches": 806,
       "avg_duration": 4.89
     },
     {
+      "name": "SPECIAL_OLYMPICS",
+      "launches": 310,
+      "avg_duration": 2.68
+    },
+    {
+      "name": "SPINNINGTOPS",
+      "launches": 8640,
+      "avg_duration": 4.99
+    },
+    {
+      "name": "SPORTS_TOURNEY_ORIGINAL",
+      "launches": 1260,
+      "avg_duration": 5.27
+    },
+    {
+      "name": "STARDUST",
+      "launches": 165,
+      "avg_duration": 1.78
+    },
+    {
+      "name": "STARGAZING",
+      "launches": 8695,
+      "avg_duration": 4.92
+    },
+    {
       "name": "STARSIGNS",
-      "launches": 274,
-      "avg_duration": 4.29
+      "launches": 469,
+      "avg_duration": 4.77
     },
     {
       "name": "SUITCASE",
-      "launches": 73,
-      "avg_duration": 14.31
+      "launches": 174,
+      "avg_duration": 8.2
     },
     {
       "name": "TILE_SEQUENCES",
-      "launches": 350,
-      "avg_duration": 5.73
+      "launches": 1245,
+      "avg_duration": 5.62
     },
     {
       "name": "TILE_SEQUENCES_ANIMALS",
-      "launches": 42,
-      "avg_duration": 2.24
+      "launches": 52,
+      "avg_duration": 1.94
     },
     {
       "name": "TIME_BOMB",
-      "launches": 16,
-      "avg_duration": 1.22
+      "launches": 26,
+      "avg_duration": 1.31
     },
     {
       "name": "TOOTHBRUSHING",
-      "launches": 276,
-      "avg_duration": 3.09
+      "launches": 448,
+      "avg_duration": 3.12
     },
     {
       "name": "TOVER_PETS",
-      "launches": 14,
-      "avg_duration": 5.06
+      "launches": 24,
+      "avg_duration": 6.49
     },
     {
       "name": "TRAINS",
-      "launches": 89,
-      "avg_duration": 1.91
+      "launches": 157,
+      "avg_duration": 1.55
     },
     {
       "name": "TRAINS_UP",
-      "launches": 177,
-      "avg_duration": 3.87
+      "launches": 292,
+      "avg_duration": 3.83
     },
     {
       "name": "TRANSPORTATION",
-      "launches": 162,
-      "avg_duration": 3.87
+      "launches": 261,
+      "avg_duration": 4.06
     },
     {
       "name": "TURNING_TILES",
-      "launches": 2233,
+      "launches": 4115,
       "avg_duration": 5.06
     },
     {
       "name": "UNFOLD_SPROUT",
-      "launches": 37,
-      "avg_duration": 2.57
+      "launches": 67,
+      "avg_duration": 1.73
     },
     {
       "name": "UNFOLD_UP",
-      "launches": 222,
-      "avg_duration": 3.81
+      "launches": 329,
+      "avg_duration": 3.72
     },
     {
       "name": "VI_BOUQUET",
-      "launches": 115,
-      "avg_duration": 6.47
+      "launches": 201,
+      "avg_duration": 6.26
     },
     {
       "name": "VI_BUBBLES_UP",
-      "launches": 150,
-      "avg_duration": 3.38
+      "launches": 236,
+      "avg_duration": 3.61
     },
     {
       "name": "VI_CATERPILLARS",
-      "launches": 119,
-      "avg_duration": 4.23
+      "launches": 196,
+      "avg_duration": 4.29
     },
     {
       "name": "VI_PAINTSPLATTERS_UP",
-      "launches": 155,
-      "avg_duration": 6.39
+      "launches": 257,
+      "avg_duration": 6.26
     },
     {
       "name": "VI_POND",
-      "launches": 168,
-      "avg_duration": 3.18
+      "launches": 281,
+      "avg_duration": 3.2
     },
     {
       "name": "VI_PUPPIES",
-      "launches": 135,
-      "avg_duration": 4.07
+      "launches": 222,
+      "avg_duration": 3.98
     },
     {
       "name": "VI_PUZZLE_TRANSPORTATION",
-      "launches": 129,
-      "avg_duration": 6.44
+      "launches": 212,
+      "avg_duration": 6.51
     },
     {
       "name": "VI_PUZZLE_UP",
-      "launches": 123,
-      "avg_duration": 6.44
+      "launches": 205,
+      "avg_duration": 6.38
     },
     {
       "name": "VI_SOCCER_UP",
-      "launches": 143,
-      "avg_duration": 4.5
+      "launches": 224,
+      "avg_duration": 4.34
     },
     {
       "name": "VI_WHAC_A_MOLE",
-      "launches": 137,
-      "avg_duration": 4.09
+      "launches": 241,
+      "avg_duration": 3.96
     },
     {
       "name": "VOCABULARY",
-      "launches": 19,
-      "avg_duration": 0.89
+      "launches": 45,
+      "avg_duration": 0.6
     },
     {
       "name": "WHAC_A_MOLE",
-      "launches": 348,
-      "avg_duration": 3.79
+      "launches": 603,
+      "avg_duration": 3.62
     },
     {
       "name": "XMAS",
-      "launches": 16,
-      "avg_duration": 7.44
+      "launches": 33,
+      "avg_duration": 6.32
     }
   ]
 }
