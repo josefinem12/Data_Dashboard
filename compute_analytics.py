@@ -57,12 +57,21 @@ country_tz = (
     .rename(columns={'device_timezone': 'country_timezone'})
 )
 
+# ── Static fallback for countries not covered by data (e.g. US, CA → ET)
+STATIC_COUNTRY_TZ = {
+    'US': 'ET -0500',
+    'CA': 'ET -0500',
+}
+
 # ── GAME_START subset ─────────────────────────────────────────────
 df_games = df[df['event'] == 'GAME_START'].copy()
 df_games = df_games.merge(device_tz, on='hostname', how='left')
 df_games = df_games.merge(country_tz, on='geoip.country_code', how='left')
-# Fill missing device timezone with country fallback
+# Fill: device tz → country tz from data → static country override
 df_games['device_timezone'] = df_games['device_timezone'].fillna(df_games['country_timezone'])
+df_games['device_timezone'] = df_games['device_timezone'].fillna(
+    df_games['geoip.country_code'].map(STATIC_COUNTRY_TZ)
+)
 
 tz_offset = df_games['device_timezone'].str.extract(r'([+-]\d{4})')[0]
 df_games['utc_offset'] = pd.to_timedelta(
