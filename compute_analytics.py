@@ -194,6 +194,57 @@ retention_data = [
 ]
 
 # ─────────────────────────────────────────────────────────────────
+# 7b. Cumulative device activations over time
+# ─────────────────────────────────────────────────────────────────
+device_activations = (
+    df.drop_duplicates(subset='hostname')[['hostname', 'activation_date']]
+    .sort_values('activation_date')
+    .reset_index(drop=True)
+)
+device_activations['cumulative'] = range(1, len(device_activations) + 1)
+# Sample to ~500 points max so JSON stays small
+step = max(1, len(device_activations) // 500)
+sampled = device_activations.iloc[::step]
+cumulative_activations_data = [
+    {"date": str(r['activation_date'].date()), "cumulative": int(r['cumulative'])}
+    for _, r in sampled.iterrows()
+]
+
+# ─────────────────────────────────────────────────────────────────
+# 7c. Device usage frequency distribution
+# ─────────────────────────────────────────────────────────────────
+device_active_days = (
+    df.groupby('hostname')['date']
+    .nunique()
+    .reset_index(name='active_days')
+)
+# Histogram with 50 bins
+counts, bin_edges = np.histogram(device_active_days['active_days'], bins=50)
+active_freq_data = [
+    {"bin_start": round(float(bin_edges[i]), 1), "count": int(counts[i])}
+    for i in range(len(counts))
+]
+median_active_days = float(device_active_days['active_days'].median())
+
+# ─────────────────────────────────────────────────────────────────
+# 7d. Top game per day since activation (days 0–60)
+# ─────────────────────────────────────────────────────────────────
+daily_games_by_act = (
+    df_games.groupby(['days_since_activation', 'generic_string'])
+    .size()
+    .reset_index(name='play_count')
+    .sort_values(['days_since_activation', 'play_count'], ascending=[True, False])
+)
+top_game_per_day = (
+    daily_games_by_act[daily_games_by_act['days_since_activation'] <= 60]
+    .drop_duplicates(subset=['days_since_activation'])
+)
+top_game_per_day_data = [
+    {"day": int(r['days_since_activation']), "game": str(r['generic_string']), "plays": int(r['play_count'])}
+    for _, r in top_game_per_day.iterrows()
+]
+
+# ─────────────────────────────────────────────────────────────────
 # 8. Games by device type
 # ─────────────────────────────────────────────────────────────────
 games_per_device = (
@@ -316,6 +367,10 @@ analytics = {
     "seasonal": seasonal_data,
     "sessions": sessions_data,
     "retention": retention_data,
+    "cumulative_activations": cumulative_activations_data,
+    "active_freq": active_freq_data,
+    "active_freq_median": median_active_days,
+    "top_game_per_day": top_game_per_day_data,
     "games_by_device": device_data,
     "games_by_country": country_data,
     "avg_session_by_country": avg_session_by_country,

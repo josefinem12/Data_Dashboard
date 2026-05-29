@@ -534,6 +534,23 @@ input.sel::placeholder{color:var(--muted2)}
         <div class="sub">Each point = number of distinct hostnames that logged at least one event on that day after their first activation</div>
         <canvas id="chart-retention" style="max-height:440px"></canvas>
       </div>
+      <div class="two-col">
+        <div class="card">
+          <h3>Cumulative device activations over time</h3>
+          <div class="sub">Total number of unique devices activated, growing over time</div>
+          <canvas id="chart-cumulative-activations" style="max-height:340px"></canvas>
+        </div>
+        <div class="card">
+          <h3>Device usage frequency distribution</h3>
+          <div class="sub" id="active-freq-sub">How many days was each device active?</div>
+          <canvas id="chart-active-freq" style="max-height:340px"></canvas>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Most played game per day since activation (days 0–60)</h3>
+        <div class="sub">The #1 game played by all devices on each day after activation</div>
+        <div id="top-game-per-day-table" style="overflow-x:auto"></div>
+      </div>
     </div>
 
     <!-- ══ GAME EXPLORER ══ -->
@@ -930,6 +947,77 @@ function buildRetention() {
   });
 }
 
+// ── Cumulative activations chart ───────────────────────────────────────────
+function buildCumulativeActivations() {
+  const data = DATA.cumulative_activations;
+  new Chart(document.getElementById('chart-cumulative-activations'), {
+    type: 'line',
+    data: {
+      labels: data.map(d => d.date),
+      datasets: [{
+        data: data.map(d => d.cumulative),
+        borderColor: '#f87171',
+        backgroundColor: 'rgba(248,113,113,0.15)',
+        pointRadius: 0, borderWidth: 2, fill: true, tension: 0.3
+      }]
+    },
+    options: {
+      plugins: { legend: { display: false }, tooltip: { callbacks: { title: i => i[0].label, label: ctx => `  ${ctx.parsed.y.toLocaleString()} devices` } } },
+      scales: {
+        x: { title: { display: true, text: 'Date', color: '#8eaac8' }, grid: { color: GRID }, ticks: { maxTicksLimit: 10, maxRotation: 30 } },
+        y: { title: { display: true, text: 'Cumulative devices', color: '#8eaac8' }, grid: { color: GRID }, beginAtZero: true }
+      },
+      responsive: true, maintainAspectRatio: true
+    }
+  });
+}
+
+// ── Active frequency distribution ──────────────────────────────────────────
+function buildActiveFrequency() {
+  const freq = DATA.active_freq;
+  const median = DATA.active_freq_median;
+  document.getElementById('active-freq-sub').textContent =
+    `How many days was each device active? Median: ${median} days`;
+  new Chart(document.getElementById('chart-active-freq'), {
+    type: 'bar',
+    data: {
+      labels: freq.map(d => d.bin_start),
+      datasets: [{
+        data: freq.map(d => d.count),
+        backgroundColor: 'rgba(167,139,250,0.75)',
+        borderColor: 'rgba(167,139,250,1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      plugins: { legend: { display: false }, tooltip: { callbacks: { title: i => `≥${i[0].label} days`, label: ctx => `  ${ctx.parsed.y.toLocaleString()} devices` } } },
+      scales: {
+        x: { title: { display: true, text: 'Days active', color: '#8eaac8' }, grid: { color: GRID }, ticks: { maxTicksLimit: 12 } },
+        y: { title: { display: true, text: 'Number of devices', color: '#8eaac8' }, grid: { color: GRID }, beginAtZero: true }
+      },
+      responsive: true, maintainAspectRatio: true
+    }
+  });
+}
+
+// ── Top game per day table ─────────────────────────────────────────────────
+function buildTopGamePerDay() {
+  const rows = DATA.top_game_per_day;
+  const html = `<table style="width:100%;border-collapse:collapse;font-size:0.85rem">
+    <thead><tr style="border-bottom:1px solid #2a3a50">
+      <th style="padding:6px 10px;text-align:left;color:#8eaac8">Day</th>
+      <th style="padding:6px 10px;text-align:left;color:#8eaac8">Top Game</th>
+      <th style="padding:6px 10px;text-align:right;color:#8eaac8">Plays</th>
+    </tr></thead>
+    <tbody>${rows.map((r, i) => `<tr style="background:${i%2===0?'transparent':'rgba(255,255,255,0.03)'}">
+      <td style="padding:5px 10px">${r.day}</td>
+      <td style="padding:5px 10px;font-weight:500">${r.game}</td>
+      <td style="padding:5px 10px;text-align:right">${r.plays.toLocaleString()}</td>
+    </tr>`).join('')}</tbody>
+  </table>`;
+  document.getElementById('top-game-per-day-table').innerHTML = html;
+}
+
 // ── World map ─────────────────────────────────────────────────────────────
 let mapInitialized = false;
 function initMap() {
@@ -1236,6 +1324,9 @@ function updateDeviceDetail() {
   buildHeatGrid();
   buildDeviceSelector();
   buildRetention();
+  buildCumulativeActivations();
+  buildActiveFrequency();
+  buildTopGamePerDay();
   buildGameExplorer();
 
   // Hostname data is optional — only available after compute_analytics.py is re-run
