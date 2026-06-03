@@ -1,4 +1,4 @@
-#!/Users/josefinemertens/anaconda3/bin/python
+
 from flask import Flask, jsonify, g, send_from_directory
 import sqlite3
 import json

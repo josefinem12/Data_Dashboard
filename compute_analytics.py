@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 import json
-import math
 import sqlite3
 
 FILE_PATHS = ["elastic1.csv", "elastic2.csv"]
@@ -84,13 +83,13 @@ df_games = df_games[df_games['geoip.country_code'].notna()]
 df_games_clean = df_games[df_games['geoip.country_code'] != '-'].copy()
 
 # ─────────────────────────────────────────────────────────────────
-# 1. Hourly usage (global)
+#  Hourly usage (global)
 # ─────────────────────────────────────────────────────────────────
 hourly = df_games['local_hour'].value_counts().sort_index()
 hourly_data = [{"hour": int(h), "plays": int(c)} for h, c in hourly.items()]
 
 # ─────────────────────────────────────────────────────────────────
-# 2. Country hourly usage
+# Country hourly usage
 # ─────────────────────────────────────────────────────────────────
 country_hourly_raw = (
     df_games_clean
@@ -111,7 +110,7 @@ for country, grp in country_hourly_raw.groupby('geoip.country_code'):
     country_hourly_data[country] = row
 
 # ─────────────────────────────────────────────────────────────────
-# 3. Seasonal trends
+#  Seasonal trends
 # ─────────────────────────────────────────────────────────────────
 month_to_season = {
     1:'Winter', 2:'Winter', 3:'Spring', 4:'Spring', 5:'Spring', 6:'Summer',
@@ -123,7 +122,7 @@ seasonal_counts = df_games['season'].value_counts()
 seasonal_data = [{"season": s, "plays": int(seasonal_counts.get(s, 0))} for s in season_order]
 
 # ─────────────────────────────────────────────────────────────────
-# 4. Session durations
+# Session durations
 # ─────────────────────────────────────────────────────────────────
 df_sorted = df.sort_values(['game_uuid', '@timestamp'])
 starts_ends = df_sorted[df_sorted['event'].isin(['GAME_START', 'GAME_END'])].copy()
@@ -169,7 +168,7 @@ all_game_stats = [
 ]
 
 # ─────────────────────────────────────────────────────────────────
-# 5. Per-game detailed stats (country, hourly, seasonal)
+#  Per-game detailed stats (country, hourly, seasonal)
 # ─────────────────────────────────────────────────────────────────
 game_country_data = {}
 game_hourly_data = {}
@@ -187,43 +186,9 @@ for game_name, grp in df_games.groupby('generic_string'):
     game_hourly_data[key] = row
     game_seasonal_data[key] = {str(s): int(c) for s, c in grp['season'].value_counts().items()}
 
-# ─────────────────────────────────────────────────────────────────
-# 6. Per-app-uuid stats (top 300 by launch count)
-# ─────────────────────────────────────────────────────────────────
-app_uuid_counts = df_games['app_uuid'].value_counts()
-print(f"  Unique app_uuids: {len(app_uuid_counts)}")
-top_uuids = app_uuid_counts.head(300).index
-
-app_stats = {}
-for uuid in top_uuids:
-    grp = df_games[df_games['app_uuid'] == uuid]
-    game_name = str(grp['generic_string'].mode().iloc[0])
-    cc = grp[grp['geoip.country_code'] != '-']['geoip.country_code'].value_counts()
-    countries = {str(k): int(v) for k, v in cc.items()}
-    row = [0] * 24
-    for h, cnt in grp['local_hour'].dropna().value_counts().items():
-        h = int(h)
-        if 0 <= h <= 23:
-            row[h] = int(cnt)
-    app_stats[str(uuid)] = {
-        'game': game_name,
-        'launches': int(len(grp)),
-        'countries': countries,
-        'hourly': row
-    }
-
-game_detail = {
-    'country': game_country_data,
-    'hourly': game_hourly_data,
-    'seasonal': game_seasonal_data
-}
-with open('game_data.json', 'w') as f:
-    json.dump(game_detail, f, separators=(',', ':'))
-with open('app_data.json', 'w') as f:
-    json.dump(app_stats, f, separators=(',', ':'))
 
 # ─────────────────────────────────────────────────────────────────
-# 7. Retention curve
+# Retention curve
 # ─────────────────────────────────────────────────────────────────
 daily_retention = (
     df.groupby('days_since_activation')['hostname']
@@ -241,7 +206,7 @@ retention_data = [
 ]
 
 # ─────────────────────────────────────────────────────────────────
-# 7b. Cumulative device activations over time
+# Cumulative device activations over time
 # ─────────────────────────────────────────────────────────────────
 daily_new_devices = (
     df.drop_duplicates(subset='hostname')
@@ -257,7 +222,7 @@ cumulative_activations_data = [
 ]
 
 # ─────────────────────────────────────────────────────────────────
-# 7c. Device usage frequency distribution
+# Device usage frequency distribution
 # ─────────────────────────────────────────────────────────────────
 device_active_days = (
     df.groupby('hostname')['date']
@@ -273,7 +238,7 @@ active_freq_data = [
 median_active_days = float(device_active_days['active_days'].median())
 
 # ─────────────────────────────────────────────────────────────────
-# 7d. Top game per day since activation (days 0–60)
+# Top game per day since activation (days 0–60)
 # ─────────────────────────────────────────────────────────────────
 daily_games_by_act = (
     df_games.groupby(['days_since_activation', 'generic_string'])
@@ -291,7 +256,7 @@ top_game_per_day_data = [
 ]
 
 # ─────────────────────────────────────────────────────────────────
-# 8. Games by device type
+# Games by device type
 # ─────────────────────────────────────────────────────────────────
 games_per_device = (
     df_games.groupby(['device_type', 'generic_string'])
@@ -308,7 +273,7 @@ for device, grp in top_per_device.groupby('device_type'):
     ]
 
 # ─────────────────────────────────────────────────────────────────
-# 9. Top 5 games per country
+# Top 5 games per country
 # ─────────────────────────────────────────────────────────────────
 country_games = (
     df_games_clean.groupby(['geoip.country_code', 'generic_string'])
@@ -325,7 +290,7 @@ for country, grp in top5_per_country.groupby('geoip.country_code'):
     ]
 
 # ─────────────────────────────────────────────────────────────────
-# 10. Average session duration by country
+# Average session duration by country
 # ─────────────────────────────────────────────────────────────────
 country_dur_raw = (
     valid_sessions[
@@ -346,7 +311,7 @@ avg_session_by_country = {
 }
 
 # ─────────────────────────────────────────────────────────────────
-# 11. KPI summary
+# KPI summary
 # ─────────────────────────────────────────────────────────────────
 total_sessions = len(valid_sessions)
 unique_devices = df['hostname'].nunique()
@@ -368,7 +333,7 @@ kpi_data = {
 }
 
 # ─────────────────────────────────────────────────────────────────
-# 12. Per-hostname stats
+# Per-hostname stats
 # ─────────────────────────────────────────────────────────────────
 print("Computing per-hostname stats...")
 
